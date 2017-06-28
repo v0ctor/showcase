@@ -1,0 +1,46 @@
+{
+	"name": "victordzmr/web",
+	"license": "MIT",
+	"homepage": "https://victordiaz.me",
+	"authors": [
+		{
+			"name": "Víctor Díaz Marco",
+			"email": "victor@victordiaz.me",
+			"homepage": "https://victordiaz.me"
+		}
+	],
+	"require": {
+		"php": "7.1.*",
+		"ext-pdo": "*",
+		"graham-campbell/htmlmin": "^4.5",
+		"laravel/framework": "5.4.*"
+	},
+	"autoload": {
+		"classmap": [
+			"database"
+		],
+		"psr-4": {
+			"App\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true,
+		"optimize-autoloader": true
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"Illuminate\\Foundation\\ComposerScripts::postInstall",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"Illuminate\\Foundation\\ComposerScripts::postUpdate",
+			"php artisan optimize"
+		]
+	}
+}

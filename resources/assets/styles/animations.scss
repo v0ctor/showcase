@@ -1,0 +1,33 @@
+/**
+ * Animation styles.
+ */
+
+@-webkit-keyframes bounce {
+	0%, 10%, 25%, 40%, 50% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	30% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+}
+
+@keyframes bounce {
+	0%, 10%, 25%, 40%, 50% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	20% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	30% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+}

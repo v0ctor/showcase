@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+use Illuminate\Contracts\Console\Kernel;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+
+/**
+ * Artisan script.
+ */
+
+# Register the auto loader
+require __DIR__ . '/bootstrap/autoload.php';
+
+# Bootstrap the framework
+$app = require_once __DIR__ . '/bootstrap/app.php';
+
+# Run the Artisan application
+$kernel = $app->make(Kernel::class);
+$status = $kernel->handle($input = new ArgvInput, new ConsoleOutput);
+
+# Shutdown the application
+$kernel->terminate($input, $status);
+exit($status);

@@ -1,0 +1,49 @@
+# Robots file
+
+User-agent: Googlebot
+Disallow: /admin
+
+User-agent: googlebot-image
+Disallow: /admin
+
+User-agent: googlebot-mobile
+Disallow: /admin
+
+User-agent: MSNBot
+Disallow: /admin
+
+User-agent: Slurp
+Disallow: /admin
+
+User-agent: Teoma
+Disallow: /admin
+
+User-agent: Gigabot
+Disallow: /admin
+
+User-agent: Robozilla
+Disallow: /admin
+
+User-agent: Nutch
+Disallow: /admin
+
+User-agent: ia_archiver
+Disallow: /admin
+
+User-agent: baiduspider
+Disallow: /admin
+
+User-agent: naverbot
+Disallow: /admin
+
+User-agent: yeti
+Disallow: /admin
+
+User-agent: yahoo-mmcrawler
+Disallow: /admin
+
+User-agent: psbot
+Disallow: /admin
+
+User-agent: *
+Disallow: /

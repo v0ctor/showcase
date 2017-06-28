@@ -1,0 +1,68 @@
+/**
+ * Icon styles.
+ */
+
+/** Font **/
+@font-face {
+	font-family: 'Foundation Icons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('/fonts/foundation-icons/foundation-icons.eot');
+	src: url('/fonts/foundation-icons/foundation-icons.eot?#iefix') format('embedded-opentype'), url('/fonts/foundation-icons/foundation-icons.woff') format('woff'), url('/fonts/foundation-icons/foundation-icons.ttf') format('truetype'), url('/fonts/foundation-icons/foundation-icons.svg#fontcustom') format('svg');
+}
+
+/** Icons **/
+.social {
+	.icon:before {
+		font-family: 'Foundation Icons';
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		text-decoration: inherit;
+		font-size: 30px;
+		margin: 0 6px;
+	}
+	
+	.linkedin:before {
+		@extend .icon;
+		content: '\f1d0';
+	}
+	
+	.github:before {
+		@extend .icon;
+		content: '\f1c9';
+	}
+	
+	.twitter:before {
+		@extend .icon;
+		content: '\f1e4';
+	}
+	
+	.facebook:before {
+		@extend .icon;
+		content: '\f1c4';
+	}
+	
+	.instagram:before {
+		@extend .icon;
+		content: '\f1cd';
+	}
+	
+	.spotify:before {
+		@extend .icon;
+		content: '\f1dd';
+	}
+	
+	a:hover > .linkedin:before,
+	a:hover > .github:before,
+	a:hover > .twitter:before,
+	a:hover > .facebook:before,
+	a:hover > .instagram:before,
+	a:hover > .spotify:before {
+		color: #cbd0d8;
+	}
+}
