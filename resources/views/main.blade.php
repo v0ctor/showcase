@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
-@section('title', trans('app.title'))
+@section('title', trans('app.author.full_name'))
+@section('description', trans('app.description', ['age' => Carbon::createFromDate(1994, 1, 31)->age]))
+@section('image', asset('images/header/4k.jpg'))
+@section('type', 'website')
+@section('color', '#181830')
 
 @section('body')
-	<header>
+	<header class="main">
 		<div class="avatar"></div>
-		<h1>@lang('app.title')</h1>
+		<h1>@lang('app.author.full_name')</h1>
 		
 		<div class="social row">
 			<a href="https://github.com/victordzmr"><span class="github"></span></a>

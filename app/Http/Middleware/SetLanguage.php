@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Lang;
 
 /**
  * SetLanguage middleware.
@@ -82,8 +81,10 @@ class SetLanguage {
 	 * @return void
 	 */
 	protected function init(Request $request): void {
-		// Get the language from the "Accept-Language" header or the "hl" parameter
-		if ($request->hasHeader('accept-language')) {
+		// Get the language from the "language" cookie, the "Accept-Language" header or the "hl" parameter
+		if ($request->hasCookie('language')) {
+			$this->addLanguage($request->cookie('language'));
+		} elseif ($request->hasHeader('accept-language')) {
 			foreach (explode(',', $request->header('accept-language')) as $lang) {
 				$this->addLanguage(explode(';', $lang)[0]);
 			}
