@@ -34,12 +34,22 @@ gulp.task('scripts', function () {
 	exec('rm -r public/js');
 	
 	// Compile the scripts
-	return gulp.src([
+	gulp.src([
 		'node_modules/jquery/dist/jquery.js',
-		'node_modules/node-polyglot/build/polyglot.js',
 		'resources/assets/scripts/**/*.js'
 	])
 	.pipe(concat('app.js'))
+	.pipe(sourcemaps.init())
+	.pipe(uglify())
+	.pipe(sourcemaps.write('.'))
+	.pipe(gulp.dest('public/js'));
+	
+	// Compile the publications scripts
+	return gulp.src([
+		'node_modules/prismjs/prism.js',
+		'node_modules/prismjs/components/prism-http.js'
+	])
+	.pipe(concat('publications.js'))
 	.pipe(sourcemaps.init())
 	.pipe(uglify())
 	.pipe(sourcemaps.write('.'))
@@ -56,14 +66,32 @@ gulp.task('styles', function () {
 	exec('rm -r public/css');
 	
 	// Compile the styles
-	return gulp.src([
+	gulp.src([
 		'node_modules/normalize.css/normalize.css',
+		'resources/assets/styles/colors.scss',
+		'resources/assets/styles/mixins.scss',
 		'resources/assets/styles/animations.scss',
-		'resources/assets/styles/main.scss',
 		'resources/assets/styles/icons.scss',
-		'resources/assets/styles/**/*.scss'
+		'resources/assets/styles/main.scss'
 	])
 	.pipe(concat('app.css'))
+	.pipe(sass().on('error', sass.logError))
+	.pipe(cssnano({
+		discardComments: {
+			removeAll: true
+		},
+		zindex: false
+	}))
+	.pipe(gulp.dest('public/css'));
+	
+	// Compile the publications styles
+	return gulp.src([
+		'node_modules/prismjs/themes/prism.css',
+		'resources/assets/styles/colors.scss',
+		'resources/assets/styles/mixins.scss',
+		'resources/assets/styles/publications.scss'
+	])
+	.pipe(concat('publications.css'))
 	.pipe(sass().on('error', sass.logError))
 	.pipe(cssnano({
 		discardComments: {

@@ -2,7 +2,8 @@
 	"private": true,
 	"dependencies": {
 		"jquery": "^3.2.1",
-		"normalize.css": "^7.0.0"
+		"normalize.css": "^7.0.0",
+		"prismjs": "^1.6.0"
 	},
 	"devDependencies": {
 		"gulp": "^3.9.1",
