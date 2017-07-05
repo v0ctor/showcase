@@ -57,16 +57,16 @@ return [
 			'period'       => 'marzo de 2017 — actualidad',
 		],
 		
-		'valencia_city_council' => [
-			'position'     => 'Desarrollador de software <em>full-stack</em> (beca)',
-			'organization' => 'Ajuntament de València',
-			'period'       => 'julio — agosto de 2013',
-		],
-		
 		'habtium' => [
 			'position'     => 'Administrador de sistemas y desarrollador web',
 			'organization' => 'Habtium',
 			'period'       => 'enero de 2010 — junio de 2016',
+		],
+		
+		'valencia_city_council' => [
+			'position'     => 'Desarrollador de software <em>full-stack</em> (beca)',
+			'organization' => 'Ajuntament de València',
+			'period'       => 'julio — agosto de 2013',
 		],
 	],
 	
@@ -155,6 +155,10 @@ return [
 		'b2' => 'B2',
 		'c1' => 'C1',
 		'c2' => 'C2',
+	],
+	
+	'articles' => [
+		'title' => 'Artículos',
 	],
 	
 	'contact' => [

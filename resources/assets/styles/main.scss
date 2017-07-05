@@ -249,10 +249,6 @@ section {
 		}
 	}
 	
-	&.experience {
-	
-	}
-	
 	&.skills {
 		@extend .gradient-one;
 		color: white;
@@ -271,12 +267,47 @@ section {
 		}
 	}
 	
-	&.languages {
-	
-	}
-	
-	&.contact {
-	
+	&.articles {
+		padding: 0;
+		flex-direction: row;
+		position: relative;
+		
+		h1 {
+			width: 100%;
+			position: absolute;
+			top: 17vh;
+			
+			span {
+				margin: 0 auto;
+				background-color: white;
+				border-radius: 8px;
+				padding: 5px 14px;
+				color: $dark-grey-2;
+			}
+		}
+		
+		.article {
+			height: 100vh;
+			padding: 15px;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 22px;
+			text-align: center;
+			background-position: center;
+			background-size: cover;
+			
+			&.websocket {
+				width: 50vw;
+				background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('/images/publications/websocket/header/1k.jpg');
+			}
+			
+			&.bitcoin {
+				width: 50vw;
+				background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('/images/publications/bitcoin/header/1k.jpg');
+			}
+		}
 	}
 	
 }

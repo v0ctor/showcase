@@ -84,6 +84,15 @@
 			</div>
 			<div class="job">
 				<div class="column">
+					<div class="position">@lang('main.experience.habtium.position')</div>
+					<div class="organization">
+						<a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
+					<div class="period"><span class="badge">@lang('main.experience.habtium.period')</span></div>
+				</div>
+				<div class="logo habtium"></div>
+			</div>
+			<div class="job">
+				<div class="column">
 					<div class="position">@lang('main.experience.valencia_city_council.position')</div>
 					<div class="organization">
 						<a href="http://www.valencia.es">@lang('main.experience.valencia_city_council.organization')</a>
@@ -92,15 +101,6 @@
 					</div>
 				</div>
 				<div class="logo valencia-city-council"></div>
-			</div>
-			<div class="job">
-				<div class="column">
-					<div class="position">@lang('main.experience.habtium.position')</div>
-					<div class="organization">
-						<a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
-					<div class="period"><span class="badge">@lang('main.experience.habtium.period')</span></div>
-				</div>
-				<div class="logo habtium"></div>
 			</div>
 		</div>
 	</section>
@@ -333,6 +333,17 @@
 			<div class="name">@lang('main.languages.en')</div>
 			<div class="badge">@lang('main.languages.b2')</div>
 		</div>
+	</section>
+	
+	<section class="articles">
+		<h1><span>@lang('main.articles.title')</span></h1>
+		
+		<a href="{{ url('websocket') }}">
+			<div class="article websocket">@lang('websocket.title')</div>
+		</a>
+		<a href="{{ url('bitcoin') }}">
+			<div class="article bitcoin">@lang('bitcoin.title')</div>
+		</a>
 	</section>
 	
 	<section class="contact">
