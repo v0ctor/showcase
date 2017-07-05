@@ -8,11 +8,11 @@
 @endpush
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/publications.css') }}">
+<link rel="stylesheet" href="{{ asset('css/publications.css?' . config('app.build')) }}">
 @endpush
 
 @push('scripts')
-<script src="{{ asset('js/publications.js') }}"></script>
+<script src="{{ asset('js/publications.js?' . config('app.build')) }}"></script>
 @endpush
 
 @section('body')

@@ -22,21 +22,21 @@
 			<meta property="og:locale:alternate" content="{{ $language }}">
 		@endforeach
 		
-		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/app.css?' . config('app.build')) }}">
 		@stack('styles')
 		
-		<script src="{{ asset('js/app.js') }}"></script>
+		<script src="{{ asset('js/app.js?' . config('app.build')) }}"></script>
 		@stack('scripts')
 		
 		<meta name="theme-color" content="@yield('color')">
-		<link rel="manifest" href="{{ asset('manifest.json') }}">
-		<meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
+		<link rel="manifest" href="{{ asset('manifest.json?' . config('app.build')) }}">
+		<meta name="msapplication-config" content="{{ asset('browserconfig.xml?' . config('app.build')) }}">
 		
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon-16x16.png') }}">
-		<link rel="mask-icon" href="{{ asset('images/icons/safari-pinned-tab.svg') }}" color="#181830">
-		<link rel="shortcut icon" href="{{ asset('images/icons/favicon.ico') }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png?' . config('app.build')) }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png?' . config('app.build')) }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon-16x16.png?' . config('app.build')) }}">
+		<link rel="mask-icon" href="{{ asset('images/icons/safari-pinned-tab.svg?' . config('app.build')) }}" color="@yield('color')">
+		<link rel="shortcut icon" href="{{ asset('images/icons/favicon.ico?' . config('app.build')) }}">
 	</head>
 	<body>
 		@yield('body')
