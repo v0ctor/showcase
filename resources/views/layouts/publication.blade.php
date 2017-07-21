@@ -8,7 +8,7 @@
 @endpush
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/publications.css?' . config('app.build')) }}">
+<link rel="stylesheet" href="{{ asset('styles/publications.css?' . config('app.build')) }}">
 @endpush
 
 @push('scripts')

@@ -31,7 +31,7 @@ gulp.task('watch', ['scripts', 'styles', 'images', 'fonts'], function () {
 gulp.task('scripts', function () {
 	
 	// Clean the directory and export the language strings
-	return exec('rm -r public/js && mkdir -p public/js && php artisan lang:js', function () {
+	return exec('rm -r public/scripts && mkdir -p public/scripts && php artisan lang:js', function () {
 		
 		// Compile the scripts
 		gulp.src([
@@ -44,7 +44,7 @@ gulp.task('scripts', function () {
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('public/js'));
+		.pipe(gulp.dest('public/scripts'));
 		
 		// Compile the publications scripts
 		gulp.src([
@@ -55,7 +55,7 @@ gulp.task('scripts', function () {
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('public/js'));
+		.pipe(gulp.dest('public/scripts'));
 		
 	});
 	
@@ -67,7 +67,7 @@ gulp.task('scripts', function () {
 gulp.task('styles', function () {
 	
 	// Clean the directory
-	return exec('rm -r public/css', function () {
+	return exec('rm -r public/styles', function () {
 		
 		// Compile the styles
 		gulp.src([
@@ -87,7 +87,7 @@ gulp.task('styles', function () {
 			},
 			zindex: false
 		}))
-		.pipe(gulp.dest('public/css'));
+		.pipe(gulp.dest('public/styles'));
 		
 		// Compile the publications styles
 		gulp.src([
@@ -104,7 +104,7 @@ gulp.task('styles', function () {
 			},
 			zindex: false
 		}))
-		.pipe(gulp.dest('public/css'));
+		.pipe(gulp.dest('public/styles'));
 		
 	});
 	

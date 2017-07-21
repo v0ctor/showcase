@@ -22,10 +22,10 @@
 			<meta property="og:locale:alternate" content="{{ $language }}">
 		@endforeach
 		
-		<link rel="stylesheet" href="{{ asset('css/app.css?' . config('app.build')) }}">
+		<link rel="stylesheet" href="{{ asset('styles/app.css?' . config('app.build')) }}">
 		@stack('styles')
 		
-		<script src="{{ asset('js/app.js?' . config('app.build')) }}"></script>
+		<script src="{{ asset('scripts/app.js?' . config('app.build')) }}"></script>
 		@stack('scripts')
 		
 		<meta name="theme-color" content="@yield('color')">
