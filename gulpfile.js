@@ -30,30 +30,34 @@ gulp.task('watch', ['scripts', 'styles', 'images', 'fonts'], function () {
  */
 gulp.task('scripts', function () {
 	
-	// Clean the directory
-	exec('rm -r public/js');
-	
-	// Compile the scripts
-	gulp.src([
-		'node_modules/jquery/dist/jquery.js',
-		'resources/assets/scripts/**/*.js'
-	])
-	.pipe(concat('app.js'))
-	.pipe(sourcemaps.init())
-	.pipe(uglify())
-	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest('public/js'));
-	
-	// Compile the publications scripts
-	return gulp.src([
-		'node_modules/prismjs/prism.js',
-		'node_modules/prismjs/components/prism-http.js'
-	])
-	.pipe(concat('publications.js'))
-	.pipe(sourcemaps.init())
-	.pipe(uglify())
-	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest('public/js'));
+	// Clean the directory and export the language strings
+	return exec('rm -r public/js && mkdir -p public/js && php artisan lang:js', function () {
+		
+		// Compile the scripts
+		gulp.src([
+			'storage/framework/cache/i18n.js',
+			'node_modules/jquery/dist/jquery.js',
+			'node_modules/cookieconsent/src/cookieconsent.js',
+			'resources/assets/scripts/**/*.js'
+		])
+		.pipe(concat('app.js'))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('public/js'));
+		
+		// Compile the publications scripts
+		gulp.src([
+			'node_modules/prismjs/prism.js',
+			'node_modules/prismjs/components/prism-http.js'
+		])
+		.pipe(concat('publications.js'))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('public/js'));
+		
+	});
 	
 });
 
@@ -63,43 +67,46 @@ gulp.task('scripts', function () {
 gulp.task('styles', function () {
 	
 	// Clean the directory
-	exec('rm -r public/css');
-	
-	// Compile the styles
-	gulp.src([
-		'node_modules/normalize.css/normalize.css',
-		'resources/assets/styles/colors.scss',
-		'resources/assets/styles/mixins.scss',
-		'resources/assets/styles/animations.scss',
-		'resources/assets/styles/icons.scss',
-		'resources/assets/styles/main.scss'
-	])
-	.pipe(concat('app.css'))
-	.pipe(sass().on('error', sass.logError))
-	.pipe(cssnano({
-		discardComments: {
-			removeAll: true
-		},
-		zindex: false
-	}))
-	.pipe(gulp.dest('public/css'));
-	
-	// Compile the publications styles
-	return gulp.src([
-		'node_modules/prismjs/themes/prism.css',
-		'resources/assets/styles/colors.scss',
-		'resources/assets/styles/mixins.scss',
-		'resources/assets/styles/publications.scss'
-	])
-	.pipe(concat('publications.css'))
-	.pipe(sass().on('error', sass.logError))
-	.pipe(cssnano({
-		discardComments: {
-			removeAll: true
-		},
-		zindex: false
-	}))
-	.pipe(gulp.dest('public/css'));
+	return exec('rm -r public/css', function () {
+		
+		// Compile the styles
+		gulp.src([
+			'node_modules/normalize.css/normalize.css',
+			'node_modules/cookieconsent/build/cookieconsent.min.css',
+			'resources/assets/styles/colors.scss',
+			'resources/assets/styles/mixins.scss',
+			'resources/assets/styles/animations.scss',
+			'resources/assets/styles/icons.scss',
+			'resources/assets/styles/main.scss'
+		])
+		.pipe(concat('app.css'))
+		.pipe(sass().on('error', sass.logError))
+		.pipe(cssnano({
+			discardComments: {
+				removeAll: true
+			},
+			zindex: false
+		}))
+		.pipe(gulp.dest('public/css'));
+		
+		// Compile the publications styles
+		gulp.src([
+			'node_modules/prismjs/themes/prism.css',
+			'resources/assets/styles/colors.scss',
+			'resources/assets/styles/mixins.scss',
+			'resources/assets/styles/publications.scss'
+		])
+		.pipe(concat('publications.css'))
+		.pipe(sass().on('error', sass.logError))
+		.pipe(cssnano({
+			discardComments: {
+				removeAll: true
+			},
+			zindex: false
+		}))
+		.pipe(gulp.dest('public/css'));
+		
+	});
 	
 });
 
@@ -109,10 +116,12 @@ gulp.task('styles', function () {
 gulp.task('images', function () {
 	
 	// Clean the directory
-	exec('rm -r public/images');
-	
-	// Copy the images
-	return gulp.src('resources/assets/images/**/*').pipe(gulp.dest('public/images'));
+	return exec('rm -r public/images', function () {
+		
+		// Copy the images
+		gulp.src('resources/assets/images/**/*').pipe(gulp.dest('public/images'));
+		
+	});
 	
 });
 
@@ -122,10 +131,10 @@ gulp.task('images', function () {
 gulp.task('fonts', function () {
 	
 	// Clean the directory
-	exec('rm -r public/fonts');
-	
-	// Copy the fonts
-	return gulp.src('resources/assets/fonts/**/*').pipe(gulp.dest('public/fonts'));
+	return exec('rm -r public/fonts', function () {
+		// Copy the fonts
+		gulp.src('resources/assets/fonts/**/*').pipe(gulp.dest('public/fonts'));
+	});
 	
 });
 
@@ -135,11 +144,10 @@ gulp.task('fonts', function () {
 gulp.task('manifest', function () {
 	
 	// Clean the files
-	exec('rm public/manifest.json');
-	exec('rm public/browserconfig.xml');
-	
-	// Copy the files
-	gulp.src('resources/assets/manifest.json').pipe(gulp.dest('public'));
-	return gulp.src('resources/assets/browserconfig.xml').pipe(gulp.dest('public'));
+	return exec('rm public/manifest.json && rm public/browserconfig.xml', function () {
+		// Copy the files
+		gulp.src('resources/assets/manifest.json').pipe(gulp.dest('public'));
+		gulp.src('resources/assets/browserconfig.xml').pipe(gulp.dest('public'));
+	});
 	
 });

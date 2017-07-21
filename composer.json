@@ -13,7 +13,8 @@
 		"php": "7.1.*",
 		"ext-pdo": "*",
 		"graham-campbell/htmlmin": "^4.5",
-		"laravel/framework": "5.4.*"
+		"laravel/framework": "5.4.*",
+		"mariuzzo/laravel-js-localization": "^1.4"
 	},
 	"autoload": {
 		"classmap": [

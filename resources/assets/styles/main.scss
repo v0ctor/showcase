@@ -79,6 +79,11 @@ mark {
 	background-color: #fdffb6;
 }
 
+/** Cookie consent **/
+.cc-message a {
+	padding: 0;
+}
+
 /** Gradients **/
 .gradient-one {
 	background: $gradient-purple;
