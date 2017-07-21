@@ -153,6 +153,7 @@ header {
 		
 		.description {
 			font-size: 20px;
+			text-align: center;
 			
 			a {
 				@extend .a;
@@ -285,6 +286,52 @@ section {
 				-webkit-background-clip: text;
 				background-clip: text;
 				color: transparent;
+			}
+		}
+	}
+	
+	&.languages {
+		.language {
+			margin: 5px;
+			padding: 10px;
+			font-size: 17px;
+			font-weight: 400;
+			border-radius: 6px;
+			border: 1px solid $dark-grey-1;
+			color: #666;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			&.ca {
+				border-color: $grapefruit-1;
+				color: $grapefruit-1;
+				
+				.badge {
+					background-color: $grapefruit-1;
+				}
+			}
+			
+			&.es {
+				border-color: $mint-2;
+				color: $mint-2;
+				
+				.badge {
+					background-color: $mint-2;
+				}
+			}
+			
+			&.en {
+				border-color: $aqua-2;
+				color: $aqua-2;
+				
+				.badge {
+					background-color: $aqua-2;
+				}
+			}
+			
+			.badge {
+				margin-left: 7px;
 			}
 		}
 	}
@@ -426,51 +473,6 @@ section {
 	
 	.level-100 {
 		@extend .level;
-	}
-}
-
-/** Languages **/
-.language {
-	margin: 5px;
-	padding: 10px;
-	font-size: 17px;
-	font-weight: 400;
-	border-radius: 6px;
-	border: 1px solid $dark-grey-1;
-	color: #666;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	&.ca {
-		border-color: $grapefruit-1;
-		color: $grapefruit-1;
-		
-		.badge {
-			background-color: $grapefruit-1;
-		}
-	}
-	
-	&.es {
-		border-color: $mint-2;
-		color: $mint-2;
-		
-		.badge {
-			background-color: $mint-2;
-		}
-	}
-	
-	&.en {
-		border-color: $aqua-2;
-		color: $aqua-2;
-		
-		.badge {
-			background-color: $aqua-2;
-		}
-	}
-	
-	.badge {
-		margin-left: 7px;
 	}
 }
 
