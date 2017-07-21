@@ -12,7 +12,7 @@
 @endpush
 
 @push('scripts')
-<script src="{{ asset('js/publications.js?' . config('app.build')) }}"></script>
+<script src="{{ asset('scripts/publications.js?' . config('app.build')) }}"></script>
 @endpush
 
 @section('body')
