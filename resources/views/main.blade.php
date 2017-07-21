@@ -2,7 +2,7 @@
 
 @section('title', trans('app.author.full_name'))
 @section('description', trans('app.description', ['age' => Carbon::createFromDate(1994, 1, 31)->age]))
-@section('image', asset('images/header/4k.jpg'))
+@section('image', asset('images/headers/main/4k.jpg'))
 @section('type', 'website')
 @section('color', '#181830')
 

@@ -32,7 +32,7 @@ a:visited {
 	}
 }
 
-p a, li a {
+p a, li a, .a {
 	transition: color .3s ease;
 	text-decoration: underline !important;
 	
@@ -128,7 +128,7 @@ header {
 	&.main {
 		color: white;
 		text-shadow: 0 0 30px black;
-		@include background-image('/images/header/4k.jpg', '/images/header/2k.jpg', '/images/header/1k.jpg', '/images/header/hd.jpg');
+		@include background-image('/images/headers/main/4k.jpg', '/images/headers/main/2k.jpg', '/images/headers/main/1k.jpg', '/images/headers/main/hd.jpg');
 		
 		.avatar {
 			width: 130px;
@@ -140,6 +140,23 @@ header {
 		
 		h1 {
 			margin: 10px 0;
+		}
+	}
+	
+	&.error {
+		background-color: #d8d8d8;
+		@include background-image('/images/headers/errors/4k.jpg', '/images/headers/errors/2k.jpg', '/images/headers/errors/1k.jpg', '/images/headers/errors/hd.jpg');
+		
+		h1 {
+			margin-bottom: 15px;
+		}
+		
+		.description {
+			font-size: 20px;
+			
+			a {
+				@extend .a;
+			}
 		}
 	}
 	
