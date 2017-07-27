@@ -54,7 +54,7 @@ return [
 		'apadrina_un_olivo' => [
 			'position'     => 'Enginyer de programari',
 			'organization' => 'Apadrina un olivo',
-			'period'       => 'març de 2017 — actualitat',
+			'period'       => 'març — juliol de 2017',
 		],
 		
 		'habtium' => [

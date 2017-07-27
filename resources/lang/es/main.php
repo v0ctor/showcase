@@ -54,7 +54,7 @@ return [
 		'apadrina_un_olivo' => [
 			'position'     => 'Ingeniero de software',
 			'organization' => 'Apadrina un olivo',
-			'period'       => 'marzo de 2017 — actualidad',
+			'period'       => 'marzo — julio de 2017',
 		],
 		
 		'habtium' => [
