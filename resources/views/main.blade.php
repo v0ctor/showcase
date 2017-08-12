@@ -73,6 +73,17 @@
 		<div class="column stretch">
 			<div class="job">
 				<div class="column">
+					<div class="position">@lang('main.experience.mobimento.position')</div>
+					<div class="organization">
+						<a href="http://mobimento.com">@lang('main.experience.mobimento.organization')</a>
+					</div>
+					<div class="period"><span class="badge">@lang('main.experience.mobimento.period')</span>
+					</div>
+				</div>
+				<div class="logo mobimento"></div>
+			</div>
+			<div class="job">
+				<div class="column">
 					<div class="position">@lang('main.experience.apadrina_un_olivo.position')</div>
 					<div class="organization">
 						<a href="https://apadrinaunolivo.org">@lang('main.experience.apadrina_un_olivo.organization')</a>

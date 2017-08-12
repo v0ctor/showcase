@@ -408,6 +408,11 @@ section {
 		width: 56px;
 		margin-left: 20px;
 		
+		&.mobimento {
+			background: url('/images/organizations/mobimento.png') center no-repeat;
+			background-size: contain;
+		}
+		
 		&.apadrina-un-olivo {
 			background: url('/images/organizations/apadrina_un_olivo.png') center no-repeat;
 			background-size: contain;

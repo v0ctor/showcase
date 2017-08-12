@@ -51,6 +51,12 @@ return [
 	'experience' => [
 		'title' => 'Experience',
 		
+		'mobimento' => [
+			'position'     => 'Back-end software developer',
+			'organization' => 'Mobimento Mobile',
+			'period'       => 'August 2017 — now',
+		],
+		
 		'apadrina_un_olivo' => [
 			'position'     => 'Software engineer',
 			'organization' => 'Apadrina un olivo',

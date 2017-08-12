@@ -51,6 +51,12 @@ return [
 	'experience' => [
 		'title' => 'Experiència professional',
 		
+		'mobimento' => [
+			'position'     => 'Desenvolupador de programari <em>back-end</em>',
+			'organization' => 'Mobimento Mobile',
+			'period'       => 'agost de 2017 — actualitat',
+		],
+		
 		'apadrina_un_olivo' => [
 			'position'     => 'Enginyer de programari',
 			'organization' => 'Apadrina un olivo',
