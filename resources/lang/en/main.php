@@ -52,7 +52,7 @@ return [
 		'title' => 'Experience',
 		
 		'mobimento' => [
-			'position'     => 'Back-end software developer',
+			'position'     => 'Back-end software engineer',
 			'organization' => 'Mobimento Mobile',
 			'period'       => 'August 2017 — now',
 		],

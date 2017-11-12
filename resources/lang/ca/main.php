@@ -52,7 +52,7 @@ return [
 		'title' => 'Experiència professional',
 		
 		'mobimento' => [
-			'position'     => 'Desenvolupador de programari <em>back-end</em>',
+			'position'     => 'Enginyer de programari <em>back-end</em>',
 			'organization' => 'Mobimento Mobile',
 			'period'       => 'agost de 2017 — actualitat',
 		],
