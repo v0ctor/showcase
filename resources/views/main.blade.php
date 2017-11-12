@@ -323,7 +323,7 @@
 					</div>
 					<div class="skill">
 						<span>@lang('main.skills.docker')</span>
-						<div class="level-50"></div>
+						<div class="level-75"></div>
 					</div>
 				</div>
 			</div>
