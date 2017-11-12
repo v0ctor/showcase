@@ -4,14 +4,14 @@
 		"cookieconsent": "^3.0.4",
 		"jquery": "^3.2.1",
 		"normalize.css": "^7.0.0",
-		"prismjs": "^1.6.0"
+		"prismjs": "^1.8.4"
 	},
 	"devDependencies": {
 		"gulp": "^3.9.1",
 		"gulp-concat": "^2.6.1",
 		"gulp-cssnano": "^2.1.2",
 		"gulp-sass": "^3.1.0",
-		"gulp-sourcemaps": "^2.6.0",
+		"gulp-sourcemaps": "^2.6.1",
 		"gulp-uglify": "^2.1.2"
 	}
 }

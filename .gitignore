@@ -1,8 +1,6 @@
 .env
 /.idea
-/composer.lock
 /node_modules
-package-lock.json
 /public/*
 !/public/index.php
 !/public/robots.txt

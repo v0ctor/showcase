@@ -183,7 +183,7 @@ return [
 		/*
 		 * Package Service Providers...
 		 */
-		GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+		HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
 		Mariuzzo\LaravelJsLocalization\LaravelJsLocalizationServiceProvider::class,
 		
 		/*
