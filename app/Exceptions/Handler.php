@@ -11,8 +11,8 @@ use Illuminate\Session\TokenMismatchException;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
-class Handler extends ExceptionHandler {
-	
+class Handler extends ExceptionHandler
+{
 	/**
 	 * A list of the exception types that are not reported.
 	 *
@@ -26,7 +26,7 @@ class Handler extends ExceptionHandler {
 		TokenMismatchException::class,
 		ValidationException::class,
 	];
-	
+
 	/**
 	 * A list of the inputs that are never flashed for validation exceptions.
 	 *
@@ -36,7 +36,7 @@ class Handler extends ExceptionHandler {
 		'password',
 		'password_confirmation',
 	];
-	
+
 	/**
 	 * Report or log an exception.
 	 *
@@ -45,10 +45,11 @@ class Handler extends ExceptionHandler {
 	 * @param  \Exception $exception
 	 * @return void
 	 */
-	public function report(Exception $exception) {
+	public function report(Exception $exception)
+	{
 		parent::report($exception);
 	}
-	
+
 	/**
 	 * Render an exception into an HTTP response.
 	 *
@@ -56,7 +57,8 @@ class Handler extends ExceptionHandler {
 	 * @param  \Exception               $exception
 	 * @return \Illuminate\Http\Response
 	 */
-	public function render($request, Exception $exception) {
+	public function render($request, Exception $exception)
+	{
 		return parent::render($request, $exception);
 	}
 }

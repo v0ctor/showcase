@@ -15,14 +15,15 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode;
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
 use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
+use Illuminate\Http\Middleware\SetCacheHeaders;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 
 /**
  * HTTP kernel.
  */
-class Kernel extends HttpKernel {
-	
+class Kernel extends HttpKernel
+{
 	/**
 	 * The application's global HTTP middleware stack.
 	 *
@@ -38,7 +39,7 @@ class Kernel extends HttpKernel {
 		ConvertEmptyStringsToNull::class,
 		SetLanguage::class,
 	];
-	
+
 	/**
 	 * The application's route middleware groups.
 	 *
@@ -50,13 +51,13 @@ class Kernel extends HttpKernel {
 			AddQueuedCookiesToResponse::class,
 			SubstituteBindings::class,
 		],
-		
+
 		'api' => [
 			'throttle:60,1',
 			'bindings',
 		],
 	];
-	
+
 	/**
 	 * The application's route middleware.
 	 *
@@ -65,12 +66,12 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth'       => Authenticate::class,
-		'auth.basic' => AuthenticateWithBasicAuth::class,
-		'bindings'   => SubstituteBindings::class,
-		'can'        => Authorize::class,
-		'guest'      => RedirectIfAuthenticated::class,
-		'throttle'   => ThrottleRequests::class,
+		'auth'          => Authenticate::class,
+		'auth.basic'    => AuthenticateWithBasicAuth::class,
+		'bindings'      => SubstituteBindings::class,
+		'cache.headers' => SetCacheHeaders::class,
+		'can'           => Authorize::class,
+		'guest'         => RedirectIfAuthenticated::class,
+		'throttle'      => ThrottleRequests::class,
 	];
-	
 }

@@ -1,8 +1,8 @@
 <?php
 
 use App\Helpers\Formatter;
-use Illuminate\Support\Facades\App;
 use App\Http\Middleware\SetLanguage;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -30,7 +30,7 @@ Route::get('websocket', function () {
 		setlocale(LC_TIME, SetLanguage::SYSTEM_LOCALES['es']);
 		App::setLocale('es');
 	}
-	
+
 	return view('websocket');
 });
 
@@ -48,6 +48,6 @@ Route::get('bitcoin', function () {
 		setlocale(LC_TIME, SetLanguage::SYSTEM_LOCALES['es']);
 		App::setLocale('es');
 	}
-	
+
 	return view('bitcoin', ['formatter' => resolve(Formatter::class)]);
 });

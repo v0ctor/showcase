@@ -1,12 +1,9 @@
 <?php
-/**
- * Trusted proxy configuration.
- */
 
 use Illuminate\Http\Request;
 
 return [
-	
+
 	/*
 	 * Set trusted proxy IP addresses.
 	 *
@@ -17,47 +14,33 @@ return [
 	 * within TrustedProxy to trust any proxy
 	 * that connects directly to your server,
 	 * a requirement when you cannot know the address
-	 * of your proxy (e.g. if using Rackspace balancers).
+	 * of your proxy (e.g. if using ELB or similar).
 	 *
-	 * The "**" character is syntactic sugar within
-	 * TrustedProxy to trust not just any proxy that
-	 * connects directly to your server, but also
-	 * proxies that connect to those proxies, and all
-	 * the way back until you reach the original source
-	 * IP. It will mean that $request->getClientIp()
-	 * always gets the originating client IP, no matter
-	 * how many proxies that client's request has
-	 * subsequently passed through.
 	 */
-	'proxies' => [],
-	
+	'proxies' => null, // [<ip addresses>,], '*'
+
 	/*
-	 * Default Header Names
-	 *
-	 * Change these if the proxy does
-	 * not send the default header names.
-	 *
-	 * Note that headers such as X-Forwarded-For
-	 * are transformed to HTTP_X_FORWARDED_FOR format.
-	 *
-	 * The following are Symfony defaults, found in
-	 * \Symfony\Component\HttpFoundation\Request::$trustedHeaders
-	 *
-	 * You may optionally set headers to 'null' here if you'd like
-	 * for them to be considered untrusted instead. Ex:
-	 *
-	 * Illuminate\Http\Request::HEADER_CLIENT_HOST  => null,
-	 *
-	 * WARNING: If you're using AWS Elastic Load Balancing or Heroku,
-	 * the FORWARDED and X_FORWARDED_HOST headers should be set to null
-	 * as they are currently unsupported there.
+	 * To trust one or more specific proxies that connect
+	 * directly to your server, use an array of IP addresses:
 	 */
-	'headers' => [
-		Request::HEADER_FORWARDED         => null,
-		Request::HEADER_X_FORWARDED_FOR   => 'X_FORWARDED_FOR',
-		Request::HEADER_X_FORWARDED_HOST  => null,
-		Request::HEADER_X_FORWARDED_PROTO => 'X_FORWARDED_PROTO',
-		Request::HEADER_X_FORWARDED_PORT  => 'X_FORWARDED_PORT',
-	]
+	# 'proxies' => ['192.168.1.1'],
+
+	/*
+	 * Or, to trust all proxies that connect
+	 * directly to your server, use a "*"
+	 */
+	# 'proxies' => '*',
+
+	/*
+	 * Which headers to use to detect proxy related data (For, Host, Proto, Port)
+	 *
+	 * Options include:
+	 *
+	 * - Illuminate\Http\Request::HEADER_X_FORWARDED_ALL (use all x-forwarded-* headers to establish trust)
+	 * - Illuminate\Http\Request::HEADER_FORWARDED (use the FORWARDED header to establish trust)
+	 *
+	 * @link https://symfony.com/doc/current/deployment/proxies.html
+	 */
+	'headers' => Request::HEADER_X_FORWARDED_ALL,
 
 ];

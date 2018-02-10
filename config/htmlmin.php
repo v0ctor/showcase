@@ -4,7 +4,7 @@
  */
 
 return [
-	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Automatic Blade Optimizations
@@ -19,9 +19,9 @@ return [
 	| Default: false
 	|
 	*/
-	
+
 	'blade' => true,
-	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Force Blade Optimizations
@@ -37,7 +37,7 @@ return [
 	| Default: false
 	|
 	*/
-	
+
 	'force' => false,
 
 ];
