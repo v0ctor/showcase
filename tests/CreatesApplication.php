@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Hash;
 
 trait CreatesApplication
 {
-
 	/**
 	 * Creates the application.
 	 *
@@ -23,5 +22,4 @@ trait CreatesApplication
 
 		return $app;
 	}
-
 }

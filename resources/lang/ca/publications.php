@@ -4,7 +4,7 @@
  */
 
 return [
-	
+
 	'bibliography' => 'Bibliografia',
 	'enumeration'  => ':elements i :last',
 	'section'      => '":name" en :publication',
