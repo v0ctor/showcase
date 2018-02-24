@@ -13,7 +13,7 @@ ENV TEMPORARY apt-transport-https curl
 RUN apt-get update && \
     apt-get -y upgrade && \
 	apt-get -y --no-install-recommends install apt-utils && \
-	apt-get -y --no-install-recommends install $TEMPORARY ca-certificates gcc git gnupg2 locales
+	apt-get -y --no-install-recommends install $TEMPORARY ca-certificates gcc git gnupg2 iproute locales
 
 # Default user
 RUN useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME

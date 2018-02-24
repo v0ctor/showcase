@@ -69,7 +69,7 @@ docker-compose up -d
 Then, enter to the `app` container.
 
 ```Shell
-docker exec -it --user=$(id -u) app bash
+docker exec -it -u=$(id -u) app bash
 ```
 
 ### Initialization
