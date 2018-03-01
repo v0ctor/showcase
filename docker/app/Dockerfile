@@ -53,9 +53,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN echo "xdebug.remote_host=`ip route | awk '/default/ { print $3 }'`" >> /etc/php/7.2/fpm/conf.d/20-xdebug.ini
 
 # Node
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 	apt-get -y --no-install-recommends install nodejs && \
 	npm install --global npm gulp-cli
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
 
 # Cleanup
 RUN apt-get -y remove $TEMPORARY && \
