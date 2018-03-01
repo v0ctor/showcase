@@ -11,28 +11,28 @@ use Illuminate\Support\ServiceProvider;
  */
 class FormatServiceProvider extends ServiceProvider
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	protected $defer = true;
+    /**
+     * {@inheritdoc}
+     */
+    protected $defer = true;
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register(): void
-	{
-		$this->app->singleton(Formatter::class, function () {
-			return new Formatter(App::getLocale());
-		});
-	}
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        $this->app->singleton(Formatter::class, function () {
+            return new Formatter(App::getLocale());
+        });
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function provides(): array
-	{
-		return [Formatter::class];
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function provides(): array
+    {
+        return [Formatter::class];
+    }
 }

@@ -1,60 +1,60 @@
 {
-	"name": "victordzmr/web",
-	"license": "MIT",
-	"homepage": "https://victordiaz.me",
-	"authors": [
-		{
-			"name": "Víctor Díaz Marco",
-			"email": "victor@victordiaz.me",
-			"homepage": "https://victordiaz.me"
-		}
-	],
-	"require": {
-		"php": ">=7.1.3",
-		"ext-pdo": "*",
-		"fideloper/proxy": "~4.0",
-		"htmlmin/htmlmin": "^5.6",
-		"laravel/framework": "5.6.*",
-		"mariuzzo/laravel-js-localization": "^1.4"
-	},
-	"require-dev": {
-		"filp/whoops": "~2.0",
-		"nunomaduro/collision": "~1.1",
-		"fzaninotto/faker": "~1.4",
-		"laravel/tinker": "~1.0",
-		"mockery/mockery": "~1.0",
-		"phpunit/phpunit": "~7.0"
-	},
-	"autoload": {
-		"classmap": [
-			"database/seeds",
-			"database/factories"
-		],
-		"psr-4": {
-			"App\\": "app/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Tests\\": "tests/"
-		}
-	},
-	"extra": {
-		"laravel": {
-			"dont-discover": []
-		}
-	},
-	"scripts": {
-		"post-autoload-dump": [
-			"Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-			"@php artisan package:discover"
-		]
-	},
-	"config": {
-		"preferred-install": "dist",
-		"sort-packages": true,
-		"optimize-autoloader": true
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true
+    "name": "victordzmr/web",
+    "license": "MIT",
+    "homepage": "https://victordiaz.me",
+    "authors": [
+        {
+            "name": "Víctor Díaz Marco",
+            "email": "victor@victordiaz.me",
+            "homepage": "https://victordiaz.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "ext-pdo": "*",
+        "fideloper/proxy": "~4.0",
+        "htmlmin/htmlmin": "^5.6",
+        "laravel/framework": "5.6.*",
+        "mariuzzo/laravel-js-localization": "^1.4"
+    },
+    "require-dev": {
+        "filp/whoops": "~2.0",
+        "nunomaduro/collision": "~1.1",
+        "fzaninotto/faker": "~1.4",
+        "laravel/tinker": "~1.0",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~7.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

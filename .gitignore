@@ -1,9 +1,15 @@
-.env
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDEs
 /.idea
+/.vscode
+
+# Project
 /node_modules
 /public/*
 !/public/index.php
 !/public/robots.txt
 /vendor
-.DS_Store
-Thumbs.db
+/.env

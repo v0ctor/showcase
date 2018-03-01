@@ -4,145 +4,145 @@
 
 /** Common **/
 .publication {
-	h2 {
-		width: 100%;
-		text-align: left;
-	}
-	
-	p {
-		width: 100%;
-		text-align: justify;
-	}
-	
-	ul {
-		font-size: 18px;
-		
-		li {
-			margin: 0.4em 0;
-		}
-	}
-	
-	.scroll {
-		max-width: 100%;
-		margin: 1em 0;
-		overflow-x: scroll;
-	}
-	
-	table {
-		border-spacing: 0;
-		table-layout: fixed;
-		border-radius: 6px;
-		border: 1px solid #ccc;
-		
-		th {
-			background-color: rgba(204, 204, 204, .3);
-		}
-		
-		th, td {
-			padding: 10px 14px;
-			border-bottom: 1px solid #ccc;
-			text-align: center !important;
-		}
-		
-		tbody {
-			tr:last-child th, tr:last-child td {
-				border-bottom: none;
-			}
-		}
-	}
-	
-	header {
-		&.websocket {
-			background-color: #6090c0;
-			
-			$base-url: '/images/publications/websocket/header/';
-			@include background-image($base-url + '4k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
-			
-			h1 {
-				color: #6090c0;
-			}
-			
-			.author, .date {
-				background: rgba(0, 0, 0, .2);
-			}
-		}
-		
-		&.bitcoin {
-			background-color: #c07860;
-			
-			$base-url: '/images/publications/bitcoin/header/';
-			@include background-image($base-url + '4k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
-			
-			@media (min-device-width: 768px) {
-				box-shadow: inset 0 -150vh 150vh -130vh rgba(0, 0, 0, .4);
-			}
-			
-			h1 {
-				color: #c07860;
-			}
-			
-			.author, .date {
-				background: #c07860;
-			}
-			
-			.arrow {
-				opacity: 1;
-			}
-		}
-		
-		h1 {
-			background-color: white;
-			border-radius: 8px;
-			padding: 5px 14px;
-		}
-		
-		.author, .date {
-			padding: 5px 8px;
-			border-radius: 5px;
-			font-size: 16px;
-			color: white;
-		}
-		
-		.author {
-			margin-bottom: 8px;
-		}
-	}
-	
-	section {
-		padding: 40px 10vw;
-		
-		&.bibliography {
-			.name {
-				font-variant: small-caps;
-			}
-			
-			a {
-				font-style: italic;
-			}
-		}
-		
-		&.introduction {
-			p {
-				text-align: center;
-			}
-		}
-		
-		img {
-			max-width: 100%;
-			margin: 1em 0;
-			
-			&.full {
-				width: calc(100% + 20vw);
-				max-width: initial;
-				margin-left: -10vw;
-				margin-right: -10vw;
-			}
-		}
-		
-		.figure {
-			margin-bottom: 1em;
-			color: $dark-grey-1;
-			text-align: center;
-		}
-	}
+    h2 {
+        width: 100%;
+        text-align: left;
+    }
+
+    p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    ul {
+        font-size: 18px;
+
+        li {
+            margin: 0.4em 0;
+        }
+    }
+
+    .scroll {
+        max-width: 100%;
+        margin: 1em 0;
+        overflow-x: scroll;
+    }
+
+    table {
+        border-spacing: 0;
+        table-layout: fixed;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+
+        th {
+            background-color: rgba(204, 204, 204, .3);
+        }
+
+        th, td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #ccc;
+            text-align: center !important;
+        }
+
+        tbody {
+            tr:last-child th, tr:last-child td {
+                border-bottom: none;
+            }
+        }
+    }
+
+    header {
+        &.websocket {
+            background-color: #6090c0;
+
+            $base-url: '/images/publications/websocket/header/';
+            @include background-image($base-url + '4k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
+
+            h1 {
+                color: #6090c0;
+            }
+
+            .author, .date {
+                background: rgba(0, 0, 0, .2);
+            }
+        }
+
+        &.bitcoin {
+            background-color: #c07860;
+
+            $base-url: '/images/publications/bitcoin/header/';
+            @include background-image($base-url + '4k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
+
+            @media (min-device-width: 768px) {
+                box-shadow: inset 0 -150vh 150vh -130vh rgba(0, 0, 0, .4);
+            }
+
+            h1 {
+                color: #c07860;
+            }
+
+            .author, .date {
+                background: #c07860;
+            }
+
+            .arrow {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            background-color: white;
+            border-radius: 8px;
+            padding: 5px 14px;
+        }
+
+        .author, .date {
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .author {
+            margin-bottom: 8px;
+        }
+    }
+
+    section {
+        padding: 40px 10vw;
+
+        &.bibliography {
+            .name {
+                font-variant: small-caps;
+            }
+
+            a {
+                font-style: italic;
+            }
+        }
+
+        &.introduction {
+            p {
+                text-align: center;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            margin: 1em 0;
+
+            &.full {
+                width: calc(100% + 20vw);
+                max-width: initial;
+                margin-left: -10vw;
+                margin-right: -10vw;
+            }
+        }
+
+        .figure {
+            margin-bottom: 1em;
+            color: $dark-grey-1;
+            text-align: center;
+        }
+    }
 }

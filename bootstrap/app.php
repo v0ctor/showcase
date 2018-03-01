@@ -14,7 +14,7 @@ use Illuminate\Foundation\Application;
 
 # Create the application
 $app = new Application(
-	realpath(__DIR__ . '/../')
+    realpath(__DIR__ . '/../')
 );
 
 # Bind important interfaces
