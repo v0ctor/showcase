@@ -12,12 +12,11 @@ The project follows these standards:
 * [PSR-4](http://www.php-fig.org/psr/psr-4/): autoloading.
 * [PHPDoc](https://docs.phpdoc.org/references/phpdoc/index.html): documentation.
 
-Modified and extended by the following rules:
+Extended by the following rules:
 
 * Code must sort `use` declarations in alphabetical order.
-* Code must use an indent of one tab, and must not use spaces for indenting.
 * Code must use the short array declaration style.
-* Code must align key-value pairs in multiline arrays.
+* Code must align multiline constant declarations and array key-value pairs.
 * Code must use a comma after last element in multiline arrays.
 
 ### Directory structure

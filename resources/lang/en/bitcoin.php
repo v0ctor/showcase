@@ -5,210 +5,210 @@
 
 return [
 
-	'title'       => 'Bitcoin: approach and protocol',
-	'description' => '',
+    'title'       => 'Bitcoin: approach and protocol',
+    'description' => '',
 
-	'introduction' => [
-		'1' => '',
+    'introduction' => [
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
+        '3' => '',
 
-		'4' => '',
-	],
+        '4' => '',
+    ],
 
-	'cryptographic_basis' => [
-		'title' => '',
+    'cryptographic_basis' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'hash_functions' => [
-			'title' => '',
+        'hash_functions' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'table' => [
-				'0' => [
-					'a' => '',
-					'b' => '',
-				],
+            'table' => [
+                '0' => [
+                    'a' => '',
+                    'b' => '',
+                ],
 
-				'1' => [
-					'a' => '',
-					'b' => '',
-				],
+                '1' => [
+                    'a' => '',
+                    'b' => '',
+                ],
 
-				'2' => [
-					'a' => '',
-					'b' => '',
-				],
+                '2' => [
+                    'a' => '',
+                    'b' => '',
+                ],
 
-				'3' => [
-					'a' => '',
-					'b' => '',
-				],
-			],
+                '3' => [
+                    'a' => '',
+                    'b' => '',
+                ],
+            ],
 
-			'3' => '',
+            '3' => '',
 
-			'4' => [
-				'a' => '',
+            '4' => [
+                'a' => '',
 
-				'b' => '',
+                'b' => '',
 
-				'c' => '',
+                'c' => '',
 
-				'd' => '',
-			],
+                'd' => '',
+            ],
 
-			'5' => '',
-		],
+            '5' => '',
+        ],
 
-		'asymmetric_cryptography' => [
-			'title' => '',
+        'asymmetric_cryptography' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
-		],
+            '3' => '',
+        ],
 
-		'digital_signature' => [
-			'title' => '',
+        'digital_signature' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => [
-				'a' => '',
+            '2' => [
+                'a' => '',
 
-				'b' => '',
+                'b' => '',
 
-				'c' => '',
-			],
+                'c' => '',
+            ],
 
-			'3' => '',
-		],
-	],
+            '3' => '',
+        ],
+    ],
 
-	'protocol' => [
-		'title' => '',
+    'protocol' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'addresses' => [
-			'title' => '',
+        'addresses' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
+            '3' => '',
 
-			'4' => '',
+            '4' => '',
 
-			'5' => '',
-		],
+            '5' => '',
+        ],
 
-		'transactions' => [
-			'title' => '',
+        'transactions' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
-		],
+            '2' => '',
+        ],
 
-		'blocks' => [
-			'title' => '',
+        'blocks' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
+            '3' => '',
 
-			'4' => '',
-		],
+            '4' => '',
+        ],
 
-		'proof_of_work_test' => [
-			'title' => '',
+        'proof_of_work_test' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'table' => [
-				'block'                  => ':number',
-				'block_hash'             => '',
-				'merkle_root'            => '',
-				'number_of_transactions' => '',
-				'difficulty'             => '',
-				'height'                 => '',
-				'size'                   => '',
-				'reward'                 => '',
-				'version'                => '',
-				'date'                   => '',
-				'nonce'                  => '',
-			],
+            'table' => [
+                'block'                  => ':number',
+                'block_hash'             => '',
+                'merkle_root'            => '',
+                'number_of_transactions' => '',
+                'difficulty'             => '',
+                'height'                 => '',
+                'size'                   => '',
+                'reward'                 => '',
+                'version'                => '',
+                'date'                   => '',
+                'nonce'                  => '',
+            ],
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
+            '3' => '',
 
-			'4' => '',
+            '4' => '',
 
-			'5' => '',
+            '5' => '',
 
-			'6' => '',
-		],
+            '6' => '',
+        ],
 
-		'block_chain' => [
-			'title' => '',
+        'block_chain' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
+            '3' => '',
 
-			'4' => '',
-		],
+            '4' => '',
+        ],
 
-		'six_confirmations' => [
-			'title' => '',
+        'six_confirmations' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'table' => [
-				'control_of_network_capacity' => 'Control of :percent % of network capacity',
-				'blocks_to_rewrite'           => '',
-				'probability_of_success'      => '',
-			],
+            'table' => [
+                'control_of_network_capacity' => 'Control of :percent % of network capacity',
+                'blocks_to_rewrite'           => '',
+                'probability_of_success'      => '',
+            ],
 
-			'3' => '',
-		],
-	],
+            '3' => '',
+        ],
+    ],
 
-	'conclusion' => [
-		'title' => '',
+    'conclusion' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
+        '3' => '',
 
-		'4' => '',
-	],
+        '4' => '',
+    ],
 
-	'figures' => [
-		'1' => '',
-		'2' => '',
-		'3' => '',
-		'4' => '',
-	],
+    'figures' => [
+        '1' => '',
+        '2' => '',
+        '3' => '',
+        '4' => '',
+    ],
 
 ];

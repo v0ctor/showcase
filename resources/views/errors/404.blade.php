@@ -7,8 +7,8 @@
 @section('color', '#d8d8d8')
 
 @section('body')
-	<header class="error">
-		<h1>@lang('errors.not_found.title')</h1>
-		<div class="description">@lang('errors.not_found.description')</div>
-	</header>
+    <header class="error">
+        <h1>@lang('errors.not_found.title')</h1>
+        <div class="description">@lang('errors.not_found.description')</div>
+    </header>
 @endsection

@@ -5,170 +5,170 @@
 
 return [
 
-	'title'       => 'Knowing WebSocket',
-	'description' => '',
+    'title'       => 'Knowing WebSocket',
+    'description' => '',
 
-	'introduction' => [
-		'1' => '',
+    'introduction' => [
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
+        '3' => '',
 
-		'4' => '',
-	],
+        '4' => '',
+    ],
 
-	'protocol' => [
-		'title' => '',
+    'protocol' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
+        '3' => '',
 
-		'4' => '',
+        '4' => '',
 
-		'5' => '',
+        '5' => '',
 
-		'6' => '',
+        '6' => '',
 
-		'7' => '',
+        '7' => '',
 
-		'8' => '',
+        '8' => '',
 
-		'9' => '',
+        '9' => '',
 
-		'10' => '',
+        '10' => '',
 
-		'11' => [
-			'a' => '',
+        '11' => [
+            'a' => '',
 
-			'b' => '',
+            'b' => '',
 
-			'c' => '',
+            'c' => '',
 
-			'd' => '',
+            'd' => '',
 
-			'e' => '',
+            'e' => '',
 
-			'f' => '',
+            'f' => '',
 
-			'g' => '',
-		],
+            'g' => '',
+        ],
 
-		'12' => '',
+        '12' => '',
 
-		'13' => '',
-	],
+        '13' => '',
+    ],
 
-	'security' => [
-		'title' => '',
+    'security' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
-	],
+        '2' => '',
+    ],
 
-	'api' => [
-		'title' => '',
+    'api' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'establishing_the_connection' => [
-			'title' => '',
+        'establishing_the_connection' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
+            '2' => '',
 
-			'3' => '',
-		],
+            '3' => '',
+        ],
 
-		'sending_information' => [
-			'title' => '',
+        'sending_information' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'2' => '',
-		],
+            '2' => '',
+        ],
 
-		'receiving_information' => [
-			'title' => '',
+        'receiving_information' => [
+            'title' => '',
 
-			'1' => '',
-		],
+            '1' => '',
+        ],
 
-		'closing_the_connection' => [
-			'title' => '',
+        'closing_the_connection' => [
+            'title' => '',
 
-			'1' => '',
-		],
+            '1' => '',
+        ],
 
-		'documentation' => [
-			'title' => '',
+        'documentation' => [
+            'title' => '',
 
-			'1' => '',
-		],
-	],
+            '1' => '',
+        ],
+    ],
 
-	'scope_of_application' => [
-		'title' => '',
+    'scope_of_application' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'web_browser_support' => [
-			'title' => '',
+        'web_browser_support' => [
+            'title' => '',
 
-			'1' => '',
+            '1' => '',
 
-			'table' => [
-				'version'  => ':number',
-				'no'       => '',
-				'unknown'  => '',
-				'disabled' => ':version',
-			],
-		],
-	],
+            'table' => [
+                'version'  => ':number',
+                'no'       => '',
+                'unknown'  => '',
+                'disabled' => ':version',
+            ],
+        ],
+    ],
 
-	'advantages_and_disadvantages' => [
-		'title' => '',
+    'advantages_and_disadvantages' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
-	],
+        '3' => '',
+    ],
 
-	'real_case' => [
-		'title' => '',
+    'real_case' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
+        '2' => '',
 
-		'3' => '',
+        '3' => '',
 
-		'4' => '',
+        '4' => '',
 
-		'5' => '',
-	],
+        '5' => '',
+    ],
 
-	'conclusion' => [
-		'title' => '',
+    'conclusion' => [
+        'title' => '',
 
-		'1' => '',
+        '1' => '',
 
-		'2' => '',
-	],
+        '2' => '',
+    ],
 
-	'figures' => [
-		'1' => '<strong>Figure 1</strong>: .',
-		'2' => '<strong>Figure 2</strong>: .',
-		'3' => '<strong>Figure 3</strong>: .',
-	],
+    'figures' => [
+        '1' => '<strong>Figure 1</strong>: .',
+        '2' => '<strong>Figure 2</strong>: .',
+        '3' => '<strong>Figure 3</strong>: .',
+    ],
 
 ];
