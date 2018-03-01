@@ -16,7 +16,7 @@
 			<a href="https://linkedin.com/in/victordm"><span class="linkedin"></span></a>
 			<a href="https://twitter.com/victordzmr"><span class="twitter"></span></a>
 			<a href="https://facebook.com/victordzmr"><span class="facebook"></span></a>
-			<a href="https://instagram.com/victordzmr"><span class="instagram"></span></a>
+			<a href="https://instagram.com/victor.dzmr"><span class="instagram"></span></a>
 			<a href="https://open.spotify.com/user/victor.dm"><span class="spotify"></span></a>
 		</div>
 		
