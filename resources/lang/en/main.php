@@ -38,7 +38,6 @@ return [
 
         'a_level' => [
             'name'        => 'Advanced Level of sciences and technology',
-            'institution' => 'IES Tavernes Blanques',
         ],
 
         'bachelor_degree' => [

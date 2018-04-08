@@ -38,7 +38,6 @@ return [
 
         'a_level' => [
             'name'        => 'Bachillerato científico-tecnológico',
-            'institution' => 'IES Tavernes Blanques',
         ],
 
         'bachelor_degree' => [

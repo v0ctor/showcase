@@ -56,7 +56,7 @@
         <div class="period a-level">
             <time>2010 — 2012</time>
             <div class="name">@lang('main.education.a_level.name')</div>
-            <div class="info">@lang('main.education.a_level.institution')</div>
+            <div class="info"></div>
         </div>
         <div class="period bachelor-degree">
             <time>2012 — 2016</time>
