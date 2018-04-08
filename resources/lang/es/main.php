@@ -112,7 +112,6 @@ return [
         'debian_and_ubuntu'                 => 'Debian/Ubuntu',
         'rhel_and_centos'                   => 'RHEL/CentOS',
         'macos'                             => 'macOS',
-        'windows'                           => 'Windows',
         'security'                          => 'Seguridad',
         'cryptography'                      => 'Criptografía',
         'ssh'                               => 'SSH',
