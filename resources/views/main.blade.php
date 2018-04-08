@@ -56,7 +56,7 @@
         <div class="period a-level">
             <time>2010 — 2012</time>
             <div class="name">@lang('main.education.a_level.name')</div>
-            <div class="info">@lang('main.education.a_level.institution')</div>
+            <div class="info"></div>
         </div>
         <div class="period bachelor-degree">
             <time>2012 — 2016</time>
@@ -125,12 +125,12 @@
                 <h2>@lang('main.skills.development_methodologies')</h2>
                 <div class="row">
                     <div class="skill">
-                        <span>@lang('main.skills.scrum')</span>
-                        <div class="level-75"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.kanban')</span>
                         <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.scrum')</span>
+                        <div class="level-50"></div>
                     </div>
                 </div>
 
@@ -227,10 +227,6 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.windows')</span>
-                        <div class="level-75"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.security')</span>
                         <div class="level-100"></div>
                     </div>
@@ -264,7 +260,7 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.mongodb')</span>
-                        <div class="level-25"></div>
+                        <div class="level-50"></div>
                     </div>
                 </div>
 
@@ -324,7 +320,7 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.docker')</span>
-                        <div class="level-75"></div>
+                        <div class="level-100"></div>
                     </div>
                 </div>
             </div>
