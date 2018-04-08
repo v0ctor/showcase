@@ -27,14 +27,19 @@
         margin: 0 6px;
     }
 
-    .linkedin:before {
-        @extend .icon;
-        content: '\f1d0';
-    }
-
     .github:before {
         @extend .icon;
         content: '\f1c9';
+    }
+
+    .dribbble:before {
+        @extend .icon;
+        content: '\f1c0';
+    }
+
+    .linkedin:before {
+        @extend .icon;
+        content: '\f1d0';
     }
 
     .twitter:before {
@@ -57,8 +62,9 @@
         content: '\f1dd';
     }
 
-    a:hover > .linkedin:before,
     a:hover > .github:before,
+    a:hover > .dribbble:before,
+    a:hover > .linkedin:before,
     a:hover > .twitter:before,
     a:hover > .facebook:before,
     a:hover > .instagram:before,
