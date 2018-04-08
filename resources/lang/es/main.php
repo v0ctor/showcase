@@ -14,7 +14,7 @@ return [
 
         'principles' => 'Considero que el conocimiento debe ir acompañado necesariamente de unos valores que garanticen que su aplicación sea beneficiosa para el conjunto de la sociedad. Estos son mis <strong>valores axiomáticos</strong>:',
 
-        'cave' => 'Para mí, la <strong>informática</strong> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es Internet) nos permiten por igual a todos los humanos <strong>salir de la <a href="https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna">caverna</a></strong> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.',
+        'cave' => 'Para mí, la <strong>informática</strong> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es internet) nos permiten por igual a todos los humanos <strong>salir de la <a href="https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna">caverna</a></strong> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.',
 
         'conclusion' => 'Mi <strong>objetivo</strong> profesional es hacer efectivo el potencial de la informática para <strong>eliminar problemas</strong> y <strong>cubrir necesidades</strong>, fomentando así el progreso de la humanidad.',
 

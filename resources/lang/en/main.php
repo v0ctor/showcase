@@ -14,7 +14,7 @@ return [
 
         'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my <strong>axiomatic values</strong>:',
 
-        'cave' => 'For me, <strong>computing</strong> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the Internet) allow equally to all humans to <strong>leave the <a href="https://en.wikipedia.org/wiki/Allegory_of_the_Cave">cave</a></strong> on our own and to travel without limits or prejudices through knowledge.',
+        'cave' => 'For me, <strong>computing</strong> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <strong>leave the <a href="https://en.wikipedia.org/wiki/Allegory_of_the_Cave">cave</a></strong> on our own and to travel without limits or prejudices through knowledge.',
 
         'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate problems</strong> and <strong>meet needs</strong>, thus promoting the progress of humanity.',
 
