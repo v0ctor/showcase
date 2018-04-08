@@ -8,7 +8,7 @@ return [
     'about' => [
         'title' => 'Sobre mí',
 
-        'introduction' => '¡Hola! Mi nombre es <strong>Víctor</strong>, tengo <strong>:age años</strong>, vivo en Valencia y soy ingeniero informático. Mi interés se centra especialmente en el desarrollo de <strong>software</strong>, la administración de <strong>sistemas</strong> y las <strong>redes</strong>.',
+        'introduction' => '¡Hola! Mi nombre es <strong>Víctor</strong>, tengo <strong>:age años</strong>, vivo en Valencia y soy ingeniero informático. Mi interés se centra especialmente en el desarrollo de <strong>software</strong>, la administración de <strong>sistemas</strong>, las <strong>redes</strong> y la <strong>seguridad</strong>.',
 
         'beginnings' => 'En 2007, con 13 años, empecé a adentrarme en el mundo de la informática a través del desarrollo web. Poco a poco fui aprendiendo PHP, JavaScript, HTML y CSS. Esto me permitió profundizar en otros temas como la ingeniería de software, la administración de sistemas, la seguridad y la criptografía; los cuales me parecen apasionantes. Desde entonces continúo aprendiendo, tanto por mi cuenta como gracias a haber participado en diversos proyectos. En 2016 me gradué en <strong>ingeniería informática</strong> por la <strong>Universitat Politècnica de València</strong>, con la mención de <strong>tecnologías de la información</strong>.',
 
@@ -16,7 +16,7 @@ return [
 
         'cave' => 'Para mí, la <strong>informática</strong> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es Internet) nos permiten por igual a todos los humanos <strong>salir de la <a href="https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna">caverna</a></strong> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.',
 
-        'conclusion' => 'Mi <strong>objetivo</strong> profesional es utilizar la informática para <strong>eliminar problemas</strong> y <strong>cubrir necesidades</strong>, impulsando así a la humanidad para llegar al siguiente estadio evolutivo.',
+        'conclusion' => 'Mi <strong>objetivo</strong> profesional es hacer efectivo el potencial de la informática para <strong>eliminar problemas</strong> y <strong>cubrir necesidades</strong>, fomentando así el progreso de la humanidad.',
 
         'values' => [
             'equality'            => 'Igualdad',

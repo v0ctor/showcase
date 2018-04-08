@@ -8,7 +8,7 @@ return [
     'about' => [
         'title' => 'Sobre mi',
 
-        'introduction' => 'Hola! El meu nom és <strong>Víctor</strong>, tinc <strong>:age anys</strong>, visc a València i sóc enginyer informàtic. El meu interés se centra especialment en el desenvolupament de <strong>programari</strong>, l\'administració de <strong>sistemes</strong> i les <strong>xarxes</strong>.',
+        'introduction' => 'Hola! El meu nom és <strong>Víctor</strong>, tinc <strong>:age anys</strong>, visc a València i sóc enginyer informàtic. El meu interés se centra especialment en el desenvolupament de <strong>programari</strong>, l\'administració de <strong>sistemes</strong>, les <strong>xarxes</strong> i la <strong>seguretat</strong>.',
 
         'beginnings' => 'En 2007, amb 13 anys, vaig començar a endinsar-me al món de la informàtica a través del desenvolupament web. A poc a poc vaig anar aprenent PHP, JavaScript, HTML i CSS. Això em va permetre aprofundir en altres temes com l\'enginyeria de programari, l\'administració de sistemes, la seguretat i la criptografia; els quals em pareixen apassionants. Des d\'aleshores continue aprenent, tant pel meu compte com gràcies a haver participat en diversos projectes. L\'any 2016 em vaig graduar en <strong>enginyeria informàtica</strong> per la <strong>Universitat Politècnica de València</strong>, amb la menció de <strong>tecnologies de la informació</strong>.',
 
@@ -16,7 +16,7 @@ return [
 
         'cave' => 'Per a mi, la <strong>informàtica</strong> és la cúspide en l\'aplicació pràctica de ciències pures tan elegants i belles com les matemàtiques i la física. Ella i els seus resultats (com ho és Internet) ens permeten per igual a tots els humans <strong>eixir de la <a href="https://ca.wikipedia.org/wiki/Mite_de_la_caverna">caverna</a></strong> pel nostre compte i viatjar sense límits ni prejudicis pel coneixement.',
 
-        'conclusion' => 'El meu <strong>objectiu</strong> professional és utilitzar la informàtica per <strong>eliminar problemes</strong> i <strong>cobrir necessitats</strong>, impulsant així a la humanitat per arribar al següent estadi evolutiu.',
+        'conclusion' => 'El meu <strong>objectiu</strong> professional és fer efectiu el potencial de la informàtica per <strong>eliminar problemes</strong> i <strong>cobrir necessitats</strong>, fomentant així el progrés de la humanitat.',
 
         'values' => [
             'equality'            => 'Igualtat',
