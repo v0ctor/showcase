@@ -41,15 +41,20 @@ RUN curl -sS https://packages.sury.org/php/apt.gpg | apt-key add - && \
     php7.2-xml \
     php7.2-zip
 
-ADD php-production.ini /etc/php/7.2/fpm/conf.d/99-overrides.ini
+ADD production.ini /etc/php/7.2/cli/conf.d/99-overrides.ini
+ADD production.ini /etc/php/7.2/fpm/conf.d/99-overrides.ini
 ADD pool.conf /etc/php/7.2/fpm/pool.d/z-overrides.conf
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    echo 'export PATH=$PATH:/var/www/vendor/bin' >> ~/.bashrc && \
     su -c "echo 'export PATH=$PATH:/var/www/vendor/bin' >> ~/.bashrc" $USER_NAME
 
 # Xdebug
-RUN echo "xdebug.remote_host=`ip route | awk '/default/ { print $3 }'`" >> /etc/php/7.2/fpm/conf.d/20-xdebug.ini
+RUN echo "xdebug.remote_host=`ip route | awk '/default/ { print $3 }'`" >> /etc/php/7.2/cli/conf.d/20-xdebug.ini && \
+    echo "xdebug.remote_host=`ip route | awk '/default/ { print $3 }'`" >> /etc/php/7.2/fpm/conf.d/20-xdebug.ini && \
+    echo 'export PHP_IDE_CONFIG="serverName=default"' >> ~/.bashrc && \
+    su -c "echo 'export PHP_IDE_CONFIG=\"serverName=default\"' >> ~/.bashrc" $USER_NAME
 
 # Node
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
