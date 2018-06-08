@@ -54,24 +54,28 @@ return [
             'position'     => 'Back-end software engineer',
             'organization' => 'Mobimento Mobile',
             'period'       => 'August 2017 — now',
+            'duration'     => '10 months',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Software engineer',
             'organization' => 'Apadrina un olivo',
             'period'       => 'March — July 2017',
+            'duration'     => '5 months',
         ],
 
         'habtium' => [
             'position'     => 'System administrator and web developer',
             'organization' => 'Habtium',
             'period'       => 'January 2010 — June 2016',
+            'duration'     => '6 years and 6 months',
         ],
 
         'valencia_city_council' => [
             'position'     => 'Full-stack software developer (scholarship)',
             'organization' => 'Ajuntament de València',
             'period'       => 'July — August 2013',
+            'duration'     => '2 months',
         ],
     ],
 

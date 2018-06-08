@@ -78,7 +78,10 @@
                     <div class="organization">
                         <a href="http://mobimento.com">@lang('main.experience.mobimento.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.mobimento.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.mobimento.period')</span>
+                        @php $duration = Carbon::createFromDate(2017, 8, 7)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
                 </div>
                 <div class="logo mobimento"></div>
@@ -89,7 +92,9 @@
                     <div class="organization">
                         <a href="https://apadrinaunolivo.org">@lang('main.experience.apadrina_un_olivo.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
+                        <span class="badge">@lang('main.experience.apadrina_un_olivo.duration')</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
@@ -99,7 +104,10 @@
                     <div class="position">@lang('main.experience.habtium.position')</div>
                     <div class="organization">
                         <a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
-                    <div class="period"><span class="badge">@lang('main.experience.habtium.period')</span></div>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.habtium.period')</span>
+                        <span class="badge">@lang('main.experience.habtium.duration')</span>
+                    </div>
                 </div>
                 <div class="logo habtium"></div>
             </div>
@@ -109,7 +117,9 @@
                     <div class="organization">
                         <a href="http://www.valencia.es">@lang('main.experience.valencia_city_council.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.valencia_city_council.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.valencia_city_council.period')</span>
+                        <span class="badge">@lang('main.experience.valencia_city_council.duration')</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>

@@ -5,6 +5,8 @@
 
 return [
 
+    'month' => 'un mes|:amount meses',
+
     'formats' => [
         'short' => [
             'without_time' => 'd-m-Y',
