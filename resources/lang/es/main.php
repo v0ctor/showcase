@@ -52,30 +52,35 @@ return [
 
         'mobimento' => [
             'position'     => 'Ingeniero de software <em>back-end</em>',
-            'organization' => 'Mobimento Mobile',
             'period'       => 'agosto de 2017 — actualidad',
             'duration'     => '10 meses',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Ingeniero de software',
-            'organization' => 'Apadrina un olivo',
             'period'       => 'marzo — julio de 2017',
             'duration'     => '5 meses',
         ],
 
         'habtium' => [
             'position'     => 'Administrador de sistemas y desarrollador web',
-            'organization' => 'Habtium',
             'period'       => 'enero de 2010 — junio de 2016',
             'duration'     => '6 años y 6 meses',
         ],
 
         'valencia_city_council' => [
             'position'     => 'Desarrollador de software <em>full-stack</em> (beca)',
-            'organization' => 'Ajuntament de València',
             'period'       => 'julio — agosto de 2013',
             'duration'     => '2 meses',
+        ],
+    ],
+
+    'volunteering' => [
+        'title' => 'Experiencia de voluntariado',
+
+        'avptp' => [
+            'position'     => 'Cofundador, vicepresidente y portavoz',
+            'period'       => 'abril de 2018 — actualidad',
         ],
     ],
 
@@ -109,13 +114,6 @@ return [
         'ca' => 'Valenciano/catalán nativo',
         'es' => 'Castellano nativo',
         'en' => 'Inglés intermedio-alto',
-
-        'a1' => 'A1',
-        'a2' => 'A2',
-        'b1' => 'B1',
-        'b2' => 'B2',
-        'c1' => 'C1',
-        'c2' => 'C2',
     ],
 
     'articles' => [

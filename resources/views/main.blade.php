@@ -127,6 +127,27 @@
         </div>
     </section>
 
+    <section class="volunteering">
+        <h1>@lang('main.volunteering.title')</h1>
+
+        <div class="column stretch">
+            <div class="job">
+                <div class="column">
+                    <div class="position">@lang('main.volunteering.avptp.position')</div>
+                    <div class="organization">
+                        <a href="https://avptp.org">@lang('main.volunteering.avptp.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.volunteering.avptp.period')</span>
+                        @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                    </div>
+                </div>
+                <div class="logo avptp"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="skills">
         <h1><span>@lang('main.skills.title')</span></h1>
 

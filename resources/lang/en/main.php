@@ -48,7 +48,7 @@ return [
     ],
 
     'experience' => [
-        'title' => 'Experience',
+        'title' => 'Professional experience',
 
         'mobimento' => [
             'position'     => 'Back-end software engineer',
@@ -76,6 +76,16 @@ return [
             'organization' => 'Ajuntament de València',
             'period'       => 'July — August 2013',
             'duration'     => '2 months',
+        ],
+    ],
+
+    'volunteering' => [
+        'title' => 'Volunteering experience',
+
+        'avptp' => [
+            'position'     => 'Co-founder, vice president and spokesperson',
+            'organization' => 'Associació Valenciana pel Transport Públic',
+            'period'       => 'April 2018 — now',
         ],
     ],
 
