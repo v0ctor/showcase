@@ -1,8 +1,8 @@
-# Víctor's website
+# Víctor's showcase
 
 ## About
 
-This is the repository of my personal website, in which I share my professional career, my skills and my interests. Find it live [here](https://victordiaz.me).
+This is the repository of my showcase, where I share my professional career, my skills and my interests. Find it live [here](https://victordiaz.me).
 
 ### Standards
 
@@ -21,9 +21,9 @@ Extended by the following rules:
 
 ### Directory structure
 
-The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following addition:
+The project follows the default [Laravel application structure](https://laravel.com/docs/structure) with the following addition:
 
-* `docker` and `docker-compose.yml` define the local Docker environment.
+* `docker`, `docker-compose.yml` and `docker-compose.override.yml` define the Docker environments for developing and deploying.
 
 ### License
 This software is distributed under the MIT license. Please read `LICENSE` for information on the software availability and distribution.
@@ -50,7 +50,11 @@ Once installed, copy the example environment file to its default location.
 cp .env.example .env
 ```
 
-Then, complete `USER_ID` and `USER_NAME` environment variables with your user ID (`id -u`) and your username (`whoami`). Thus, Docker containers will work with the same user than your computer.
+Then, complete the `UID` environment variable with your user ID (`id -u`). Thus, the application container will use your user to interact with shared volumes.
+
+```Shell
+sed -i "s/UID=.*/UID=$(id -u)/" .env
+```
 
 #### Docker environment
 
@@ -68,7 +72,13 @@ docker-compose up -d
 Then, enter to the `app` container.
 
 ```Shell
-docker exec -it -u=$(id -u) app bash
+docker-compose exec -u $(id -u) app bash
+```
+
+To easily access the container on subsequent occasions, you can add the following alias to your `.bashrc` or `.zshrc` file.
+
+```Shell
+alias app="docker-compose exec -u $(id -u) app bash"
 ```
 
 ### Initialization
@@ -77,6 +87,7 @@ Being inside of the `app` container for the first time, you should install the d
 
 ```Shell
 composer install
+npm install
 ```
 
 ### Usage
@@ -84,3 +95,38 @@ composer install
 Now you can use [Composer](https://getcomposer.org), [Artisan](https://laravel.com/docs/artisan) and [PHPUnit](https://phpunit.de) inside the container, among others. [Xdebug](https://xdebug.org) is also available from the host machine.
 
 To use the application through HTTP, you can perform requests to [http://localhost](http://localhost).
+
+The database is also accessible from the host with the following credentials:
+
+* **Host:** `localhost`
+* **Port:** `3306`
+* **Database:** `test`
+* **Username:** `test`
+* **Password:** `test`
+
+> Note that Git is not available in the container, so you should use it from the host machine.
+
+## Problem resolution
+
+There are several common problems that can be easily solved. Here are their causes and solutions.
+
+### Composer
+
+When a class is not found, check that it is in the correct namespace. If that was not the problem, you should [update the autoloader](https://getcomposer.org/doc/03-cli.md#dump-autoload-dumpautoload-) by running the following command.
+
+```Shell
+composer dump-autoload
+```
+
+### Docker
+
+The Docker environment should work properly as it has been exhaustively tested. Otherwise, it is always possible to rebuild it. To start from scratch, you can remove all containers, images and volumes by running the following commands.
+
+> Note that all system containers, images and volumes will be deleted, not only those related to this project.
+
+```Shell
+docker-compose down
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -f dangling=true -q)
+```

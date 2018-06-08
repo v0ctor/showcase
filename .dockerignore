@@ -1,0 +1,6 @@
+.editorconfig
+.env.example
+.gitignore
+docker-compose.yml
+LICENSE
+readme.md

@@ -37,7 +37,7 @@ return [
         'title' => 'Formación académica',
 
         'a_level' => [
-            'name'        => 'Bachillerato científico-tecnológico',
+            'name' => 'Bachillerato científico-tecnológico',
         ],
 
         'bachelor_degree' => [
@@ -52,26 +52,35 @@ return [
 
         'mobimento' => [
             'position'     => 'Ingeniero de software <em>back-end</em>',
-            'organization' => 'Mobimento Mobile',
             'period'       => 'agosto de 2017 — actualidad',
+            'duration'     => '10 meses',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Ingeniero de software',
-            'organization' => 'Apadrina un olivo',
             'period'       => 'marzo — julio de 2017',
+            'duration'     => '5 meses',
         ],
 
         'habtium' => [
             'position'     => 'Administrador de sistemas y desarrollador web',
-            'organization' => 'Habtium',
             'period'       => 'enero de 2010 — junio de 2016',
+            'duration'     => '6 años y 6 meses',
         ],
 
         'valencia_city_council' => [
             'position'     => 'Desarrollador de software <em>full-stack</em> (beca)',
-            'organization' => 'Ajuntament de València',
             'period'       => 'julio — agosto de 2013',
+            'duration'     => '2 meses',
+        ],
+    ],
+
+    'volunteering' => [
+        'title' => 'Experiencia de voluntariado',
+
+        'avptp' => [
+            'position'     => 'Cofundador, vicepresidente y portavoz',
+            'period'       => 'abril de 2018 — actualidad',
         ],
     ],
 
@@ -79,71 +88,24 @@ return [
         'title' => 'Habilidades',
 
         'development_methodologies' => 'Metodologías de desarrollo',
-        'scrum'                     => 'Scrum',
-        'kanban'                    => 'Kanban',
-
 
         'web_application_development' => 'Desarrollo de aplicaciones web',
-        'html'                        => 'HTML 5',
-        'css'                         => 'CSS 3',
-        'websocket'                   => 'WebSocket',
-        'jquery'                      => 'jQuery',
-        'angular'                     => 'Angular',
-        'laravel'                     => 'Laravel',
-        'lumen'                       => 'Lumen',
-        'rest'                        => 'Arquitectura REST',
-
-
-        'mobile_application_development' => 'Desarrollo de aplicaciones móviles',
-        'android'                        => 'Android',
-
 
         'programming_languages' => 'Lenguajes de programación',
-        'php'                   => 'PHP',
-        'java'                  => 'Java',
-        'javascript'            => 'JavaScript',
-        'c'                     => 'C',
-        'c++'                   => 'C++',
-        'swift'                 => 'Swift',
-        'python'                => 'Python',
 
+        'devops' => 'Desarrollo y operaciones (<em>DevOps</em>)',
 
         'system_and_network_administration' => 'Administración de sistemas y redes',
-        'debian_and_ubuntu'                 => 'Debian/Ubuntu',
-        'rhel_and_centos'                   => 'RHEL/CentOS',
-        'macos'                             => 'macOS',
         'security'                          => 'Seguridad',
         'cryptography'                      => 'Criptografía',
-        'ssh'                               => 'SSH',
-        'dns'                               => 'DNS',
-        'dhcp'                              => 'DHCP',
-
 
         'database_administration' => 'Administración de bases de datos',
-        'mariadb'                 => 'MariaDB',
-        'mysql'                   => 'MySQL',
-        'mongodb'                 => 'MongoDB',
-
 
         'web_server_administration' => 'Administración de servidores web',
-        'nginx'                     => 'Nginx',
-        'apache'                    => 'Apache Web Server',
-
 
         'mail_server_administration' => 'Administración de servidores de correo',
-        'postfix'                    => 'Postfix',
-        'dovecot'                    => 'Dovecot',
-        'rspamd'                     => 'Rspamd',
-        'spf'                        => 'SPF',
-        'dkim'                       => 'DKIM',
-        'dmarc'                      => 'DMARC',
 
-
-        'other'  => 'Otros',
-        'git'    => 'Git',
-        'gulp'   => 'Gulp',
-        'nodejs' => 'NodeJS',
-        'docker' => 'Docker',
+        'other' => 'Otros',
     ],
 
     'languages' => [
@@ -152,13 +114,6 @@ return [
         'ca' => 'Valenciano/catalán nativo',
         'es' => 'Castellano nativo',
         'en' => 'Inglés intermedio-alto',
-
-        'a1' => 'A1',
-        'a2' => 'A2',
-        'b1' => 'B1',
-        'b2' => 'B2',
-        'c1' => 'C1',
-        'c2' => 'C2',
     ],
 
     'articles' => [

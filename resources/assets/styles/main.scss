@@ -408,6 +408,11 @@ section {
         width: 56px;
         margin-left: 20px;
 
+        &.avptp {
+            background: url('/images/organizations/avptp.svg') center no-repeat;
+            background-size: contain;
+        }
+
         &.mobimento {
             background: url('/images/organizations/mobimento.png') center no-repeat;
             background-size: contain;
@@ -434,7 +439,7 @@ section {
     }
 
     .organization {
-        margin: 6px 0;
+        margin: 8px 0;
         font-weight: lighter;
     }
 }
@@ -488,7 +493,7 @@ section {
     border-radius: 20px;
     font-size: 15px;
     color: white;
-    background: $lavender-1;
+    background: $bluejeans-1;
     display: flex;
     align-items: center;
     justify-content: center;

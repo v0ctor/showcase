@@ -78,7 +78,10 @@
                     <div class="organization">
                         <a href="http://mobimento.com">@lang('main.experience.mobimento.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.mobimento.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.mobimento.period')</span>
+                        @php $duration = Carbon::createFromDate(2017, 8, 7)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
                 </div>
                 <div class="logo mobimento"></div>
@@ -89,7 +92,9 @@
                     <div class="organization">
                         <a href="https://apadrinaunolivo.org">@lang('main.experience.apadrina_un_olivo.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
+                        <span class="badge">@lang('main.experience.apadrina_un_olivo.duration')</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
@@ -99,7 +104,10 @@
                     <div class="position">@lang('main.experience.habtium.position')</div>
                     <div class="organization">
                         <a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
-                    <div class="period"><span class="badge">@lang('main.experience.habtium.period')</span></div>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.habtium.period')</span>
+                        <span class="badge">@lang('main.experience.habtium.duration')</span>
+                    </div>
                 </div>
                 <div class="logo habtium"></div>
             </div>
@@ -109,10 +117,33 @@
                     <div class="organization">
                         <a href="http://www.valencia.es">@lang('main.experience.valencia_city_council.organization')</a>
                     </div>
-                    <div class="period"><span class="badge">@lang('main.experience.valencia_city_council.period')</span>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.valencia_city_council.period')</span>
+                        <span class="badge">@lang('main.experience.valencia_city_council.duration')</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="volunteering">
+        <h1>@lang('main.volunteering.title')</h1>
+
+        <div class="column stretch">
+            <div class="job">
+                <div class="column">
+                    <div class="position">@lang('main.volunteering.avptp.position')</div>
+                    <div class="organization">
+                        <a href="https://avptp.org">@lang('main.volunteering.avptp.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.volunteering.avptp.period')</span>
+                        @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                    </div>
+                </div>
+                <div class="logo avptp"></div>
             </div>
         </div>
     </section>
@@ -132,6 +163,14 @@
                         <span>@lang('main.skills.scrum')</span>
                         <div class="level-50"></div>
                     </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.tdd')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.fdd')</span>
+                        <div class="level-100"></div>
+                    </div>
                 </div>
 
                 <h2>@lang('main.skills.web_application_development')</h2>
@@ -145,16 +184,16 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.websocket')</span>
-                        <div class="level-100"></div>
+                        <span>@lang('main.skills.react')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.angular')</span>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
                         <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.angular')</span>
-                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.laravel')</span>
@@ -168,13 +207,9 @@
                         <span>@lang('main.skills.rest')</span>
                         <div class="level-100"></div>
                     </div>
-                </div>
-
-                <h2>@lang('main.skills.mobile_application_development')</h2>
-                <div class="row">
                     <div class="skill">
-                        <span>@lang('main.skills.android')</span>
-                        <div class="level-75"></div>
+                        <span>@lang('main.skills.graphql')</span>
+                        <div class="level-25"></div>
                     </div>
                 </div>
 
@@ -201,6 +236,10 @@
                         <div class="level-25"></div>
                     </div>
                     <div class="skill">
+                        <span>@lang('main.skills.go')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
                         <span>@lang('main.skills.swift')</span>
                         <div class="level-25"></div>
                     </div>
@@ -209,11 +248,43 @@
                         <div class="level-25"></div>
                     </div>
                 </div>
+
+                <h2>@lang('main.skills.devops')</h2>
+                <div class="row">
+                    <div class="skill">
+                        <span>@lang('main.skills.docker')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.docker_swarm')</span>
+                        <div class="level-50"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.kubernetes')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.jenkins')</span>
+                        <div class="level-75"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.capistrano')</span>
+                        <div class="level-75"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="second">
                 <h2>@lang('main.skills.system_and_network_administration')</h2>
                 <div class="row">
+                    <div class="skill">
+                        <span>@lang('main.skills.security')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.cryptography')</span>
+                        <div class="level-100"></div>
+                    </div>
                     <div class="skill">
                         <span>@lang('main.skills.debian_and_ubuntu')</span>
                         <div class="level-100"></div>
@@ -224,14 +295,6 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.macos')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.security')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.cryptography')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -257,6 +320,10 @@
                     <div class="skill">
                         <span>@lang('main.skills.mysql')</span>
                         <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.redis')</span>
+                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.mongodb')</span>
@@ -319,7 +386,7 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.docker')</span>
+                        <span>@lang('main.skills.websocket')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>

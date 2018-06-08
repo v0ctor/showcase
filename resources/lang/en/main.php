@@ -37,7 +37,7 @@ return [
         'title' => 'Education',
 
         'a_level' => [
-            'name'        => 'Advanced Level of sciences and technology',
+            'name' => 'Advanced Level of sciences and technology',
         ],
 
         'bachelor_degree' => [
@@ -48,30 +48,44 @@ return [
     ],
 
     'experience' => [
-        'title' => 'Experience',
+        'title' => 'Professional experience',
 
         'mobimento' => [
             'position'     => 'Back-end software engineer',
             'organization' => 'Mobimento Mobile',
             'period'       => 'August 2017 — now',
+            'duration'     => '10 months',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Software engineer',
             'organization' => 'Apadrina un olivo',
             'period'       => 'March — July 2017',
+            'duration'     => '5 months',
         ],
 
         'habtium' => [
             'position'     => 'System administrator and web developer',
             'organization' => 'Habtium',
             'period'       => 'January 2010 — June 2016',
+            'duration'     => '6 years and 6 months',
         ],
 
         'valencia_city_council' => [
             'position'     => 'Full-stack software developer (scholarship)',
             'organization' => 'Ajuntament de València',
             'period'       => 'July — August 2013',
+            'duration'     => '2 months',
+        ],
+    ],
+
+    'volunteering' => [
+        'title' => 'Volunteering experience',
+
+        'avptp' => [
+            'position'     => 'Co-founder, vice president and spokesperson',
+            'organization' => 'Associació Valenciana pel Transport Públic',
+            'period'       => 'April 2018 — now',
         ],
     ],
 
@@ -81,21 +95,20 @@ return [
         'development_methodologies' => 'Development methodologies',
         'scrum'                     => 'Scrum',
         'kanban'                    => 'Kanban',
+        'tdd'                       => 'TDD',
+        'fdd'                       => 'FDD',
 
 
         'web_application_development' => 'Web application development',
         'html'                        => 'HTML 5',
         'css'                         => 'CSS 3',
-        'websocket'                   => 'WebSocket',
+        'react'                       => 'React',
         'jquery'                      => 'jQuery',
         'angular'                     => 'Angular',
         'laravel'                     => 'Laravel',
         'lumen'                       => 'Lumen',
-        'rest'                        => 'REST architecture',
-
-
-        'mobile_application_development' => 'Mobile application development',
-        'android'                        => 'Android',
+        'rest'                        => 'REST',
+        'graphql'                     => 'GraphQL',
 
 
         'programming_languages' => 'Programming languages',
@@ -104,9 +117,16 @@ return [
         'javascript'            => 'JavaScript',
         'c'                     => 'C',
         'c++'                   => 'C++',
+        'go'                    => 'Go',
         'swift'                 => 'Swift',
         'python'                => 'Python',
 
+        'devops'       => 'Development and operations (DevOps)',
+        'docker'       => 'Docker',
+        'docker_swarm' => 'Docker Swarm',
+        'kubernetes'   => 'Kubernetes',
+        'jenkins'      => 'Jenkins',
+        'capistrano'   => 'Capistrano',
 
         'system_and_network_administration' => 'System and network administration',
         'debian_and_ubuntu'                 => 'Debian/Ubuntu',
@@ -122,6 +142,7 @@ return [
         'database_administration' => 'Database administration',
         'mariadb'                 => 'MariaDB',
         'mysql'                   => 'MySQL',
+        'redis'                   => 'Redis',
         'mongodb'                 => 'MongoDB',
 
 
@@ -139,11 +160,11 @@ return [
         'dmarc'                      => 'DMARC',
 
 
-        'other'  => 'Other',
-        'git'    => 'Git',
-        'gulp'   => 'Gulp',
-        'nodejs' => 'NodeJS',
-        'docker' => 'Docker',
+        'other'     => 'Other',
+        'git'       => 'Git',
+        'gulp'      => 'Gulp',
+        'nodejs'    => 'NodeJS',
+        'websocket' => 'WebSocket',
     ],
 
     'languages' => [
