@@ -220,19 +220,15 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.java')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.javascript')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.c')</span>
-                        <div class="level-75"></div>
+                        <span>@lang('main.skills.java')</span>
+                        <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.c++')</span>
+                        <span>@lang('main.skills.ruby')</span>
                         <div class="level-25"></div>
                     </div>
                     <div class="skill">
@@ -245,6 +241,14 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.python')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.c')</span>
+                        <div class="level-75"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.c++')</span>
                         <div class="level-25"></div>
                     </div>
                 </div>
@@ -284,6 +288,10 @@
                     <div class="skill">
                         <span>@lang('main.skills.cryptography')</span>
                         <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.aws')</span>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.debian_and_ubuntu')</span>
