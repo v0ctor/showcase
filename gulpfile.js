@@ -56,7 +56,7 @@ gulp.task('clean', gulp.parallel(
  */
 
 // Concrete
-gulp.task('build-scripts', gulp.series('clean-scripts', 'buildLanguages', gulp.parallel(buildPublicationScripts, function () {
+gulp.task('build-scripts', gulp.series('clean-scripts', buildLanguages, gulp.parallel(buildPublicationScripts, function () {
     return gulp.src([
         'storage/framework/cache/i18n.js',
         'node_modules/jquery/dist/jquery.js',
