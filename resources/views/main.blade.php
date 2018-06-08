@@ -132,6 +132,14 @@
                         <span>@lang('main.skills.scrum')</span>
                         <div class="level-50"></div>
                     </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.tdd')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.fdd')</span>
+                        <div class="level-100"></div>
+                    </div>
                 </div>
 
                 <h2>@lang('main.skills.web_application_development')</h2>
@@ -145,16 +153,16 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.websocket')</span>
-                        <div class="level-100"></div>
+                        <span>@lang('main.skills.react')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.angular')</span>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
                         <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.angular')</span>
-                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.laravel')</span>
@@ -168,13 +176,9 @@
                         <span>@lang('main.skills.rest')</span>
                         <div class="level-100"></div>
                     </div>
-                </div>
-
-                <h2>@lang('main.skills.mobile_application_development')</h2>
-                <div class="row">
                     <div class="skill">
-                        <span>@lang('main.skills.android')</span>
-                        <div class="level-75"></div>
+                        <span>@lang('main.skills.graphql')</span>
+                        <div class="level-25"></div>
                     </div>
                 </div>
 
@@ -201,6 +205,10 @@
                         <div class="level-25"></div>
                     </div>
                     <div class="skill">
+                        <span>@lang('main.skills.go')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
                         <span>@lang('main.skills.swift')</span>
                         <div class="level-25"></div>
                     </div>
@@ -209,11 +217,43 @@
                         <div class="level-25"></div>
                     </div>
                 </div>
+
+                <h2>@lang('main.skills.devops')</h2>
+                <div class="row">
+                    <div class="skill">
+                        <span>@lang('main.skills.docker')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.docker_swarm')</span>
+                        <div class="level-50"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.kubernetes')</span>
+                        <div class="level-25"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.jenkins')</span>
+                        <div class="level-75"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.capistrano')</span>
+                        <div class="level-75"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="second">
                 <h2>@lang('main.skills.system_and_network_administration')</h2>
                 <div class="row">
+                    <div class="skill">
+                        <span>@lang('main.skills.security')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.cryptography')</span>
+                        <div class="level-100"></div>
+                    </div>
                     <div class="skill">
                         <span>@lang('main.skills.debian_and_ubuntu')</span>
                         <div class="level-100"></div>
@@ -224,14 +264,6 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.macos')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.security')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.cryptography')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -257,6 +289,10 @@
                     <div class="skill">
                         <span>@lang('main.skills.mysql')</span>
                         <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.redis')</span>
+                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.mongodb')</span>
@@ -319,7 +355,7 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.docker')</span>
+                        <span>@lang('main.skills.websocket')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>

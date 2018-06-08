@@ -37,7 +37,7 @@ return [
         'title' => 'Education',
 
         'a_level' => [
-            'name'        => 'Advanced Level of sciences and technology',
+            'name' => 'Advanced Level of sciences and technology',
         ],
 
         'bachelor_degree' => [
@@ -81,21 +81,20 @@ return [
         'development_methodologies' => 'Development methodologies',
         'scrum'                     => 'Scrum',
         'kanban'                    => 'Kanban',
+        'tdd'                       => 'TDD',
+        'fdd'                       => 'FDD',
 
 
         'web_application_development' => 'Web application development',
         'html'                        => 'HTML 5',
         'css'                         => 'CSS 3',
-        'websocket'                   => 'WebSocket',
+        'react'                       => 'React',
         'jquery'                      => 'jQuery',
         'angular'                     => 'Angular',
         'laravel'                     => 'Laravel',
         'lumen'                       => 'Lumen',
-        'rest'                        => 'REST architecture',
-
-
-        'mobile_application_development' => 'Mobile application development',
-        'android'                        => 'Android',
+        'rest'                        => 'REST',
+        'graphql'                     => 'GraphQL',
 
 
         'programming_languages' => 'Programming languages',
@@ -104,9 +103,16 @@ return [
         'javascript'            => 'JavaScript',
         'c'                     => 'C',
         'c++'                   => 'C++',
+        'go'                    => 'Go',
         'swift'                 => 'Swift',
         'python'                => 'Python',
 
+        'devops'       => 'Development and operations (DevOps)',
+        'docker'       => 'Docker',
+        'docker_swarm' => 'Docker Swarm',
+        'kubernetes'   => 'Kubernetes',
+        'jenkins'      => 'Jenkins',
+        'capistrano'   => 'Capistrano',
 
         'system_and_network_administration' => 'System and network administration',
         'debian_and_ubuntu'                 => 'Debian/Ubuntu',
@@ -122,6 +128,7 @@ return [
         'database_administration' => 'Database administration',
         'mariadb'                 => 'MariaDB',
         'mysql'                   => 'MySQL',
+        'redis'                   => 'Redis',
         'mongodb'                 => 'MongoDB',
 
 
@@ -139,11 +146,11 @@ return [
         'dmarc'                      => 'DMARC',
 
 
-        'other'  => 'Other',
-        'git'    => 'Git',
-        'gulp'   => 'Gulp',
-        'nodejs' => 'NodeJS',
-        'docker' => 'Docker',
+        'other'     => 'Other',
+        'git'       => 'Git',
+        'gulp'      => 'Gulp',
+        'nodejs'    => 'NodeJS',
+        'websocket' => 'WebSocket',
     ],
 
     'languages' => [

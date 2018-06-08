@@ -37,7 +37,7 @@ return [
         'title' => 'Formación académica',
 
         'a_level' => [
-            'name'        => 'Bachillerato científico-tecnológico',
+            'name' => 'Bachillerato científico-tecnológico',
         ],
 
         'bachelor_degree' => [
@@ -79,71 +79,24 @@ return [
         'title' => 'Habilidades',
 
         'development_methodologies' => 'Metodologías de desarrollo',
-        'scrum'                     => 'Scrum',
-        'kanban'                    => 'Kanban',
-
 
         'web_application_development' => 'Desarrollo de aplicaciones web',
-        'html'                        => 'HTML 5',
-        'css'                         => 'CSS 3',
-        'websocket'                   => 'WebSocket',
-        'jquery'                      => 'jQuery',
-        'angular'                     => 'Angular',
-        'laravel'                     => 'Laravel',
-        'lumen'                       => 'Lumen',
-        'rest'                        => 'Arquitectura REST',
-
-
-        'mobile_application_development' => 'Desarrollo de aplicaciones móviles',
-        'android'                        => 'Android',
-
 
         'programming_languages' => 'Lenguajes de programación',
-        'php'                   => 'PHP',
-        'java'                  => 'Java',
-        'javascript'            => 'JavaScript',
-        'c'                     => 'C',
-        'c++'                   => 'C++',
-        'swift'                 => 'Swift',
-        'python'                => 'Python',
 
+        'devops' => 'Desarrollo y operaciones (<em>DevOps</em>)',
 
         'system_and_network_administration' => 'Administración de sistemas y redes',
-        'debian_and_ubuntu'                 => 'Debian/Ubuntu',
-        'rhel_and_centos'                   => 'RHEL/CentOS',
-        'macos'                             => 'macOS',
         'security'                          => 'Seguridad',
         'cryptography'                      => 'Criptografía',
-        'ssh'                               => 'SSH',
-        'dns'                               => 'DNS',
-        'dhcp'                              => 'DHCP',
-
 
         'database_administration' => 'Administración de bases de datos',
-        'mariadb'                 => 'MariaDB',
-        'mysql'                   => 'MySQL',
-        'mongodb'                 => 'MongoDB',
-
 
         'web_server_administration' => 'Administración de servidores web',
-        'nginx'                     => 'Nginx',
-        'apache'                    => 'Apache Web Server',
-
 
         'mail_server_administration' => 'Administración de servidores de correo',
-        'postfix'                    => 'Postfix',
-        'dovecot'                    => 'Dovecot',
-        'rspamd'                     => 'Rspamd',
-        'spf'                        => 'SPF',
-        'dkim'                       => 'DKIM',
-        'dmarc'                      => 'DMARC',
 
-
-        'other'  => 'Otros',
-        'git'    => 'Git',
-        'gulp'   => 'Gulp',
-        'nodejs' => 'NodeJS',
-        'docker' => 'Docker',
+        'other' => 'Otros',
     ],
 
     'languages' => [
