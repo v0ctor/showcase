@@ -50,28 +50,33 @@ return [
     'experience' => [
         'title' => 'Experiència professional',
 
-        'mobimento' => [
-            'position'     => 'Enginyer de programari <em>back-end</em>',
-            'period'       => 'agost de 2017 — actualitat',
-            'duration'     => '10 mesos',
+        'tokintu' => [
+            'position' => 'Enginyer de programari <em>back-end</em>',
+            'period'   => 'juliol de 2018 — actualitat',
+        ],
+
+        'mobincube' => [
+            'position' => 'Enginyer de programari <em>back-end</em>',
+            'period'   => 'agost de 2017 — juny de 2018',
+            'duration' => '11 mesos',
         ],
 
         'apadrina_un_olivo' => [
-            'position'     => 'Enginyer de programari',
-            'period'       => 'març — juliol de 2017',
-            'duration'     => '5 mesos',
+            'position' => 'Enginyer de programari',
+            'period'   => 'març — juliol de 2017',
+            'duration' => '5 mesos',
         ],
 
         'habtium' => [
-            'position'     => 'Administrador de sistemes i desenvolupador web',
-            'period'       => 'gener de 2010 — juny de 2016',
-            'duration'     => '6 anys i 6 mesos',
+            'position' => 'Administrador de sistemes i desenvolupador web',
+            'period'   => 'gener de 2010 — juny de 2016',
+            'duration' => '6 anys i 6 mesos',
         ],
 
         'valencia_city_council' => [
-            'position'     => 'Desenvolupador de programari <em>full-stack</em> (beca)',
-            'period'       => 'juliol — agost de 2013',
-            'duration'     => '2 mesos',
+            'position' => 'Desenvolupador de programari <em>full-stack</em> (beca)',
+            'period'   => 'juliol — agost de 2013',
+            'duration' => '2 mesos',
         ],
     ],
 
@@ -79,8 +84,8 @@ return [
         'title' => 'Experiència de voluntariat',
 
         'avptp' => [
-            'position'     => 'Cofundador, vicepresident i portaveu',
-            'period'       => 'abril de 2018 — actualitat',
+            'position' => 'Cofundador, vicepresident i portaveu',
+            'period'   => 'abril de 2018 — actualitat',
         ],
     ],
 

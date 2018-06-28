@@ -50,11 +50,17 @@ return [
     'experience' => [
         'title' => 'Professional experience',
 
-        'mobimento' => [
+        'tokintu' => [
             'position'     => 'Back-end software engineer',
-            'organization' => 'Mobimento Mobile',
-            'period'       => 'August 2017 — now',
-            'duration'     => '10 months',
+            'organization' => 'Tokintu',
+            'period'       => 'July 2018 — now',
+        ],
+
+        'mobincube' => [
+            'position'     => 'Back-end software engineer',
+            'organization' => 'Mobincube',
+            'period'       => 'August 2017 — June 2018',
+            'duration'     => '11 months',
         ],
 
         'apadrina_un_olivo' => [

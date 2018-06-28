@@ -74,17 +74,16 @@
         <div class="column stretch">
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.mobimento.position')</div>
+                    <div class="position">@lang('main.experience.mobincube.position')</div>
                     <div class="organization">
-                        <a href="http://mobimento.com">@lang('main.experience.mobimento.organization')</a>
+                        <a href="https://mobincube.com">@lang('main.experience.mobincube.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.mobimento.period')</span>
-                        @php $duration = Carbon::createFromDate(2017, 8, 7)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">@lang('main.experience.mobincube.period')</span>
+                        <span class="badge">@lang('main.experience.mobincube.duration')</span>
                     </div>
                 </div>
-                <div class="logo mobimento"></div>
+                <div class="logo mobincube"></div>
             </div>
             <div class="job">
                 <div class="column">
