@@ -413,8 +413,8 @@ section {
             background-size: contain;
         }
 
-        &.mobimento {
-            background: url('/images/organizations/mobimento.png') center no-repeat;
+        &.mobincube {
+            background: url('/images/organizations/mobincube.svg') center no-repeat;
             background-size: contain;
         }
 
@@ -439,8 +439,21 @@ section {
     }
 
     .organization {
-        margin: 8px 0;
+        margin-top: 8px;
         font-weight: lighter;
+    }
+
+    .period {
+        margin-top: 8px;
+
+        .badge {
+            display: inline-block;
+            margin-top: 4px;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
     }
 }
 

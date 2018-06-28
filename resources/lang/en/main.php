@@ -50,11 +50,17 @@ return [
     'experience' => [
         'title' => 'Professional experience',
 
-        'mobimento' => [
+        'tokintu' => [
             'position'     => 'Back-end software engineer',
-            'organization' => 'Mobimento Mobile',
-            'period'       => 'August 2017 — now',
-            'duration'     => '10 months',
+            'organization' => 'Tokintu',
+            'period'       => 'July 2018 — now',
+        ],
+
+        'mobincube' => [
+            'position'     => 'Back-end software engineer',
+            'organization' => 'Mobincube',
+            'period'       => 'August 2017 — June 2018',
+            'duration'     => '11 months',
         ],
 
         'apadrina_un_olivo' => [
@@ -113,13 +119,14 @@ return [
 
         'programming_languages' => 'Programming languages',
         'php'                   => 'PHP',
-        'java'                  => 'Java',
         'javascript'            => 'JavaScript',
-        'c'                     => 'C',
-        'c++'                   => 'C++',
+        'java'                  => 'Java',
+        'ruby'                  => 'Ruby',
         'go'                    => 'Go',
         'swift'                 => 'Swift',
         'python'                => 'Python',
+        'c'                     => 'C',
+        'c++'                   => 'C++',
 
         'devops'       => 'Development and operations (DevOps)',
         'docker'       => 'Docker',
@@ -129,11 +136,12 @@ return [
         'capistrano'   => 'Capistrano',
 
         'system_and_network_administration' => 'System and network administration',
+        'security'                          => 'Security',
+        'cryptography'                      => 'Cryptography',
+        'aws'                               => 'AWS',
         'debian_and_ubuntu'                 => 'Debian/Ubuntu',
         'rhel_and_centos'                   => 'RHEL/CentOS',
         'macos'                             => 'macOS',
-        'security'                          => 'Security',
-        'cryptography'                      => 'Cryptography',
         'ssh'                               => 'SSH',
         'dns'                               => 'DNS',
         'dhcp'                              => 'DHCP',
