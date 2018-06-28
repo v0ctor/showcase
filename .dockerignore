@@ -1,5 +1,6 @@
 .editorconfig
 .env.example
+.git
 .gitignore
 docker-compose.yml
 LICENSE
