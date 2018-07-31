@@ -71,7 +71,7 @@
     <section class="experience">
         <h1>@lang('main.experience.title')</h1>
 
-        <div class="column stretch">
+        <div class="row">
             <div class="job">
                 <div class="column">
                     <div class="position">@lang('main.experience.vocalik.position')</div>
