@@ -50,10 +50,16 @@ return [
     'experience' => [
         'title' => 'Professional experience',
 
-        'tokintu' => [
+        'vocalik' => [
             'position'     => 'Back-end software engineer',
-            'organization' => 'Tokintu',
+            'organization' => 'Vocalik',
             'period'       => 'July 2018 — now',
+        ],
+
+        'dide' => [
+            'position'     => 'Development and operations engineer',
+            'organization' => 'Díde',
+            'period'       => 'June 2018 — now',
         ],
 
         'mobincube' => [
@@ -156,7 +162,7 @@ return [
 
         'web_server_administration' => 'Web server administration',
         'nginx'                     => 'Nginx',
-        'apache'                    => 'Apache Web Server',
+        'traefik'                   => 'Træfik',
 
 
         'mail_server_administration' => 'Mail server administration',

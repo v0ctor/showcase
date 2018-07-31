@@ -408,6 +408,11 @@ section {
         width: 56px;
         margin-left: 20px;
 
+        &.dide {
+            background: url('/images/organizations/dide.svg') center no-repeat;
+            background-size: contain;
+        }
+
         &.avptp {
             background: url('/images/organizations/avptp.svg') center no-repeat;
             background-size: contain;
