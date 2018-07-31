@@ -50,10 +50,16 @@ return [
     'experience' => [
         'title' => 'Professional experience',
 
-        'tokintu' => [
+        'vocalik' => [
             'position'     => 'Back-end software engineer',
-            'organization' => 'Tokintu',
+            'organization' => 'Vocalik',
             'period'       => 'July 2018 — now',
+        ],
+
+        'dide' => [
+            'position'     => 'Development and operations engineer',
+            'organization' => 'Díde',
+            'period'       => 'June 2018 — now',
         ],
 
         'mobincube' => [

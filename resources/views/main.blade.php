@@ -74,6 +74,32 @@
         <div class="column stretch">
             <div class="job">
                 <div class="column">
+                    <div class="position">@lang('main.experience.vocalik.position')</div>
+                    <div class="organization">
+                        @lang('main.experience.vocalik.organization')
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.vocalik.period')</span>
+                    </div>
+                </div>
+                <div class="logo vocalik"></div>
+            </div>
+            <div class="job">
+                <div class="column">
+                    <div class="position">@lang('main.experience.dide.position')</div>
+                    <div class="organization">
+                        <a href="http://educaryaprender.es">@lang('main.experience.dide.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.experience.dide.period')</span>
+                        @php $duration = Carbon::createFromDate(2018, 6, 29)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                    </div>
+                </div>
+                <div class="logo dide"></div>
+            </div>
+            <div class="job">
+                <div class="column">
                     <div class="position">@lang('main.experience.mobincube.position')</div>
                     <div class="organization">
                         <a href="https://mobincube.com">@lang('main.experience.mobincube.organization')</a>
