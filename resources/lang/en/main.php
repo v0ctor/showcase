@@ -162,7 +162,7 @@ return [
 
         'web_server_administration' => 'Web server administration',
         'nginx'                     => 'Nginx',
-        'apache'                    => 'Apache Web Server',
+        'traefik'                   => 'Træfik',
 
 
         'mail_server_administration' => 'Mail server administration',

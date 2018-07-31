@@ -281,16 +281,16 @@
                 <h2>@lang('main.skills.devops')</h2>
                 <div class="row">
                     <div class="skill">
+                        <span>@lang('main.skills.kubernetes')</span>
+                        <div class="level-50"></div>
+                    </div>
+                    <div class="skill">
                         <span>@lang('main.skills.docker')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.docker_swarm')</span>
                         <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.kubernetes')</span>
-                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jenkins')</span>
@@ -371,7 +371,7 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.apache')</span>
+                        <span>@lang('main.skills.traefik')</span>
                         <div class="level-50"></div>
                     </div>
                 </div>
