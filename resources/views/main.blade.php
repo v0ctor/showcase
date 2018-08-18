@@ -12,11 +12,11 @@
         <h1>@lang('app.author.full_name')</h1>
 
         <div class="social row">
-            <a href="https://github.com/victordzmr"><span class="github"></span></a>
-            <a href="https://dribbble.com/victordm"><span class="dribbble"></span></a>
+            <a href="https://github.com/v0ctor"><span class="github"></span></a>
+            <a href="https://dribbble.com/v0ctor"><span class="dribbble"></span></a>
             <a href="https://linkedin.com/in/victordm"><span class="linkedin"></span></a>
             <a href="https://twitter.com/victordzmr"><span class="twitter"></span></a>
-            <a href="https://facebook.com/victordzmr"><span class="facebook"></span></a>
+            <a href="https://facebook.com/v0ctor"><span class="facebook"></span></a>
             <a href="https://instagram.com/victor.dzmr"><span class="instagram"></span></a>
             <a href="https://open.spotify.com/user/victor.dm"><span class="spotify"></span></a>
         </div>

@@ -395,7 +395,6 @@ section {
 /** Jobs **/
 .job {
     width: 474px;
-    height: 102px;
     margin: 5px;
     padding: 10px;
     border-radius: 6px;
@@ -405,6 +404,10 @@ section {
     color: $dark-grey-2;
     display: flex;
     justify-content: space-between;
+
+    @media (max-device-width: 600px) {
+        width: 100%;
+    }
 
     .logo {
         width: 56px;
