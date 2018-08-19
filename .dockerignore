@@ -1,7 +1,14 @@
+.dockerignore
+.DS_Store
 .editorconfig
+.env
 .env.example
 .git
 .gitignore
+.idea
 docker-compose.yml
+Dockerfile
+Jenkinsfile
+kubernetes
 LICENSE
 readme.md
