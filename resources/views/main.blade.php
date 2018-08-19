@@ -80,6 +80,8 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.experience.vocalik.period')</span>
+                        @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
                 </div>
                 <div class="logo vocalik"></div>

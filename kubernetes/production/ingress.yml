@@ -1,0 +1,27 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+
+metadata:
+  name: showcase
+  
+  labels:
+    app: showcase
+
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/hsts-max-age: '31536000'
+    ingress.kubernetes.io/hsts-include-subdomains: 'true'
+    ingress.kubernetes.io/hsts-preload: 'true'
+    ingress.kubernetes.io/frame-deny: 'true'
+    ingress.kubernetes.io/browser-xss-filter: 'true'
+    ingress.kubernetes.io/content-type-nosniff: 'true'
+    ingress.kubernetes.io/referrer-policy: strict-origin-when-cross-origin
+
+spec:
+  rules:
+    - host: victordiaz.me
+      http:
+        paths:
+          - backend:
+              serviceName: showcase
+              servicePort: http
