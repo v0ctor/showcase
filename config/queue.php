@@ -1,7 +1,4 @@
 <?php
-/**
- * Queue configuration.
- */
 
 return [
 
@@ -18,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_DRIVER', 'sync'),
+    'default' => env('QUEUE_CONNECTION', 'sync'),
 
     /*
     |--------------------------------------------------------------------------

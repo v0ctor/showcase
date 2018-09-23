@@ -1,7 +1,6 @@
 <?php
-/**
- * Cache configuration.
- */
+
+use Illuminate\Support\Str;
 
 return [
 
@@ -73,7 +72,7 @@ return [
 
         'redis' => [
             'driver'     => 'redis',
-            'connection' => 'default',
+            'connection' => 'cache',
         ],
 
     ],
@@ -91,7 +90,7 @@ return [
 
     'prefix' => env(
         'CACHE_PREFIX',
-        str_slug(env('APP_NAME', 'laravel'), '_') . '_cache'
+        Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache'
     ),
 
 ];

@@ -2,7 +2,6 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\SetLanguage;
 use App\Http\Middleware\TrimStrings;
@@ -10,6 +9,7 @@ use Fideloper\Proxy\TrustProxies;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;
+use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode;
@@ -47,7 +47,6 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            EncryptCookies::class,
             AddQueuedCookiesToResponse::class,
             SubstituteBindings::class,
         ],
@@ -73,5 +72,6 @@ class Kernel extends HttpKernel
         'can'           => Authorize::class,
         'guest'         => RedirectIfAuthenticated::class,
         'throttle'      => ThrottleRequests::class,
+        'verified'      => EnsureEmailIsVerified::class,
     ];
 }

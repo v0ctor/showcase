@@ -1,7 +1,4 @@
 <?php
-/**
- * Broadcasting configuration.
- */
 
 return [
 

@@ -61,7 +61,7 @@ gulp.task('build-scripts', gulp.series('clean-scripts', buildLanguages, gulp.par
         'storage/framework/cache/i18n.js',
         'node_modules/jquery/dist/jquery.js',
         'node_modules/cookieconsent/src/cookieconsent.js',
-        'resources/assets/scripts/**/*.js',
+        'resources/scripts/**/*.js',
     ])
     .pipe(concat('app.js'))
     .pipe(sourcemaps.init())
@@ -90,11 +90,11 @@ gulp.task('build-styles', gulp.series('clean-styles', gulp.parallel(buildPublica
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/cookieconsent/build/cookieconsent.min.css',
-        'resources/assets/styles/colors.scss',
-        'resources/assets/styles/mixins.scss',
-        'resources/assets/styles/animations.scss',
-        'resources/assets/styles/icons.scss',
-        'resources/assets/styles/main.scss',
+        'resources/styles/colors.scss',
+        'resources/styles/mixins.scss',
+        'resources/styles/animations.scss',
+        'resources/styles/icons.scss',
+        'resources/styles/main.scss',
     ])
     .pipe(concat('app.css'))
     .pipe(sass().on('error', sass.logError))
@@ -110,9 +110,9 @@ gulp.task('build-styles', gulp.series('clean-styles', gulp.parallel(buildPublica
 function buildPublicationStyles() {
     return gulp.src([
         'node_modules/prismjs/themes/prism.css',
-        'resources/assets/styles/colors.scss',
-        'resources/assets/styles/mixins.scss',
-        'resources/assets/styles/publications.scss'
+        'resources/styles/colors.scss',
+        'resources/styles/mixins.scss',
+        'resources/styles/publications.scss'
     ])
     .pipe(concat('publications.css'))
     .pipe(sass().on('error', sass.logError))
@@ -126,21 +126,21 @@ function buildPublicationStyles() {
 }
 
 gulp.task('build-images', gulp.series('clean-images', function () {
-    return gulp.src('resources/assets/images/**/*').pipe(gulp.dest('public/images'));
+    return gulp.src('resources/images/**/*').pipe(gulp.dest('public/images'));
 }));
 
 gulp.task('build-fonts', gulp.series('clean-fonts', function () {
-    return gulp.src('resources/assets/fonts/**/*').pipe(gulp.dest('public/fonts'));
+    return gulp.src('resources/fonts/**/*').pipe(gulp.dest('public/fonts'));
 }));
 
 gulp.task('build-manifests', gulp.series('clean-manifests', gulp.parallel(buildWebManifest, buildBrowserManifest)));
 
 function buildWebManifest() {
-    return gulp.src('resources/assets/manifest.json').pipe(gulp.dest('public'));
+    return gulp.src('resources/manifest.json').pipe(gulp.dest('public'));
 }
 
 function buildBrowserManifest() {
-    return gulp.src('resources/assets/browserconfig.xml').pipe(gulp.dest('public'));
+    return gulp.src('resources/browserconfig.xml').pipe(gulp.dest('public'));
 }
 
 // Global
@@ -158,10 +158,10 @@ gulp.task('build', gulp.parallel(
 
 // Watcher
 gulp.task('watch', function () {
-    gulp.watch('resources/assets/scripts/**/*.js', gulp.series('build-scripts'));
-    gulp.watch('resources/assets/styles/**/*.scss', gulp.series('build-styles'));
-    gulp.watch('resources/assets/images/**/*', gulp.series('build-images'));
-    gulp.watch('resources/assets/fonts/**/*', gulp.series('build-fonts'));
+    gulp.watch('resources/scripts/**/*.js', gulp.series('build-scripts'));
+    gulp.watch('resources/styles/**/*.scss', gulp.series('build-styles'));
+    gulp.watch('resources/images/**/*', gulp.series('build-images'));
+    gulp.watch('resources/fonts/**/*', gulp.series('build-fonts'));
 });
 
 // Default task

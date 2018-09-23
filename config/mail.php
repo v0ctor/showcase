@@ -1,7 +1,4 @@
 <?php
-/**
- * Mail configuration.
- */
 
 return [
 
