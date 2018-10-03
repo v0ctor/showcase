@@ -47,8 +47,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi",
-            "[ -f vendor/bin/artisan ] || ln -s ../../artisan vendor/bin/artisan"
+            "[ -f vendor/bin/artisan ] || ln -s ../../artisan vendor/bin/artisan",
+            "@php artisan package:discover --ansi"
         ]
     },
     "config": {
