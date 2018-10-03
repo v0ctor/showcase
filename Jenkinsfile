@@ -4,7 +4,7 @@ pipeline {
   environment {
     APP = 'victor/showcase'
 
-    REGISTRY = 'docker.axiomer.com'
+    REGISTRY = 'docker.victordiaz.me'
     REGISTRY_CREDENTIALS = credentials('docker-registry')
 
     NAMESPACE = 'cd'
