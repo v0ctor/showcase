@@ -459,10 +459,10 @@
     <section class="contact">
         <h1>@lang('main.contact.title')</h1>
 
-        <a href="mailto:victor@victordiaz.me">
+        <a href="mailto:victor@diazmarco.me">
             <div class="contact-method mail">
                 <img src="{{ asset('images/envelope.svg') }}">
-                victor@victordiaz.me
+                victor@diazmarco.me
             </div>
         </a>
         <a href="https://linkedin.com/in/victordm">
