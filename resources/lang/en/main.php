@@ -50,9 +50,9 @@ return [
     'experience' => [
         'title' => 'Professional experience',
 
-        'vocalik' => [
+        'dixibox' => [
             'position'     => 'Back-end software engineer',
-            'organization' => 'Vocalik',
+            'organization' => 'Dixibox',
             'period'       => 'July 2018 — now',
         ],
 

@@ -50,7 +50,7 @@ return [
     'experience' => [
         'title' => 'Experiencia profesional',
 
-        'vocalik' => [
+        'dixibox' => [
             'position' => 'Ingeniero de software <em>back-end</em>',
             'period'   => 'julio de 2018 — actualidad',
         ],

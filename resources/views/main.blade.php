@@ -74,17 +74,17 @@
         <div class="row">
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.vocalik.position')</div>
+                    <div class="position">@lang('main.experience.dixibox.position')</div>
                     <div class="organization">
-                        @lang('main.experience.vocalik.organization')
+                        @lang('main.experience.dixibox.organization')
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.vocalik.period')</span>
+                        <span class="badge">@lang('main.experience.dixibox.period')</span>
                         @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
                         <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
                 </div>
-                <div class="logo vocalik"></div>
+                <div class="logo dixibox"></div>
             </div>
             <div class="job">
                 <div class="column">

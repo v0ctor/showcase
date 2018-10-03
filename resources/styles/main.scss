@@ -413,6 +413,11 @@ section {
         width: 56px;
         margin-left: 20px;
 
+        &.dixibox {
+            background: url('/images/organizations/dixibox.svg') center no-repeat;
+            background-size: contain;
+        }
+
         &.dide {
             background: url('/images/organizations/dide.svg') center no-repeat;
             background-size: contain;
