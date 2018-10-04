@@ -71,7 +71,7 @@ gulp.task('build-scripts', gulp.series('clean-scripts', buildLanguages, gulp.par
 })));
 
 function buildLanguages() {
-    return exec('artisan lang:js');
+    return exec('vendor/bin/artisan lang:js');
 }
 
 function buildPublicationScripts() {

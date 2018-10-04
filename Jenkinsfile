@@ -48,6 +48,7 @@ pipeline {
         }
 
         sh 'kubectl create configmap showcase-web --from-file=docker/web --dry-run=true --output=yaml > kubernetes/config-web.yml'
+        sh "sed -i 's,{build},${TAG},' kubernetes/${DEPLOYMENT_NAMESPACE}/config-app.yml"
         sh "sed -i 's,{image},${IMAGE},' kubernetes/deployment.yml"
 
         sh """

@@ -33,10 +33,10 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         CheckForMaintenanceMode::class,
-        TrustProxies::class,
         ValidatePostSize::class,
         TrimStrings::class,
         ConvertEmptyStringsToNull::class,
+        TrustProxies::class,
         SetLanguage::class,
     ];
 

@@ -10,20 +10,13 @@ use Illuminate\Support\Facades\Route;
  */
 
 # Main
-Route::get('', function () {
-    return view('main');
-});
+Route::view('', 'main');
 
 # Publications
 
 // WebSocket
-Route::get('/2015/11/15/coneixent-websocket', function () {
-    return redirect('/websocket?hl=ca', 301);
-});
-
-Route::get('/2015/11/15/conociendo-websocket', function () {
-    return redirect('/websocket?hl=es', 301);
-});
+Route::redirect('/2015/11/15/coneixent-websocket', '/websocket?hl=ca', 301);
+Route::redirect('/2015/11/15/conociendo-websocket', '/websocket?hl=es', 301);
 
 Route::get('websocket', function () {
     if (App::getLocale() === 'en') {
@@ -35,13 +28,8 @@ Route::get('websocket', function () {
 });
 
 // Bitcoin
-Route::get('/2016/04/13/bitcoin-plantejament-i-protocol', function () {
-    return redirect('/bitcoin?hl=ca', 301);
-});
-
-Route::get('/2016/04/13/bitcoin-planteamiento-y-protocolo', function () {
-    return redirect('/bitcoin?hl=es', 301);
-});
+Route::redirect('/2016/04/13/bitcoin-plantejament-i-protocol', '/bitcoin?hl=ca', 301);
+Route::redirect('/2016/04/13/bitcoin-planteamiento-y-protocolo', '/bitcoin?hl=es', 301);
 
 Route::get('bitcoin', function () {
     if (App::getLocale() === 'en') {
