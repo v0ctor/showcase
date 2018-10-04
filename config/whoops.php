@@ -1,7 +1,4 @@
 <?php
-/**
- * Whoops configuration.
- */
 
 $env = [
     'APP_KEY',

@@ -65,7 +65,6 @@ ARG USER_NAME=showcase
 # Dependencies
 RUN apt-get update && \
 	apt-get -y --no-install-recommends install \
-	    iproute \
 	    php-xdebug
 
 # Default user
@@ -79,18 +78,13 @@ COPY docker/app/config.development.ini /etc/php/7.2/fpm/conf.d/99-overrides.ini
 RUN su -c "echo 'export PATH=$PATH:/var/www/vendor/bin' >> ~/.bashrc" $USER_NAME
 
 # Xdebug
-RUN echo 'xdebug.remote_host=host.docker.internal' >> /etc/php/7.2/mods-available/xdebug.ini && \
-    echo 'export PHP_IDE_CONFIG="serverName=default"' >> ~/.bashrc && \
+RUN echo 'export PHP_IDE_CONFIG="serverName=default"' >> ~/.bashrc && \
     su -c "echo 'export PHP_IDE_CONFIG=\"serverName=default\"' >> ~/.bashrc" $USER_NAME
 
 # Node
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get -y --no-install-recommends install nodejs && \
     npm install --global npm gulp-cli
-
-# Daemon
-CMD ip route | awk '/default/ { print $3" host.docker.internal"}' >> /etc/hosts && \
-    /usr/sbin/php-fpm7.2 -F -O 2>&1 | sed -u 's,.*: \"\(.*\)$,\1,'| sed -u 's,"$,,' 1>&1
 
 # Cleanup
 RUN apt-get clean && \
@@ -100,7 +94,14 @@ RUN apt-get clean && \
 ## Builder image
 FROM development AS builder
 
-RUN gulp build
+# Build the application
+COPY . /var/www
+
+RUN composer install --classmap-authoritative --no-progress --no-suggest --no-dev && \
+    ./artisan view:cache && \
+    npm ci && \
+    gulp build && \
+    rm -rf node_modules
 
 
 ## Production image
@@ -111,12 +112,7 @@ COPY docker/app/config.production.ini /etc/php/7.2/cli/conf.d/99-overrides.ini
 COPY docker/app/config.production.ini /etc/php/7.2/fpm/conf.d/99-overrides.ini
 
 # Application
-COPY . /var/www
-
-RUN composer install --classmap-authoritative --no-progress --no-suggest --no-dev && \
-    php artisan route:cache
-
-COPY --from=builder /var/www/public /var/www/public
+COPY --from=builder /var/www /var/www
 
 # Cleanup
 RUN rm /usr/local/bin/composer && \

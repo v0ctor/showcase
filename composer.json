@@ -1,28 +1,29 @@
 {
-    "name": "victordzmr/web",
+    "name": "v0ctor/showcase",
     "license": "MIT",
     "homepage": "https://victordiaz.me",
     "authors": [
         {
             "name": "Víctor Díaz Marco",
-            "email": "victor@victordiaz.me",
+            "email": "victor@diazmarco.me",
             "homepage": "https://victordiaz.me"
         }
     ],
     "require": {
         "php": ">=7.2",
         "fideloper/proxy": "~4.0",
-        "htmlmin/htmlmin": "^5.6",
-        "laravel/framework": "5.6.*",
+        "htmlmin/htmlmin": "^5.7",
+        "laravel/framework": "5.7.*",
         "mariuzzo/laravel-js-localization": "^1.4"
     },
     "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "~2.0",
-        "nunomaduro/collision": "~1.1",
+        "nunomaduro/collision": "^2.0",
         "fzaninotto/faker": "~1.4",
         "laravel/tinker": "~1.0",
         "mockery/mockery": "~1.0",
-        "phpunit/phpunit": "~7.0"
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "classmap": [
@@ -46,8 +47,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover",
-            "[ -f vendor/bin/artisan ] || ln -s ../../artisan vendor/bin/artisan"
+            "[ -f vendor/bin/artisan ] || ln -s ../../artisan vendor/bin/artisan",
+            "@php artisan package:discover --ansi"
         ]
     },
     "config": {

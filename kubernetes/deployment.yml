@@ -23,7 +23,6 @@ spec:
     metadata:
       labels:
         app: showcase
-        redis-client: 'true'
 
     spec:
       initContainers:

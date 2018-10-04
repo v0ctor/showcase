@@ -1,7 +1,4 @@
 <?php
-/**
- * Laravel JS Localization configuration.
- */
 
 return [
 

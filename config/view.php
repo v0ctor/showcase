@@ -1,7 +1,4 @@
 <?php
-/**
- * View configuration.
- */
 
 return [
 
