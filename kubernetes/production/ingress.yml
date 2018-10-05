@@ -3,7 +3,7 @@ apiVersion: extensions/v1beta1
 
 metadata:
   name: showcase
-  
+
   labels:
     app: showcase
 
@@ -20,6 +20,30 @@ metadata:
 spec:
   rules:
     - host: victordiaz.me
+      http:
+        paths:
+          - backend:
+              serviceName: showcase
+              servicePort: http
+    - host: www.victordiaz.me
+      http:
+        paths:
+          - backend:
+              serviceName: showcase
+              servicePort: http
+    - host: diazmarco.me
+      http:
+        paths:
+          - backend:
+              serviceName: showcase
+              servicePort: http
+    - host: victor.diazmarco.me
+      http:
+        paths:
+          - backend:
+              serviceName: showcase
+              servicePort: http
+    - host: www.diazmarco.me
       http:
         paths:
           - backend:
