@@ -76,7 +76,7 @@
                 <div class="column">
                     <div class="position">@lang('main.experience.dixibox.position')</div>
                     <div class="organization">
-                        @lang('main.experience.dixibox.organization')
+                        <a href="https://dixibox.com">@lang('main.experience.dixibox.organization')</a>
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.experience.dixibox.period')</span>
