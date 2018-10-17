@@ -1,24 +1,30 @@
 ## Base image
-FROM php:7.2-fpm-alpine AS base
+FROM php:7.2-fpm AS base
 
 WORKDIR /app
 
 COPY docker/app/opcache-production.ini $PHP_INI_DIR/conf.d/opcache.ini
 
 # PHP extensions and their dependencies:
-#  - gmp (gmp-dev)
-#  - intl (icu-dev)
+#  - gmp (libgmp-dev)
+#  - intl (libicu-dev)
 
 RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
     && mkdir -p /run/php \
     && printf "listen = /run/php/php.sock\nlisten.mode = 0666\n" >> /usr/local/etc/php-fpm.d/zz-docker.conf \
-    && apk add --no-cache \
-        gmp-dev \
-        icu-dev \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libgmp-dev \
+        libicu-dev \
+        locales \
+        unzip \
+    && sed -i '/\(ca_ES\|es_ES\|en_US\).UTF-8/s/^# //g' /etc/locale.gen \
+    && locale-gen \
     && docker-php-ext-install \
         gmp \
         intl \
-        opcache
+        opcache \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 
 ## Builder image
@@ -41,20 +47,21 @@ COPY docker/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
 COPY docker/app/xdebug.ini $PHP_INI_DIR/conf.d
 
 RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
-    && adduser -D -s /bin/bash -u $USER_ID $USER_NAME \
-    && apk add --no-cache \
-        $PHPIZE_DEPS \
-        bash \
+    && useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        curl \
+        gnupg2 \
+    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+    && apt-get install -y --no-install-recommends \
         nodejs \
-        npm \
     && npm install --global \
         npm \
     && pecl install \
         xdebug \
     && docker-php-ext-enable \
         xdebug \
-    && apk del \
-        $PHPIZE_DEPS
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 
 ## Installer image
