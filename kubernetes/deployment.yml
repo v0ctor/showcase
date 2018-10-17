@@ -28,7 +28,7 @@ spec:
       initContainers:
         - name: init
           image: {image}
-          command: ['sh', '-c', 'cp -rp /var/www/public/* /public/']
+          command: ['sh', '-c', 'cp -rp /app/public/* /public/']
           volumeMounts:
             - name: public
               mountPath: /public
@@ -60,7 +60,7 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - name: public
-              mountPath: /var/www/public
+              mountPath: /app/public
             - name: sock-app
               mountPath: /run/php
             - name: web-config
