@@ -8,21 +8,20 @@ services:
       target: development
       args:
         - USER_ID=${UID:-1000}
-        - USER_NAME=${USER_NAME:-showcase}
     volumes:
+      - .:/app
+      - ./docker/app/opcache-development.ini:/usr/local/etc/php/conf.d/opcache.ini
+      - ./docker/app/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - sock-app:/run/php
-      - .:/var/www
-      - ./docker/app/config.development.ini:/etc/php/7.2/cli/conf.d/99-overrides.ini
-      - ./docker/app/config.development.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
 
   web:
     image: nginx:alpine
-    working_dir: /var/www
+    working_dir: /app
     volumes:
-      - sock-app:/run/php
-      - ./public:/var/www/public
+      - ./public:/app/public
       - ./docker/web/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf
+      - sock-app:/run/php
     ports:
       - "${WEB_PORT:-80}:80"
     depends_on:

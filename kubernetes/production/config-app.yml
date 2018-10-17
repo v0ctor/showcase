@@ -2,10 +2,10 @@ kind: ConfigMap
 apiVersion: v1
 
 metadata:
-  name: showcase-app
+  name: {package}-app
   labels:
-    app: showcase
+    app: {package}
 
 data:
   APP_URL: https://victordiaz.me
-  APP_BUILD: {build}
+  APP_BUILD: '{build}'

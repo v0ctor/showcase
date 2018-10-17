@@ -17,10 +17,7 @@ const concat = require('gulp-concat'),
 
 // Concrete
 gulp.task('clean-scripts', function () {
-    return del([
-        'public/scripts',
-        'storage/framework/cache/i18n.js',
-    ]);
+    return del(['public/scripts']);
 });
 
 gulp.task('clean-styles', function () {
@@ -56,7 +53,7 @@ gulp.task('clean', gulp.parallel(
  */
 
 // Concrete
-gulp.task('build-scripts', gulp.series('clean-scripts', buildLanguages, gulp.parallel(buildPublicationScripts, function () {
+gulp.task('build-scripts', gulp.series('clean-scripts', gulp.parallel(buildPublicationScripts, function () {
     return gulp.src([
         'storage/framework/cache/i18n.js',
         'node_modules/jquery/dist/jquery.js',
@@ -69,10 +66,6 @@ gulp.task('build-scripts', gulp.series('clean-scripts', buildLanguages, gulp.par
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('public/scripts'));
 })));
-
-function buildLanguages() {
-    return exec('vendor/bin/artisan lang:js');
-}
 
 function buildPublicationScripts() {
     return gulp.src([

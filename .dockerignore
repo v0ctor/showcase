@@ -10,5 +10,5 @@ docker-compose.yml
 Dockerfile
 Jenkinsfile
 kubernetes
-LICENSE
+license.md
 readme.md
