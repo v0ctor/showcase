@@ -8,4 +8,4 @@ metadata:
 
 data:
   APP_URL: https://victordiaz.me
-  APP_BUILD: {build}
+  APP_BUILD: '{build}'
