@@ -2,7 +2,8 @@ pipeline {
   agent any
 
   environment {
-    APP = 'victor/showcase'
+    VENDOR = 'v0ctor'
+    PROJECT = 'showcase'
 
     REGISTRY = 'docker.victordiaz.me'
     REGISTRY_CREDENTIALS = credentials('docker-registry')
@@ -14,8 +15,8 @@ pipeline {
     stage('Prepare') {
       steps {
         script {
-          TAG = sh (script: "git rev-parse --short HEAD | tr -d '\n'", returnStdout: true)
-          IMAGE = "${REGISTRY}/${APP}:${TAG}"
+          BUILD = sh (script: "git rev-parse --short HEAD | tr -d '\n'", returnStdout: true)
+          IMAGE = [REGISTRY, VENDOR, PROJECT].join('/') + ":${BUILD}"
         }
       }
     }
@@ -44,12 +45,16 @@ pipeline {
       }
       steps {
         script {
+          PACKAGE = [VENDOR, PROJECT].join('-')
           DEPLOYMENT_NAMESPACE = env.BRANCH_NAME == 'master' ? 'production' : 'staging'
         }
 
-        sh 'kubectl create configmap showcase-web --from-file=docker/web --dry-run=true --output=yaml > kubernetes/config-web.yml'
-        sh "sed -i 's,{build},${TAG},' kubernetes/${DEPLOYMENT_NAMESPACE}/config-app.yml"
-        sh "sed -i 's,{image},${IMAGE},' kubernetes/deployment.yml"
+        sh 'kubectl create configmap {package}-web --from-file=docker/web --dry-run=true --output=yaml > kubernetes/config-web.yml'
+
+        sh "find kubernetes -type f | xargs sed -i 's,{vendor},${VENDOR},'"
+        sh "find kubernetes -type f | xargs sed -i 's,{package},${PACKAGE},'"
+        sh "find kubernetes -type f | xargs sed -i 's,{image},${IMAGE},'"
+        sh "find kubernetes -type f | xargs sed -i 's,{build},${BUILD},'"
 
         sh """
           kubectl apply \

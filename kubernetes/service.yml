@@ -2,9 +2,9 @@ kind: Service
 apiVersion: v1
 
 metadata:
-  name: showcase
+  name: {package}
   labels:
-    app: showcase
+    app: {package}
 
 spec:
   type: ClusterIP
@@ -13,4 +13,4 @@ spec:
       port: 80
       targetPort: http
   selector:
-    app: showcase
+    app: {package}

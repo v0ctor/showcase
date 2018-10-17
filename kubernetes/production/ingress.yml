@@ -2,10 +2,10 @@ kind: Ingress
 apiVersion: extensions/v1beta1
 
 metadata:
-  name: showcase
+  name: {package}
 
   labels:
-    app: showcase
+    app: {package}
 
   annotations:
     kubernetes.io/ingress.class: traefik
@@ -23,29 +23,29 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: showcase
+              serviceName: {package}
               servicePort: http
     - host: www.victordiaz.me
       http:
         paths:
           - backend:
-              serviceName: showcase
+              serviceName: {package}
               servicePort: http
     - host: diazmarco.me
       http:
         paths:
           - backend:
-              serviceName: showcase
+              serviceName: {package}
               servicePort: http
     - host: victor.diazmarco.me
       http:
         paths:
           - backend:
-              serviceName: showcase
+              serviceName: {package}
               servicePort: http
     - host: www.diazmarco.me
       http:
         paths:
           - backend:
-              serviceName: showcase
+              serviceName: {package}
               servicePort: http

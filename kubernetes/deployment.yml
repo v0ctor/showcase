@@ -2,9 +2,9 @@ kind: Deployment
 apiVersion: extensions/v1beta1
 
 metadata:
-  name: showcase
+  name: {package}
   labels:
-    app: showcase
+    app: {package}
 
 spec:
   replicas: 2
@@ -12,7 +12,7 @@ spec:
 
   selector:
     matchLabels:
-      app: showcase
+      app: {package}
 
   strategy:
     rollingUpdate:
@@ -22,7 +22,7 @@ spec:
   template:
     metadata:
       labels:
-        app: showcase
+        app: {package}
 
     spec:
       initContainers:
@@ -38,9 +38,9 @@ spec:
           image: {image}
           envFrom:
             - configMapRef:
-                name: showcase-app
+                name: {package}-app
             - secretRef:
-                name: showcase
+                name: {package}
           volumeMounts:
             - name: sock-app
               mountPath: /run/php
@@ -89,7 +89,7 @@ spec:
         - name: sock-app
         - name: web-config
           configMap:
-            name: showcase-web
+            name: {package}-web
 
       imagePullSecrets:
-        - name: docker-registry
+        - name: {vendor}-docker-registry
