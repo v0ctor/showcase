@@ -3,13 +3,14 @@ FROM php:7.2-fpm AS base
 
 WORKDIR /app
 
-COPY docker/app/opcache-production.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY docker/app/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
 
 # PHP extensions and their dependencies:
 #  - gmp (libgmp-dev)
 #  - intl (libicu-dev)
 
 RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
+    && sed -i 's/expose_php = .*/expose_php = Off/' $PHP_INI_DIR/php.ini \
     && mkdir -p /run/php \
     && printf "listen = /run/php/php.sock\nlisten.mode = 0666\n" >> /usr/local/etc/php-fpm.d/zz-docker.conf \
     && apt-get update \
@@ -30,6 +31,11 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
 ## Builder image
 FROM base AS builder
 
+RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
+    && sed -i 's/memory_limit = .*/memory_limit = 256M/' $PHP_INI_DIR/php.ini
+
+COPY docker/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
+
 COPY --from=composer /usr/bin/composer /usr/bin
 
 
@@ -43,11 +49,9 @@ ENV PHP_IDE_CONFIG='serverName=default'
 ARG USER_ID=1000
 ENV USER_NAME=app
 
-COPY docker/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
 COPY docker/app/xdebug.ini $PHP_INI_DIR/conf.d
 
-RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
-    && useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME \
+RUN useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         curl \
@@ -92,8 +96,8 @@ RUN npm install --global \
     && gulp build
 
 
-## Final image
-FROM base AS final
+## Runtime image
+FROM base AS runtime
 
 COPY --from=installer /app /app
 COPY --from=assets /app/public /app/public
