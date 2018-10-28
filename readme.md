@@ -21,12 +21,13 @@ Extended by the following rules:
 
 ### Directory structure
 
-The project follows the default [Laravel application structure](https://laravel.com/docs/structure) with the following addition:
+The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following addition:
 
-* `docker`, `docker-compose.yml` and `docker-compose.override.yml` define the Docker environments for developing and deploying.
+* `docker`, `Dockerfile`, `docker-compose.yml` and `.dockerignore` define the Docker environments.
+* `kubernetes` contains all necessary [Kubernetes](https://kubernetes.io) manifests to deploy the application.
 
 ### License
-This software is distributed under the MIT license. Please read `LICENSE` for information on the software availability and distribution.
+This software is distributed under the MIT license. Please read `license.md` for more information on the software availability and distribution.
 
 ### Credits
 * [Main header](https://unsplash.com/photos/XJXWbfSo2f0) by [Luca Bravo](https://unsplash.com/@lucabravo).
@@ -105,6 +106,10 @@ The database is also accessible from the host with the following credentials:
 * **Password:** `test`
 
 > Note that Git is not available in the container, so you should use it from the host machine.
+
+### Deployment
+
+The deployment process is automated with [Jenkins](https://jenkins.io) and [Kubernetes](https://kubernetes.io). When changes are incorporated into production (`master` branch) or staging (`develop` branch), an automatic deployment is made to the corresponding environment.
 
 ## Problem resolution
 
