@@ -90,12 +90,11 @@
                 <div class="column">
                     <div class="position">@lang('main.experience.dide.position')</div>
                     <div class="organization">
-                        <a href="http://educaryaprender.es">@lang('main.experience.dide.organization')</a>
+                        <a href="https://dide.app">@lang('main.experience.dide.organization')</a>
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.experience.dide.period')</span>
-                        @php $duration = Carbon::createFromDate(2018, 6, 29)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">@lang('main.experience.dide.duration')</span>
                     </div>
                 </div>
                 <div class="logo dide"></div>

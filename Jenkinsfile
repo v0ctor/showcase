@@ -7,8 +7,6 @@ pipeline {
 
     REGISTRY = 'docker.victordiaz.me'
     REGISTRY_CREDENTIALS = credentials('docker-registry')
-
-    NAMESPACE = 'cd'
   }
 
   stages {
