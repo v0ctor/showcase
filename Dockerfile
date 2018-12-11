@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.2-fpm AS base
+FROM php:7.3-fpm AS base
 
 WORKDIR /app
 
@@ -62,7 +62,7 @@ RUN useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NA
     && npm install --global \
         npm \
     && pecl install \
-        xdebug \
+        xdebug-2.7.0beta1 \
     && docker-php-ext-enable \
         xdebug \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
