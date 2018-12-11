@@ -57,7 +57,8 @@ return [
 
         'dide' => [
             'position' => 'Ingeniero de desarrollo y operaciones',
-            'period'   => 'junio de 2018 — actualidad',
+            'period'   => 'junio — diciembre de 2018 ',
+            'duration' => '6 meses',
         ],
 
         'mobincube' => [

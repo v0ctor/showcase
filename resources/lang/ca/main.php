@@ -57,7 +57,8 @@ return [
 
         'dide' => [
             'position' => 'Enginyer de desenvolupament i operacions',
-            'period'   => 'juny de 2018 — actualitat',
+            'period'   => 'juny — desembre de 2018',
+            'duration' => '6 mesos',
         ],
 
         'mobincube' => [

@@ -59,7 +59,8 @@ return [
         'dide' => [
             'position'     => 'Development and operations engineer',
             'organization' => 'Díde',
-            'period'       => 'June 2018 — now',
+            'period'       => 'June — December 2018',
+            'duration'     => '6 months',
         ],
 
         'mobincube' => [
