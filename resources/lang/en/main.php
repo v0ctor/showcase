@@ -51,7 +51,7 @@ return [
         'title' => 'Professional experience',
 
         'dixibox' => [
-            'position'     => 'Back-end software engineer',
+            'position'     => 'Chief technology officer',
             'organization' => 'Dixibox',
             'period'       => 'July 2018 — now',
         ],

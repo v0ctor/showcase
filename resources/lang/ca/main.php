@@ -51,7 +51,7 @@ return [
         'title' => 'Experiència professional',
 
         'dixibox' => [
-            'position' => 'Enginyer de programari <em>back-end</em>',
+            'position' => 'Director de tecnologia',
             'period'   => 'juliol de 2018 — actualitat',
         ],
 
