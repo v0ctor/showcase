@@ -47,8 +47,8 @@ return [
         ],
     ],
 
-    'experience' => [
-        'title' => 'Professional experience',
+    'jobs' => [
+        'title' => 'Work experience',
 
         'dixibox' => [
             'position'     => 'Chief technology officer',
@@ -56,25 +56,38 @@ return [
             'period'       => 'July 2018 — now',
         ],
 
-        'dide' => [
-            'position'     => 'Development and operations engineer',
-            'organization' => 'Díde',
-            'period'       => 'June — December 2018',
-            'duration'     => '6 months',
-        ],
-
         'mobincube' => [
             'position'     => 'Back-end software engineer',
             'organization' => 'Mobincube',
             'period'       => 'August 2017 — June 2018',
-            'duration'     => '11 months',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Software engineer',
             'organization' => 'Apadrina un olivo',
             'period'       => 'March — July 2017',
-            'duration'     => '5 months',
+        ],
+
+        'valencia_city_council' => [
+            'position'     => 'Full-stack software developer (scholarship)',
+            'organization' => 'Ajuntament de València',
+            'period'       => 'July — August 2013',
+        ],
+    ],
+
+    'projects' => [
+        'title' => 'Projects',
+
+        'avptp' => [
+            'position'     => 'Vice president and spokesperson',
+            'organization' => 'Associació Valenciana pel Transport Públic',
+            'period'       => 'April 2018 — now',
+        ],
+
+        'dide' => [
+            'name'         => 'Infrastructure migration to Kubernetes',
+            'organization' => 'Díde',
+            'period'       => 'June — December 2018',
         ],
 
         'habtium' => [
@@ -82,23 +95,6 @@ return [
             'organization' => 'Habtium',
             'period'       => 'January 2010 — June 2016',
             'duration'     => '6 years and 6 months',
-        ],
-
-        'valencia_city_council' => [
-            'position'     => 'Full-stack software developer (scholarship)',
-            'organization' => 'Ajuntament de València',
-            'period'       => 'July — August 2013',
-            'duration'     => '2 months',
-        ],
-    ],
-
-    'volunteering' => [
-        'title' => 'Volunteering experience',
-
-        'avptp' => [
-            'position'     => 'Co-founder, vice president and spokesperson',
-            'organization' => 'Associació Valenciana pel Transport Públic',
-            'period'       => 'April 2018 — now',
         ],
     ],
 

@@ -69,18 +69,18 @@
         </div>
     </section>
 
-    <section class="experience">
-        <h1>@lang('main.experience.title')</h1>
+    <section class="jobs">
+        <h1>@lang('main.jobs.title')</h1>
 
-        <div class="row">
+        <div class="column stretch">
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.dixibox.position')</div>
+                    <div class="position">@lang('main.jobs.dixibox.position')</div>
                     <div class="organization">
-                        <a href="https://dixibox.com">@lang('main.experience.dixibox.organization')</a>
+                        <a href="https://dixibox.com">@lang('main.jobs.dixibox.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.dixibox.period')</span>
+                        <span class="badge">@lang('main.jobs.dixibox.period')</span>
                         @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
                         <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
@@ -89,64 +89,39 @@
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.dide.position')</div>
+                    <div class="position">@lang('main.jobs.mobincube.position')</div>
                     <div class="organization">
-                        <a href="https://dide.app">@lang('main.experience.dide.organization')</a>
+                        <a href="https://mobincube.com">@lang('main.jobs.mobincube.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.dide.period')</span>
-                        <span class="badge">@lang('main.experience.dide.duration')</span>
-                    </div>
-                </div>
-                <div class="logo dide"></div>
-            </div>
-            <div class="job">
-                <div class="column">
-                    <div class="position">@lang('main.experience.mobincube.position')</div>
-                    <div class="organization">
-                        <a href="https://mobincube.com">@lang('main.experience.mobincube.organization')</a>
-                    </div>
-                    <div class="period">
-                        <span class="badge">@lang('main.experience.mobincube.period')</span>
-                        <span class="badge">@lang('main.experience.mobincube.duration')</span>
+                        <span class="badge">@lang('main.jobs.mobincube.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 11]) }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.apadrina_un_olivo.position')</div>
+                    <div class="position">@lang('main.jobs.apadrina_un_olivo.position')</div>
                     <div class="organization">
-                        <a href="https://apadrinaunolivo.org">@lang('main.experience.apadrina_un_olivo.organization')</a>
+                        <a href="https://apadrinaunolivo.org">@lang('main.jobs.apadrina_un_olivo.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
-                        <span class="badge">@lang('main.experience.apadrina_un_olivo.duration')</span>
+                        <span class="badge">@lang('main.jobs.apadrina_un_olivo.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 5]) }}</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.habtium.position')</div>
+                    <div class="position">@lang('main.jobs.valencia_city_council.position')</div>
                     <div class="organization">
-                        <a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
-                    <div class="period">
-                        <span class="badge">@lang('main.experience.habtium.period')</span>
-                        <span class="badge">@lang('main.experience.habtium.duration')</span>
-                    </div>
-                </div>
-                <div class="logo habtium"></div>
-            </div>
-            <div class="job">
-                <div class="column">
-                    <div class="position">@lang('main.experience.valencia_city_council.position')</div>
-                    <div class="organization">
-                        <a href="http://www.valencia.es">@lang('main.experience.valencia_city_council.organization')</a>
+                        <a href="https://valencia.es">@lang('main.jobs.valencia_city_council.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.valencia_city_council.period')</span>
-                        <span class="badge">@lang('main.experience.valencia_city_council.duration')</span>
+                        <span class="badge">@lang('main.jobs.valencia_city_council.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 2]) }}</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>
@@ -154,23 +129,48 @@
         </div>
     </section>
 
-    <section class="volunteering">
-        <h1>@lang('main.volunteering.title')</h1>
+    <section class="projects">
+        <h1>@lang('main.projects.title')</h1>
 
         <div class="column stretch">
-            <div class="job">
+            <div class="project">
                 <div class="column">
-                    <div class="position">@lang('main.volunteering.avptp.position')</div>
+                    <div class="position">@lang('main.projects.avptp.position')</div>
                     <div class="organization">
-                        <a href="https://avptp.org">@lang('main.volunteering.avptp.organization')</a>
+                        <a href="https://avptp.org">@lang('main.projects.avptp.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.volunteering.avptp.period')</span>
+                        <span class="badge">@lang('main.projects.avptp.period')</span>
                         @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
                         <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
                     </div>
                 </div>
                 <div class="logo avptp"></div>
+            </div>
+            <div class="project">
+                <div class="column">
+                    <div class="position">@lang('main.projects.dide.name')</div>
+                    <div class="organization">
+                        <a href="https://dide.app">@lang('main.projects.dide.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.projects.dide.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 6]) }}</span>
+                    </div>
+                </div>
+                <div class="logo dide"></div>
+            </div>
+            <div class="project">
+                <div class="column">
+                    <div class="position">@lang('main.projects.habtium.position')</div>
+                    <div class="organization">
+                        <a href="https://habtium.es">@lang('main.projects.habtium.organization')</a></div>
+                    <div class="period">
+                        <span class="badge">@lang('main.projects.habtium.period')</span>
+                        <span class="badge">@lang('main.projects.habtium.duration')</span>
+                    </div>
+                </div>
+                <div class="logo habtium"></div>
             </div>
         </div>
     </section>

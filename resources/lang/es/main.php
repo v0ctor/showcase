@@ -47,51 +47,47 @@ return [
         ],
     ],
 
-    'experience' => [
-        'title' => 'Experiencia profesional',
+    'jobs' => [
+        'title' => 'Experiencia laboral',
 
         'dixibox' => [
             'position' => 'Director de tecnología',
             'period'   => 'julio de 2018 — actualidad',
         ],
 
-        'dide' => [
-            'position' => 'Ingeniero de desarrollo y operaciones',
-            'period'   => 'junio — diciembre de 2018 ',
-            'duration' => '6 meses',
-        ],
-
         'mobincube' => [
             'position' => 'Ingeniero de software <em>back-end</em>',
             'period'   => 'agosto de 2017 — junio de 2018',
-            'duration' => '11 meses',
         ],
 
         'apadrina_un_olivo' => [
             'position' => 'Ingeniero de software',
             'period'   => 'marzo — julio de 2017',
-            'duration' => '5 meses',
+        ],
+
+        'valencia_city_council' => [
+            'position' => 'Desarrollador de software <em>full-stack</em> (beca)',
+            'period'   => 'julio — agosto de 2013',
+        ],
+    ],
+
+    'projects' => [
+        'title' => 'Proyectos',
+
+        'avptp' => [
+            'position' => 'Vicepresidente y portavoz',
+            'period'   => 'abril de 2018 — actualidad',
+        ],
+
+        'dide' => [
+            'name'   => 'Migración de la infraestructura a Kubernetes',
+            'period' => 'junio — diciembre de 2018 ',
         ],
 
         'habtium' => [
             'position' => 'Administrador de sistemas y desarrollador web',
             'period'   => 'enero de 2010 — junio de 2016',
             'duration' => '6 años y 6 meses',
-        ],
-
-        'valencia_city_council' => [
-            'position' => 'Desarrollador de software <em>full-stack</em> (beca)',
-            'period'   => 'julio — agosto de 2013',
-            'duration' => '2 meses',
-        ],
-    ],
-
-    'volunteering' => [
-        'title' => 'Experiencia de voluntariado',
-
-        'avptp' => [
-            'position' => 'Cofundador, vicepresidente y portavoz',
-            'period'   => 'abril de 2018 — actualidad',
         ],
     ],
 
