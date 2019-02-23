@@ -138,6 +138,18 @@ header {
             border-radius: 100%;
         }
 
+        .social {
+            img {
+                height: 22px;
+                margin: 0 6px;
+
+                &:hover {
+                    opacity: .75;
+                }
+            }
+        }
+
+
         h1 {
             margin: 10px 0;
         }
@@ -553,12 +565,6 @@ section {
 @media print {
     header {
         background-position: bottom center;
-
-        .social {
-            .facebook {
-                display: none;
-            }
-        }
 
         .arrow {
             display: none;

@@ -12,13 +12,14 @@
         <h1>@lang('app.author.full_name')</h1>
 
         <div class="social row">
-            <a href="https://github.com/v0ctor"><span class="github"></span></a>
-            <a href="https://dribbble.com/v0ctor"><span class="dribbble"></span></a>
-            <a href="https://linkedin.com/in/victordm"><span class="linkedin"></span></a>
-            <a href="https://twitter.com/victordzmr"><span class="twitter"></span></a>
-            <a href="https://facebook.com/v0ctor"><span class="facebook"></span></a>
-            <a href="https://instagram.com/victor.dzmr"><span class="instagram"></span></a>
-            <a href="https://open.spotify.com/user/victor.dm"><span class="spotify"></span></a>
+            <a href="https://linkedin.com/in/victordm"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
+            <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
+            <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
+            <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
+            <a href="https://twitter.com/victordzmr"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
+            <a href="https://facebook.com/v0ctor"><img src="{{ asset('images/social/facebook.svg') }}" alt="Facebook"></a>
+            <a href="https://instagram.com/victor.dzmr"><img src="{{ asset('images/social/instagram.svg') }}" alt="Instagram"></a>
+            <a href="https://open.spotify.com/user/victor.dm"><img src="{{ asset('images/social/spotify.svg') }}" alt="Spotify"></a>
         </div>
 
         <div id="scroll" class="arrow"></div>
@@ -458,19 +459,19 @@
         </a>
         <a href="https://linkedin.com/in/victordm">
             <div class="contact-method linkedin">
-                <img src="{{ asset('images/linkedin.svg') }}">
+                <img src="{{ asset('images/social/linkedin.svg') }}">
                 @victordm
             </div>
         </a>
         <a href="https://twitter.com/victordzmr">
             <div class="contact-method twitter">
-                <img src="{{ asset('images/twitter.svg') }}">
+                <img src="{{ asset('images/social/twitter.svg') }}">
                 @victordzmr
             </div>
         </a>
         <a href="https://keybase.io/victordm">
             <div class="contact-method keybase">
-                <img src="{{ asset('images/keybase.svg') }}">
+                <img src="{{ asset('images/social/keybase.svg') }}">
                 @victordm
             </div>
         </a>
