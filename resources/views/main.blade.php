@@ -18,7 +18,7 @@
             <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
             <a href="https://twitter.com/victordzmr"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
             <a href="https://facebook.com/v0ctor"><img src="{{ asset('images/social/facebook.svg') }}" alt="Facebook"></a>
-            <a href="https://instagram.com/victor.dzmr"><img src="{{ asset('images/social/instagram.svg') }}" alt="Instagram"></a>
+            <a href="https://instagram.com/v00ctor"><img src="{{ asset('images/social/instagram.svg') }}" alt="Instagram"></a>
             <a href="https://open.spotify.com/user/victor.dm"><img src="{{ asset('images/social/spotify.svg') }}" alt="Spotify"></a>
         </div>
 
