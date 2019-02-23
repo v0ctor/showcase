@@ -8,15 +8,15 @@ return [
     'about' => [
         'title' => 'About me',
 
-        'introduction' => 'Hi! My name is <strong>Víctor</strong>, I am <strong>:age years old</strong>, I live in València (Spain) and I am a computer engineer. My interest is particularly focused on <strong>software</strong> development, <strong>system</strong> administration, <strong>networking</strong> and <strong>security</strong>.',
+        'introduction' => 'Hi! My name is <strong>Víctor</strong>, I am <strong>:age years old</strong>, I live in <strong><a href="https://en.wikipedia.org/wiki/Valencia">Valencia</a></strong> and I am a computer engineer. My interest is particularly focused on <strong>software</strong> development, <strong>systems</strong>, <strong>networking</strong> and <strong>security</strong>.',
 
         'beginnings' => 'In 2007, when I was 13, I began to delve into the world of computing through the web development. Little by little I learned PHP, JavaScript, HTML and CSS. This allowed me to deepen other topics such as software engineering, system administration, security and cryptography; which I find exciting. Since then I continue learning, both by myself and for having participated in several projects. In 2016 I graduated in <strong>computer science</strong> by the <strong>Universitat Politècnica de València</strong>, with the specialty in the field of <strong>information technologies</strong>.',
 
-        'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my <strong>axiomatic values</strong>:',
+        'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my fundamental <strong>professional values</strong>:',
 
         'cave' => 'For me, <strong>computing</strong> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <strong>leave the <a href="https://en.wikipedia.org/wiki/Allegory_of_the_Cave">cave</a></strong> on our own and to travel without limits or prejudices through knowledge.',
 
-        'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate problems</strong> and <strong>meet needs</strong>, thus promoting the progress of humanity.',
+        'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate existing problems</strong> and <strong>meet new needs</strong>, thus doing my bit for the progress of humanity.',
 
         'values' => [
             'equality'            => 'Equality',
