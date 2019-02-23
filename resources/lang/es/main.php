@@ -8,15 +8,15 @@ return [
     'about' => [
         'title' => 'Sobre mí',
 
-        'introduction' => '¡Hola! Mi nombre es <strong>Víctor</strong>, tengo <strong>:age años</strong>, vivo en Valencia y soy ingeniero informático. Mi interés se centra especialmente en el desarrollo de <strong>software</strong>, la administración de <strong>sistemas</strong>, las <strong>redes</strong> y la <strong>seguridad</strong>.',
+        'introduction' => '¡Hola! Mi nombre es <strong>Víctor</strong>, tengo <strong>:age años</strong>, vivo en <strong><a href="https://es.wikipedia.org/wiki/Valencia">Valencia</a></strong> y soy ingeniero informático. Mi interés se centra especialmente en el desarrollo de <strong>software</strong>, los <strong>sistemas</strong>, las <strong>redes</strong> y la <strong>seguridad</strong>.',
 
         'beginnings' => 'En 2007, con 13 años, empecé a adentrarme en el mundo de la informática a través del desarrollo web. Poco a poco fui aprendiendo PHP, JavaScript, HTML y CSS. Esto me permitió profundizar en otros temas como la ingeniería de software, la administración de sistemas, la seguridad y la criptografía; los cuales me parecen apasionantes. Desde entonces continúo aprendiendo, tanto por mi cuenta como gracias a haber participado en diversos proyectos. En 2016 me gradué en <strong>ingeniería informática</strong> por la <strong>Universitat Politècnica de València</strong>, con la mención de <strong>tecnologías de la información</strong>.',
 
-        'principles' => 'Considero que el conocimiento debe ir acompañado necesariamente de unos valores que garanticen que su aplicación sea beneficiosa para el conjunto de la sociedad. Estos son mis <strong>valores axiomáticos</strong>:',
+        'principles' => 'Considero que el conocimiento debe ir acompañado necesariamente de unos valores que garanticen que su aplicación sea beneficiosa para el conjunto de la sociedad. Estos son mis <strong>valores profesionales</strong> fundamentales:',
 
         'cave' => 'Para mí, la <strong>informática</strong> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es internet) nos permiten por igual a todos los humanos <strong>salir de la <a href="https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna">caverna</a></strong> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.',
 
-        'conclusion' => 'Mi <strong>objetivo</strong> profesional es hacer efectivo el potencial de la informática para <strong>eliminar problemas</strong> y <strong>cubrir necesidades</strong>, fomentando así el progreso de la humanidad.',
+        'conclusion' => 'Mi <strong>objetivo</strong> profesional es hacer efectivo el potencial de la informática para <strong>eliminar problemas existentes</strong> y <strong>cubrir nuevas necesidades</strong>, dando así un pequeño paso más por el progreso de la humanidad.',
 
         'values' => [
             'equality'            => 'Igualdad',
@@ -47,51 +47,49 @@ return [
         ],
     ],
 
-    'experience' => [
-        'title' => 'Experiencia profesional',
+    'jobs' => [
+        'title' => 'Experiencia laboral',
+
+        'co-founder' => 'cofundador',
 
         'dixibox' => [
             'position' => 'Director de tecnología',
             'period'   => 'julio de 2018 — actualidad',
         ],
 
-        'dide' => [
-            'position' => 'Ingeniero de desarrollo y operaciones',
-            'period'   => 'junio — diciembre de 2018 ',
-            'duration' => '6 meses',
-        ],
-
         'mobincube' => [
             'position' => 'Ingeniero de software <em>back-end</em>',
             'period'   => 'agosto de 2017 — junio de 2018',
-            'duration' => '11 meses',
         ],
 
         'apadrina_un_olivo' => [
             'position' => 'Ingeniero de software',
             'period'   => 'marzo — julio de 2017',
-            'duration' => '5 meses',
+        ],
+
+        'valencia_city_council' => [
+            'position' => 'Desarrollador de software <em>full-stack</em> (beca)',
+            'period'   => 'julio — agosto de 2013',
+        ],
+    ],
+
+    'projects' => [
+        'title' => 'Proyectos',
+
+        'avptp' => [
+            'position' => 'Vicepresidente y portavoz',
+            'period'   => 'abril de 2018 — actualidad',
+        ],
+
+        'dide' => [
+            'name'   => 'Migración de la infraestructura a Kubernetes',
+            'period' => 'junio — diciembre de 2018 ',
         ],
 
         'habtium' => [
             'position' => 'Administrador de sistemas y desarrollador web',
             'period'   => 'enero de 2010 — junio de 2016',
             'duration' => '6 años y 6 meses',
-        ],
-
-        'valencia_city_council' => [
-            'position' => 'Desarrollador de software <em>full-stack</em> (beca)',
-            'period'   => 'julio — agosto de 2013',
-            'duration' => '2 meses',
-        ],
-    ],
-
-    'volunteering' => [
-        'title' => 'Experiencia de voluntariado',
-
-        'avptp' => [
-            'position' => 'Cofundador, vicepresidente y portavoz',
-            'period'   => 'abril de 2018 — actualidad',
         ],
     ],
 

@@ -8,15 +8,15 @@ return [
     'about' => [
         'title' => 'About me',
 
-        'introduction' => 'Hi! My name is <strong>Víctor</strong>, I am <strong>:age years old</strong>, I live in València (Spain) and I am a computer engineer. My interest is particularly focused on <strong>software</strong> development, <strong>system</strong> administration, <strong>networking</strong> and <strong>security</strong>.',
+        'introduction' => 'Hi! My name is <strong>Víctor</strong>, I am <strong>:age years old</strong>, I live in <strong><a href="https://en.wikipedia.org/wiki/Valencia">Valencia</a></strong> and I am a computer engineer. My interest is particularly focused on <strong>software</strong> development, <strong>systems</strong>, <strong>networking</strong> and <strong>security</strong>.',
 
         'beginnings' => 'In 2007, when I was 13, I began to delve into the world of computing through the web development. Little by little I learned PHP, JavaScript, HTML and CSS. This allowed me to deepen other topics such as software engineering, system administration, security and cryptography; which I find exciting. Since then I continue learning, both by myself and for having participated in several projects. In 2016 I graduated in <strong>computer science</strong> by the <strong>Universitat Politècnica de València</strong>, with the specialty in the field of <strong>information technologies</strong>.',
 
-        'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my <strong>axiomatic values</strong>:',
+        'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my fundamental <strong>professional values</strong>:',
 
         'cave' => 'For me, <strong>computing</strong> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <strong>leave the <a href="https://en.wikipedia.org/wiki/Allegory_of_the_Cave">cave</a></strong> on our own and to travel without limits or prejudices through knowledge.',
 
-        'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate problems</strong> and <strong>meet needs</strong>, thus promoting the progress of humanity.',
+        'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate existing problems</strong> and <strong>meet new needs</strong>, thus doing my bit for the progress of humanity.',
 
         'values' => [
             'equality'            => 'Equality',
@@ -47,8 +47,10 @@ return [
         ],
     ],
 
-    'experience' => [
-        'title' => 'Professional experience',
+    'jobs' => [
+        'title' => 'Work experience',
+
+        'co-founder' => 'co-founder',
 
         'dixibox' => [
             'position'     => 'Chief technology officer',
@@ -56,25 +58,38 @@ return [
             'period'       => 'July 2018 — now',
         ],
 
-        'dide' => [
-            'position'     => 'Development and operations engineer',
-            'organization' => 'Díde',
-            'period'       => 'June — December 2018',
-            'duration'     => '6 months',
-        ],
-
         'mobincube' => [
             'position'     => 'Back-end software engineer',
             'organization' => 'Mobincube',
             'period'       => 'August 2017 — June 2018',
-            'duration'     => '11 months',
         ],
 
         'apadrina_un_olivo' => [
             'position'     => 'Software engineer',
             'organization' => 'Apadrina un olivo',
             'period'       => 'March — July 2017',
-            'duration'     => '5 months',
+        ],
+
+        'valencia_city_council' => [
+            'position'     => 'Full-stack software developer (scholarship)',
+            'organization' => 'Ajuntament de València',
+            'period'       => 'July — August 2013',
+        ],
+    ],
+
+    'projects' => [
+        'title' => 'Projects',
+
+        'avptp' => [
+            'position'     => 'Vice president and spokesperson',
+            'organization' => 'Associació Valenciana pel Transport Públic',
+            'period'       => 'April 2018 — now',
+        ],
+
+        'dide' => [
+            'name'         => 'Infrastructure migration to Kubernetes',
+            'organization' => 'Díde',
+            'period'       => 'June — December 2018',
         ],
 
         'habtium' => [
@@ -83,33 +98,15 @@ return [
             'period'       => 'January 2010 — June 2016',
             'duration'     => '6 years and 6 months',
         ],
-
-        'valencia_city_council' => [
-            'position'     => 'Full-stack software developer (scholarship)',
-            'organization' => 'Ajuntament de València',
-            'period'       => 'July — August 2013',
-            'duration'     => '2 months',
-        ],
-    ],
-
-    'volunteering' => [
-        'title' => 'Volunteering experience',
-
-        'avptp' => [
-            'position'     => 'Co-founder, vice president and spokesperson',
-            'organization' => 'Associació Valenciana pel Transport Públic',
-            'period'       => 'April 2018 — now',
-        ],
     ],
 
     'skills' => [
         'title' => 'Skills',
 
         'development_methodologies' => 'Development methodologies',
-        'scrum'                     => 'Scrum',
         'kanban'                    => 'Kanban',
-        'tdd'                       => 'TDD',
         'fdd'                       => 'FDD',
+        'tdd'                       => 'TDD',
 
 
         'web_application_development' => 'Web application development',
@@ -135,20 +132,18 @@ return [
         'c'                     => 'C',
         'c++'                   => 'C++',
 
-        'devops'       => 'Development and operations (DevOps)',
-        'docker'       => 'Docker',
-        'docker_swarm' => 'Docker Swarm',
-        'kubernetes'   => 'Kubernetes',
-        'jenkins'      => 'Jenkins',
-        'capistrano'   => 'Capistrano',
+        'devops'     => 'Development and operations (DevOps)',
+        'docker'     => 'Docker',
+        'kubernetes' => 'Kubernetes',
+        'jenkins'    => 'Jenkins',
 
         'system_and_network_administration' => 'System and network administration',
         'security'                          => 'Security',
         'cryptography'                      => 'Cryptography',
+        'digitalocean'                      => 'DigitalOcean',
         'aws'                               => 'AWS',
-        'debian_and_ubuntu'                 => 'Debian/Ubuntu',
-        'rhel_and_centos'                   => 'RHEL/CentOS',
-        'macos'                             => 'macOS',
+        'azure'                             => 'Azure',
+        'linux'                             => 'Linux',
         'ssh'                               => 'SSH',
         'dns'                               => 'DNS',
         'dhcp'                              => 'DHCP',
@@ -159,6 +154,7 @@ return [
         'mysql'                   => 'MySQL',
         'redis'                   => 'Redis',
         'mongodb'                 => 'MongoDB',
+        'postgresql'              => 'PostgreSQL',
 
 
         'web_server_administration' => 'Web server administration',

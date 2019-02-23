@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.3-fpm AS base
+FROM php:7.3.2-fpm AS base
 
 WORKDIR /app
 
@@ -36,7 +36,7 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
 
 COPY docker/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
 
-COPY --from=composer /usr/bin/composer /usr/bin
+COPY --from=composer:1.8.3 /usr/bin/composer /usr/bin
 
 
 ## Development image
@@ -62,7 +62,7 @@ RUN useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NA
     && npm install --global \
         npm \
     && pecl install \
-        xdebug-2.7.0beta1 \
+        xdebug-2.7.0RC2 \
     && docker-php-ext-enable \
         xdebug \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
@@ -83,7 +83,7 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:8-alpine AS assets
+FROM node:10.15.1-alpine AS assets
 
 WORKDIR /app
 

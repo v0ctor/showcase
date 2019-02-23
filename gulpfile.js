@@ -28,10 +28,6 @@ gulp.task('clean-images', function () {
     return del(['public/images']);
 });
 
-gulp.task('clean-fonts', function () {
-    return del(['public/fonts']);
-});
-
 gulp.task('clean-manifests', function () {
     return del([
         'public/manifest.json',
@@ -44,7 +40,6 @@ gulp.task('clean', gulp.parallel(
     'clean-scripts',
     'clean-styles',
     'clean-images',
-    'clean-fonts',
     'clean-manifests',
 ));
 
@@ -86,7 +81,6 @@ gulp.task('build-styles', gulp.series('clean-styles', gulp.parallel(buildPublica
         'resources/styles/colors.scss',
         'resources/styles/mixins.scss',
         'resources/styles/animations.scss',
-        'resources/styles/icons.scss',
         'resources/styles/main.scss',
     ])
     .pipe(concat('app.css'))
@@ -122,10 +116,6 @@ gulp.task('build-images', gulp.series('clean-images', function () {
     return gulp.src('resources/images/**/*').pipe(gulp.dest('public/images'));
 }));
 
-gulp.task('build-fonts', gulp.series('clean-fonts', function () {
-    return gulp.src('resources/fonts/**/*').pipe(gulp.dest('public/fonts'));
-}));
-
 gulp.task('build-manifests', gulp.series('clean-manifests', gulp.parallel(buildWebManifest, buildBrowserManifest)));
 
 function buildWebManifest() {
@@ -141,7 +131,6 @@ gulp.task('build', gulp.parallel(
     'build-scripts',
     'build-styles',
     'build-images',
-    'build-fonts',
     'build-manifests',
 ));
 
@@ -154,7 +143,6 @@ gulp.task('watch', function () {
     gulp.watch('resources/scripts/**/*.js', gulp.series('build-scripts'));
     gulp.watch('resources/styles/**/*.scss', gulp.series('build-styles'));
     gulp.watch('resources/images/**/*', gulp.series('build-images'));
-    gulp.watch('resources/fonts/**/*', gulp.series('build-fonts'));
 });
 
 // Default task

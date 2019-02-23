@@ -12,13 +12,14 @@
         <h1>@lang('app.author.full_name')</h1>
 
         <div class="social row">
-            <a href="https://github.com/v0ctor"><span class="github"></span></a>
-            <a href="https://dribbble.com/v0ctor"><span class="dribbble"></span></a>
-            <a href="https://linkedin.com/in/victordm"><span class="linkedin"></span></a>
-            <a href="https://twitter.com/victordzmr"><span class="twitter"></span></a>
-            <a href="https://facebook.com/v0ctor"><span class="facebook"></span></a>
-            <a href="https://instagram.com/victor.dzmr"><span class="instagram"></span></a>
-            <a href="https://open.spotify.com/user/victor.dm"><span class="spotify"></span></a>
+            <a href="https://linkedin.com/in/victordm"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
+            <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
+            <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
+            <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
+            <a href="https://twitter.com/victordzmr"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
+            <a href="https://facebook.com/v0ctor"><img src="{{ asset('images/social/facebook.svg') }}" alt="Facebook"></a>
+            <a href="https://instagram.com/v00ctor"><img src="{{ asset('images/social/instagram.svg') }}" alt="Instagram"></a>
+            <a href="https://open.spotify.com/user/victor.dm"><img src="{{ asset('images/social/spotify.svg') }}" alt="Spotify"></a>
         </div>
 
         <div id="scroll" class="arrow"></div>
@@ -68,84 +69,60 @@
         </div>
     </section>
 
-    <section class="experience">
-        <h1>@lang('main.experience.title')</h1>
+    <section class="jobs">
+        <h1>@lang('main.jobs.title')</h1>
 
-        <div class="row">
+        <div class="column stretch">
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.dixibox.position')</div>
+                    <div class="position">@lang('main.jobs.dixibox.position')</div>
                     <div class="organization">
-                        <a href="https://dixibox.com">@lang('main.experience.dixibox.organization')</a>
+                        <a href="https://dixibox.com">@lang('main.jobs.dixibox.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.dixibox.period')</span>
+                        <span class="badge">@lang('main.jobs.dixibox.period')</span>
                         @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
                         <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
                 <div class="logo dixibox"></div>
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.dide.position')</div>
+                    <div class="position">@lang('main.jobs.mobincube.position')</div>
                     <div class="organization">
-                        <a href="https://dide.app">@lang('main.experience.dide.organization')</a>
+                        <a href="https://mobincube.com">@lang('main.jobs.mobincube.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.dide.period')</span>
-                        <span class="badge">@lang('main.experience.dide.duration')</span>
-                    </div>
-                </div>
-                <div class="logo dide"></div>
-            </div>
-            <div class="job">
-                <div class="column">
-                    <div class="position">@lang('main.experience.mobincube.position')</div>
-                    <div class="organization">
-                        <a href="https://mobincube.com">@lang('main.experience.mobincube.organization')</a>
-                    </div>
-                    <div class="period">
-                        <span class="badge">@lang('main.experience.mobincube.period')</span>
-                        <span class="badge">@lang('main.experience.mobincube.duration')</span>
+                        <span class="badge">@lang('main.jobs.mobincube.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 11]) }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.apadrina_un_olivo.position')</div>
+                    <div class="position">@lang('main.jobs.apadrina_un_olivo.position')</div>
                     <div class="organization">
-                        <a href="https://apadrinaunolivo.org">@lang('main.experience.apadrina_un_olivo.organization')</a>
+                        <a href="https://apadrinaunolivo.org">@lang('main.jobs.apadrina_un_olivo.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.apadrina_un_olivo.period')</span>
-                        <span class="badge">@lang('main.experience.apadrina_un_olivo.duration')</span>
+                        <span class="badge">@lang('main.jobs.apadrina_un_olivo.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 5]) }}</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
             </div>
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.experience.habtium.position')</div>
+                    <div class="position">@lang('main.jobs.valencia_city_council.position')</div>
                     <div class="organization">
-                        <a href="https://habtium.es">@lang('main.experience.habtium.organization')</a></div>
-                    <div class="period">
-                        <span class="badge">@lang('main.experience.habtium.period')</span>
-                        <span class="badge">@lang('main.experience.habtium.duration')</span>
-                    </div>
-                </div>
-                <div class="logo habtium"></div>
-            </div>
-            <div class="job">
-                <div class="column">
-                    <div class="position">@lang('main.experience.valencia_city_council.position')</div>
-                    <div class="organization">
-                        <a href="http://www.valencia.es">@lang('main.experience.valencia_city_council.organization')</a>
+                        <a href="https://valencia.es">@lang('main.jobs.valencia_city_council.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.experience.valencia_city_council.period')</span>
-                        <span class="badge">@lang('main.experience.valencia_city_council.duration')</span>
+                        <span class="badge">@lang('main.jobs.valencia_city_council.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 2]) }}</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>
@@ -153,23 +130,49 @@
         </div>
     </section>
 
-    <section class="volunteering">
-        <h1>@lang('main.volunteering.title')</h1>
+    <section class="projects">
+        <h1>@lang('main.projects.title')</h1>
 
         <div class="column stretch">
-            <div class="job">
+            <div class="project">
                 <div class="column">
-                    <div class="position">@lang('main.volunteering.avptp.position')</div>
+                    <div class="position">@lang('main.projects.avptp.position')</div>
                     <div class="organization">
-                        <a href="https://avptp.org">@lang('main.volunteering.avptp.organization')</a>
+                        <a href="https://avptp.org">@lang('main.projects.avptp.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.volunteering.avptp.period')</span>
+                        <span class="badge">@lang('main.projects.avptp.period')</span>
                         @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
                         <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
                 <div class="logo avptp"></div>
+            </div>
+            <div class="project">
+                <div class="column">
+                    <div class="position">@lang('main.projects.dide.name')</div>
+                    <div class="organization">
+                        <a href="https://dide.app">@lang('main.projects.dide.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.projects.dide.period')</span>
+                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 6]) }}</span>
+                    </div>
+                </div>
+                <div class="logo dide"></div>
+            </div>
+            <div class="project">
+                <div class="column">
+                    <div class="position">@lang('main.projects.habtium.position')</div>
+                    <div class="organization">
+                        <a href="https://habtium.es">@lang('main.projects.habtium.organization')</a></div>
+                    <div class="period">
+                        <span class="badge">@lang('main.projects.habtium.period')</span>
+                        <span class="badge">@lang('main.projects.habtium.duration')</span>
+                    </div>
+                </div>
+                <div class="logo habtium"></div>
             </div>
         </div>
     </section>
@@ -186,15 +189,11 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.scrum')</span>
-                        <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.tdd')</span>
+                        <span>@lang('main.skills.fdd')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.fdd')</span>
+                        <span>@lang('main.skills.tdd')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>
@@ -211,11 +210,11 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.react')</span>
-                        <div class="level-25"></div>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.angular')</span>
-                        <div class="level-50"></div>
+                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
@@ -283,23 +282,15 @@
                 <div class="row">
                     <div class="skill">
                         <span>@lang('main.skills.kubernetes')</span>
-                        <div class="level-50"></div>
+                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.docker')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.docker_swarm')</span>
-                        <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.jenkins')</span>
-                        <div class="level-75"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.capistrano')</span>
-                        <div class="level-75"></div>
+                        <div class="level-100"></div>
                     </div>
                 </div>
             </div>
@@ -308,11 +299,7 @@
                 <h2>@lang('main.skills.system_and_network_administration')</h2>
                 <div class="row">
                     <div class="skill">
-                        <span>@lang('main.skills.security')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.cryptography')</span>
+                        <span>@lang('main.skills.digitalocean')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -320,15 +307,11 @@
                         <div class="level-50"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.debian_and_ubuntu')</span>
-                        <div class="level-100"></div>
+                        <span>@lang('main.skills.azure')</span>
+                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.rhel_and_centos')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.macos')</span>
+                        <span>@lang('main.skills.linux')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -341,6 +324,14 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.dhcp')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.security')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.cryptography')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>
@@ -362,6 +353,10 @@
                     <div class="skill">
                         <span>@lang('main.skills.mongodb')</span>
                         <div class="level-50"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.postgresql')</span>
+                        <div class="level-25"></div>
                     </div>
                 </div>
 
@@ -466,19 +461,19 @@
         </a>
         <a href="https://linkedin.com/in/victordm">
             <div class="contact-method linkedin">
-                <img src="{{ asset('images/linkedin.svg') }}">
+                <img src="{{ asset('images/social/linkedin.svg') }}">
                 @victordm
             </div>
         </a>
         <a href="https://twitter.com/victordzmr">
             <div class="contact-method twitter">
-                <img src="{{ asset('images/twitter.svg') }}">
+                <img src="{{ asset('images/social/twitter.svg') }}">
                 @victordzmr
             </div>
         </a>
         <a href="https://keybase.io/victordm">
             <div class="contact-method keybase">
-                <img src="{{ asset('images/keybase.svg') }}">
+                <img src="{{ asset('images/social/keybase.svg') }}">
                 @victordm
             </div>
         </a>
