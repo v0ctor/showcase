@@ -50,6 +50,8 @@ return [
     'jobs' => [
         'title' => 'Experiencia laboral',
 
+        'co-founder' => 'cofundador',
+
         'dixibox' => [
             'position' => 'Director de tecnología',
             'period'   => 'julio de 2018 — actualidad',

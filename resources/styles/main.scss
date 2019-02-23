@@ -561,6 +561,10 @@ section {
     font-size: 11px;
     background-color: $dark-grey-1;
     color: white;
+
+    &.emphasized {
+        background-color: $dark-grey-2;
+    }
 }
 
 /** PDF styles **/

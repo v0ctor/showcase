@@ -50,6 +50,8 @@ return [
     'jobs' => [
         'title' => 'Work experience',
 
+        'co-founder' => 'co-founder',
+
         'dixibox' => [
             'position'     => 'Chief technology officer',
             'organization' => 'Dixibox',
