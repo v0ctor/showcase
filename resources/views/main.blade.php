@@ -186,15 +186,11 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.scrum')</span>
-                        <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.tdd')</span>
+                        <span>@lang('main.skills.fdd')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.fdd')</span>
+                        <span>@lang('main.skills.tdd')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>
@@ -211,11 +207,11 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.react')</span>
-                        <div class="level-25"></div>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.angular')</span>
-                        <div class="level-50"></div>
+                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
@@ -283,23 +279,15 @@
                 <div class="row">
                     <div class="skill">
                         <span>@lang('main.skills.kubernetes')</span>
-                        <div class="level-50"></div>
+                        <div class="level-75"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.docker')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.docker_swarm')</span>
-                        <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.jenkins')</span>
-                        <div class="level-75"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.capistrano')</span>
-                        <div class="level-75"></div>
+                        <div class="level-100"></div>
                     </div>
                 </div>
             </div>
@@ -308,11 +296,7 @@
                 <h2>@lang('main.skills.system_and_network_administration')</h2>
                 <div class="row">
                     <div class="skill">
-                        <span>@lang('main.skills.security')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.cryptography')</span>
+                        <span>@lang('main.skills.digitalocean')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -320,15 +304,11 @@
                         <div class="level-50"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.debian_and_ubuntu')</span>
-                        <div class="level-100"></div>
+                        <span>@lang('main.skills.azure')</span>
+                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.rhel_and_centos')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.macos')</span>
+                        <span>@lang('main.skills.linux')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -341,6 +321,14 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.dhcp')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.security')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.cryptography')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>
@@ -362,6 +350,10 @@
                     <div class="skill">
                         <span>@lang('main.skills.mongodb')</span>
                         <div class="level-50"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.postgresql')</span>
+                        <div class="level-25"></div>
                     </div>
                 </div>
 

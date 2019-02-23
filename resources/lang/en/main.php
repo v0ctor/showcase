@@ -106,10 +106,9 @@ return [
         'title' => 'Skills',
 
         'development_methodologies' => 'Development methodologies',
-        'scrum'                     => 'Scrum',
         'kanban'                    => 'Kanban',
-        'tdd'                       => 'TDD',
         'fdd'                       => 'FDD',
+        'tdd'                       => 'TDD',
 
 
         'web_application_development' => 'Web application development',
@@ -135,20 +134,18 @@ return [
         'c'                     => 'C',
         'c++'                   => 'C++',
 
-        'devops'       => 'Development and operations (DevOps)',
-        'docker'       => 'Docker',
-        'docker_swarm' => 'Docker Swarm',
-        'kubernetes'   => 'Kubernetes',
-        'jenkins'      => 'Jenkins',
-        'capistrano'   => 'Capistrano',
+        'devops'     => 'Development and operations (DevOps)',
+        'docker'     => 'Docker',
+        'kubernetes' => 'Kubernetes',
+        'jenkins'    => 'Jenkins',
 
         'system_and_network_administration' => 'System and network administration',
         'security'                          => 'Security',
         'cryptography'                      => 'Cryptography',
+        'digitalocean'                      => 'DigitalOcean',
         'aws'                               => 'AWS',
-        'debian_and_ubuntu'                 => 'Debian/Ubuntu',
-        'rhel_and_centos'                   => 'RHEL/CentOS',
-        'macos'                             => 'macOS',
+        'azure'                             => 'Azure',
+        'linux'                             => 'Linux',
         'ssh'                               => 'SSH',
         'dns'                               => 'DNS',
         'dhcp'                              => 'DHCP',
@@ -159,6 +156,7 @@ return [
         'mysql'                   => 'MySQL',
         'redis'                   => 'Redis',
         'mongodb'                 => 'MongoDB',
+        'postgresql'              => 'PostgreSQL',
 
 
         'web_server_administration' => 'Web server administration',
