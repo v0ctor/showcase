@@ -14,12 +14,9 @@
         <div class="social row">
             <a href="https://linkedin.com/in/victordm"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
             <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
-            <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
-            <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
             <a href="https://twitter.com/victordzmr"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
-            <a href="https://facebook.com/v0ctor"><img src="{{ asset('images/social/facebook.svg') }}" alt="Facebook"></a>
-            <a href="https://instagram.com/v00ctor"><img src="{{ asset('images/social/instagram.svg') }}" alt="Instagram"></a>
-            <a href="https://open.spotify.com/user/victor.dm"><img src="{{ asset('images/social/spotify.svg') }}" alt="Spotify"></a>
+            <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
+            <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
         </div>
 
         <div id="scroll" class="arrow"></div>
