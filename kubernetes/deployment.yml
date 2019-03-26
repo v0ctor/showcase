@@ -56,7 +56,7 @@ spec:
             timeoutSeconds: 2
 
         - name: web
-          image: nginx:alpine
+          image: nginx:1.15.9-alpine
           imagePullPolicy: Always
           volumeMounts:
             - name: public
