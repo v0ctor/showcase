@@ -8,9 +8,9 @@ This is the repository of my showcase, where I share my professional career, my 
 
 The project follows these standards:
 
-* [PSR-2](http://www.php-fig.org/psr/psr-2/): coding style.
-* [PSR-4](http://www.php-fig.org/psr/psr-4/): autoloading.
-* [PHPDoc](https://docs.phpdoc.org/references/phpdoc/index.html): documentation.
+* [PSR-2](https://www.php-fig.org/psr/psr-2/): coding style.
+* [PSR-4](https://www.php-fig.org/psr/psr-4/): autoloading.
+* [PSR-5](https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc.md) and [PSR-19](https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md): documentation.
 
 Extended by the following rules:
 
@@ -23,8 +23,7 @@ Extended by the following rules:
 
 The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following addition:
 
-* `docker`, `Dockerfile`, `docker-compose.yml` and `.dockerignore` define the Docker environments.
-* `kubernetes` contains all necessary [Kubernetes](https://kubernetes.io) manifests to deploy the application.
+* `Dockerfile`, `docker-compose.yml`, `.dockerignore` and `chart` contain all necessary [Docker](https://www.docker.com) and [Kubernetes](https://kubernetes.io) manifests to define the infrastructure.
 
 ### License
 This software is distributed under the MIT license. Please read `license.md` for more information on the software availability and distribution.
@@ -63,7 +62,7 @@ The development environment is made of two different containers:
 * `app` runs the application itself using the [PHP interpreter](https://php.net).
 * `web` serves the application through HTTP using [Nginx](https://nginx.org).
 
-To build the environment for the very first time, run Docker Compose in daemon mode. It may take a few minutes.
+To build the environment, run Docker Compose in daemon mode. The first time it may take a few minutes, since software must be compiled.
 
 ```Shell
 docker-compose up -d
@@ -92,11 +91,11 @@ npm install
 
 ### Usage
 
-Now you can use [Composer](https://getcomposer.org), [Artisan](https://laravel.com/docs/artisan) and [PHPUnit](https://phpunit.de) inside the container, among others. [Xdebug](https://xdebug.org) is also available from the host machine.
+Now you can use [Composer](https://getcomposer.org), [Artisan](https://laravel.com/docs/artisan), [Tinker](https://github.com/laravel/tinker) and [PHPUnit](https://phpunit.de) in the `app` container, among others
 
-To use the application through HTTP, you can perform requests to [http://localhost](http://localhost).
+[Xdebug](https://xdebug.org) is also available from the host machine. To use it with [PhpStorm](https://www.jetbrains.com/phpstorm/), see [the official guide](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html#integrationWithProduct).
 
-The database is also accessible from the host with the following credentials:
+To use the application through HTTP, you can perform requests to [http://localhost](http://localhost). The database is also accessible from the host with the following credentials:
 
 * **Host:** `localhost`
 * **Port:** `3306`
@@ -104,13 +103,13 @@ The database is also accessible from the host with the following credentials:
 * **Username:** `test`
 * **Password:** `test`
 
-> Note that Git is not available in the container, so you should use it from the host machine.
+> Note that Git is not available in the container, so you should use it from the host machine. It is strongly recommended to use [Fork](https://git-fork.com), a Git client.
 
 ### Deployment
 
 The deployment process is automated with [Drone](https://drone.io) and [Kubernetes](https://kubernetes.io). When changes are incorporated into production (`master` branch) or staging (`develop` branch), an automatic deployment is made to the corresponding environment.
 
-## Problem resolution
+## Troubleshooting
 
 There are several common problems that can be easily solved. Here are their causes and solutions.
 
@@ -124,7 +123,19 @@ composer dump-autoload
 
 ### Docker
 
-The Docker environment should work properly as it has been exhaustively tested. Otherwise, it is always possible to rebuild it. To start from scratch, you can remove all containers, images and volumes by running the following commands.
+The Docker environment should work properly as it has been exhaustively tested. Otherwise, it is possible to rebuild it by running the following command.
+
+```Shell
+docker-compose build --no-cache
+```
+
+You can also rebuild a single service. For example, if you want to rebuild the `app` service:
+
+```Shell
+docker-compose build --no-cache app
+```
+
+To start from scratch, you can remove all containers, images and volumes of your computer by running the following commands.
 
 > Note that all system containers, images and volumes will be deleted, not only those related to this project.
 
