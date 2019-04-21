@@ -15,7 +15,7 @@ services:
       - sock-app:/run/php
 
   web:
-    image: nginx:1.15.9-alpine
+    image: nginx:1.15.12-alpine
     working_dir: /app
     volumes:
       - ./public:/app/public

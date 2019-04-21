@@ -1,33 +1,34 @@
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 
 metadata:
-  name: {package}
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
   labels:
-    app: {package}
+    app: {{ .Release.Name }}
+  annotations:
+    kubernetes.io/change-cause: '{{ .Values.images.app.tag }}'
 
 spec:
-  replicas: 2
-  revisionHistoryLimit: 2
-
-  selector:
-    matchLabels:
-      app: {package}
+  revisionHistoryLimit: {{ .Values.deployment.revisionHistoryLimit }}
 
   strategy:
     rollingUpdate:
       maxUnavailable: 1
-      maxSurge: 1
+
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
 
   template:
     metadata:
       labels:
-        app: {package}
+        app: {{ .Release.Name }}
 
     spec:
       initContainers:
         - name: init
-          image: {image}
+          image: {{ template "image" . }}
           command: ['sh', '-c', 'cp -rp /app/public/* /public/']
           volumeMounts:
             - name: public
@@ -35,12 +36,12 @@ spec:
 
       containers:
         - name: app
-          image: {image}
+          image: {{ template "image" . }}
           envFrom:
             - configMapRef:
-                name: {package}-app
+                name: {{ .Release.Name }}-app
             - secretRef:
-                name: {package}
+                name: {{ .Release.Name }}
           volumeMounts:
             - name: sock-app
               mountPath: /run/php
@@ -48,15 +49,15 @@ spec:
             postStart:
               exec:
                 command: ['./artisan', 'config:cache']
+          resources: {{ toYaml .Values.deployment.resources.app | nindent 12 }}
           livenessProbe:
             exec:
               command: ['./artisan', '--version']
-            initialDelaySeconds: 15
-            periodSeconds: 10
+            initialDelaySeconds: 10
             timeoutSeconds: 2
 
         - name: web
-          image: nginx:1.15.9-alpine
+          image: {{ .Values.images.web.name }}:{{ .Values.images.web.tag }}
           imagePullPolicy: Always
           volumeMounts:
             - name: public
@@ -71,17 +72,16 @@ spec:
               subPath: default.conf
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 3000
           lifecycle:
             preStop:
               exec:
                 command: ['nginx', '-s', 'quit']
+          resources: {{ toYaml .Values.deployment.resources.web | nindent 12 }}
           livenessProbe:
-            httpGet:
-              path: /
+            tcpSocket:
               port: http
-            initialDelaySeconds: 15
-            periodSeconds: 10
+            initialDelaySeconds: 5
             timeoutSeconds: 2
 
       volumes:
@@ -89,7 +89,7 @@ spec:
         - name: sock-app
         - name: web-config
           configMap:
-            name: {package}-web
+            name: {{ .Release.Name }}-web
 
       imagePullSecrets:
-        - name: {vendor}-docker-registry
+        - name: {{ .Release.Name }}-registry

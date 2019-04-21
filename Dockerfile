@@ -1,71 +1,69 @@
 ## Base image
-FROM php:7.3.3-fpm AS base
+FROM php:7.3.4-fpm AS base
 
 WORKDIR /app
 
-COPY docker/app/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY chart/files/app/php.ini $PHP_INI_DIR/conf.d/php.ini
+COPY chart/files/app/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY chart/files/app/fpm.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 
 # PHP extensions and their dependencies:
 #  - gmp (libgmp-dev)
 #  - intl (libicu-dev)
 
 RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
-    && sed -i 's/expose_php = .*/expose_php = Off/' $PHP_INI_DIR/php.ini \
-    && mkdir -p /run/php \
-    && printf "listen = /run/php/php.sock\nlisten.mode = 0666\n" >> /usr/local/etc/php-fpm.d/zz-docker.conf \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
+ && rm /usr/local/etc/php-fpm.d/docker.conf \
+ && mkdir -p /run/php \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends \
         libgmp-dev \
         libicu-dev \
         locales \
         unzip \
-    && sed -i '/\(ca_ES\|es_ES\|en_US\).UTF-8/s/^# //g' /etc/locale.gen \
-    && locale-gen \
-    && docker-php-ext-install \
+ && sed -i '/\(ca_ES\|es_ES\|en_US\).UTF-8/s/^# //g' /etc/locale.gen \
+ && locale-gen \
+ && docker-php-ext-install \
         gmp \
         intl \
         opcache \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 
 ## Builder image
 FROM base AS builder
 
-RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
-    && sed -i 's/memory_limit = .*/memory_limit = 256M/' $PHP_INI_DIR/php.ini
-
-COPY docker/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
-
-COPY --from=composer:1.8.4 /usr/bin/composer /usr/bin
+COPY --from=composer:1.8.5 /usr/bin/composer /usr/local/bin
 
 
 ## Development image
 FROM builder AS development
 
 ENV PS1='\u@\h:\w\\$ '
-ENV PATH="${PATH}:/app/vendor/bin:/app/node_modules/.bin"
+ENV PATH="${PATH}:/app/vendor/bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
 ARG USER_ID=1000
-ENV USER_NAME=app
+ENV USER_NAME=showcase
 
-COPY docker/app/xdebug.ini $PHP_INI_DIR/conf.d
+COPY chart/files/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY chart/files/app/xdebug.ini $PHP_INI_DIR/conf.d
 
-RUN useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends \
         curl \
         gnupg2 \
-    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-    && apt-get install -y --no-install-recommends \
+ && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+ && apt-get install -y --no-install-recommends \
         nodejs \
-    && npm install --global \
+ && npm install --global \
         npm \
-    && pecl install \
+ && pecl install \
         xdebug-2.7.0 \
-    && docker-php-ext-enable \
+ && docker-php-ext-enable \
         xdebug \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
+ && useradd --user-group --create-home --shell /bin/bash --uid $USER_ID $USER_NAME
 
 
 ## Installer image
@@ -78,8 +76,8 @@ RUN composer install \
         --classmap-authoritative \
         --no-suggest \
         --no-progress \
-    && ./artisan view:cache \
-    && ./artisan lang:js
+ && ./artisan view:cache \
+ && ./artisan lang:js
 
 
 ## Assets image
@@ -92,8 +90,8 @@ COPY --from=installer /app /app
 RUN npm install --global \
         gulp-cli \
         npm \
-    && npm ci \
-    && gulp build
+ && npm ci \
+ && gulp build
 
 
 ## Runtime image

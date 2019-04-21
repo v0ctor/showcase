@@ -1,0 +1,19 @@
+config:
+  APP_ENV: production
+  APP_URL: https://victordiaz.me
+
+secrets: {}
+#  APP_KEY: nil
+
+ingress:
+  hosts:
+    - victordiaz.me
+    - diazmarco.me
+    - victor.diazmarco.me
+    - www.victordiaz.me
+    - www.diazmarco.me
+  annotations:
+    #traefik.ingress.kubernetes.io/redirect-regex: ^https://(?!victordiaz.me)/(.*)
+    traefik.ingress.kubernetes.io/redirect-regex: ^https://(diazmarco.me|victor.diazmarco.me)/(.*)
+    traefik.ingress.kubernetes.io/redirect-replacement: https://victordiaz.me/$2
+    traefik.ingress.kubernetes.io/redirect-permanent: 'true'

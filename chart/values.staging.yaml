@@ -1,0 +1,10 @@
+config:
+  APP_ENV: staging
+  APP_URL: https://dev.victordiaz.me
+
+secrets: {}
+#  APP_KEY: nil
+
+ingress:
+  hosts:
+    - dev.victordiaz.me

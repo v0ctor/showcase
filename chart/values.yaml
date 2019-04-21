@@ -1,0 +1,45 @@
+images:
+  app:
+    name: v0ctor/showcase
+    tag: nil
+  web:
+    name: nginx
+    tag: 1.15.12-alpine
+
+registry:
+  name: nil
+  credentials: nil
+
+deployment:
+  replicas:
+    min: 2
+    max: 10
+  revisionHistoryLimit: 2
+  resources:
+    app:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+      limits:
+        cpu: 300m
+        memory: 256Mi
+    web:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 20m
+        memory: 30Mi
+
+service:
+  port: 80
+
+ingress:
+  hosts: []
+  annotations:
+    ingress.kubernetes.io/hsts-max-age: '31536000'
+    ingress.kubernetes.io/hsts-include-subdomains: 'true'
+    ingress.kubernetes.io/hsts-preload: 'true'
+    ingress.kubernetes.io/force-hsts: 'true'
+    prometheus.io/probe: 'true'
+    prometheus.io/probe-path: /v1/health

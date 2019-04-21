@@ -108,7 +108,7 @@ The database is also accessible from the host with the following credentials:
 
 ### Deployment
 
-The deployment process is automated with [Jenkins](https://jenkins.io) and [Kubernetes](https://kubernetes.io). When changes are incorporated into production (`master` branch) or staging (`develop` branch), an automatic deployment is made to the corresponding environment.
+The deployment process is automated with [Drone](https://drone.io) and [Kubernetes](https://kubernetes.io). When changes are incorporated into production (`master` branch) or staging (`develop` branch), an automatic deployment is made to the corresponding environment.
 
 ## Problem resolution
 
