@@ -89,7 +89,6 @@ return [
         'habtium' => [
             'position' => 'Administrador de sistemas y desarrollador web',
             'period'   => 'enero de 2010 — junio de 2016',
-            'duration' => '6 años y 6 meses',
         ],
     ],
 

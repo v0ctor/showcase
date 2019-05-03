@@ -1,4 +1,5 @@
 .dockerignore
+.drone.yml
 .DS_Store
 .editorconfig
 .env
@@ -8,7 +9,6 @@
 .idea
 docker-compose.yml
 Dockerfile
-Jenkinsfile
 kubernetes
 license.md
 readme.md

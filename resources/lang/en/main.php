@@ -96,7 +96,6 @@ return [
             'position'     => 'System administrator and web developer',
             'organization' => 'Habtium',
             'period'       => 'January 2010 — June 2016',
-            'duration'     => '6 years and 6 months',
         ],
     ],
 
@@ -135,6 +134,7 @@ return [
         'devops'     => 'Development and operations (DevOps)',
         'docker'     => 'Docker',
         'kubernetes' => 'Kubernetes',
+        'drone'      => 'Drone',
         'jenkins'    => 'Jenkins',
 
         'system_and_network_administration' => 'System and network administration',

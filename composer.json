@@ -2,12 +2,12 @@
     "name": "v0ctor/showcase",
     "license": "MIT",
     "type": "project",
-    "homepage": "https://victordiaz.me",
+    "homepage": "https://v0ctor.me",
     "authors": [
         {
             "name": "Víctor Díaz Marco",
             "email": "victor@diazmarco.me",
-            "homepage": "https://victordiaz.me"
+            "homepage": "https://v0ctor.me"
         }
     ],
     "require": {

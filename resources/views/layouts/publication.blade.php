@@ -24,7 +24,7 @@
             <time class="date">@yield('date_human')</time>
 
             <div id="scroll" class="arrow"></div>
-            <div class="web"><a href="https://victordiaz.me">victordiaz.me</a></div>
+            <div class="web"><a href="https://v0ctor.me">v0ctor.me</a></div>
         </header>
         @yield('content')
     </div>

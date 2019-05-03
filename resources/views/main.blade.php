@@ -12,15 +12,15 @@
         <h1>@lang('app.author.full_name')</h1>
 
         <div class="social row">
-            <a href="https://linkedin.com/in/victordm"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
+            <a href="https://linkedin.com/in/v0ctor"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
             <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
-            <a href="https://twitter.com/victordzmr"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
-            <a href="https://dixibox.com/victor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
+            <a href="https://twitter.com/v0ctor"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
+            <a href="https://dixibox.com/v0ctor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
             <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
         </div>
 
         <div id="scroll" class="arrow"></div>
-        <div class="web"><a href="https://victordiaz.me">victordiaz.me</a></div>
+        <div class="web"><a href="https://v0ctor.me">v0ctor.me</a></div>
     </header>
 
     <section class="about">
@@ -78,8 +78,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.dixibox.period')</span>
-                        @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans() }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -93,7 +92,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.mobincube.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 11]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2017, 8, 7)->longAbsoluteDiffForHumans(Carbon::createFromDate(2018, 6, 22)) }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
@@ -106,7 +105,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.apadrina_un_olivo.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 5]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2017, 3, 7)->longAbsoluteDiffForHumans(Carbon::createFromDate(2017, 8, 7)) }}</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
@@ -119,7 +118,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.valencia_city_council.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 2]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2013, 7, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2013, 9, 1)) }}</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>
@@ -139,8 +138,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.avptp.period')</span>
-                        @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 4, 30)->longAbsoluteDiffForHumans(null, 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -154,7 +152,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.dide.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 6]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::createFromDate(2018, 12, 22)) }}</span>
                     </div>
                 </div>
                 <div class="logo dide"></div>
@@ -166,7 +164,7 @@
                         <a href="https://habtium.es">@lang('main.projects.habtium.organization')</a></div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.habtium.period')</span>
-                        <span class="badge">@lang('main.projects.habtium.duration')</span>
+                        <span class="badge">{{ Carbon::createFromDate(2010, 1, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2016, 7, 1), 2) }}</span>
                     </div>
                 </div>
                 <div class="logo habtium"></div>
@@ -283,6 +281,10 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.docker')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.drone')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
@@ -456,16 +458,16 @@
                 victor@diazmarco.me
             </div>
         </a>
-        <a href="https://linkedin.com/in/victordm">
+        <a href="https://linkedin.com/in/v0ctor">
             <div class="contact-method linkedin">
                 <img src="{{ asset('images/social/linkedin.svg') }}">
-                @victordm
+                @v0ctor
             </div>
         </a>
-        <a href="https://twitter.com/victordzmr">
+        <a href="https://twitter.com/v0ctor">
             <div class="contact-method twitter">
                 <img src="{{ asset('images/social/twitter.svg') }}">
-                @victordzmr
+                @v0ctor
             </div>
         </a>
         <a href="https://keybase.io/victordm">
