@@ -96,7 +96,6 @@ return [
             'position'     => 'System administrator and web developer',
             'organization' => 'Habtium',
             'period'       => 'January 2010 — June 2016',
-            'duration'     => '6 years and 6 months',
         ],
     ],
 

@@ -78,8 +78,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.dixibox.period')</span>
-                        @php $duration = Carbon::createFromDate(2018, 7, 16)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans() }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -93,7 +92,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.mobincube.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 11]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2017, 8, 7)->longAbsoluteDiffForHumans(Carbon::createFromDate(2018, 6, 22)) }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
@@ -106,7 +105,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.apadrina_un_olivo.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 5]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2017, 3, 7)->longAbsoluteDiffForHumans(Carbon::createFromDate(2017, 8, 7)) }}</span>
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
@@ -119,7 +118,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.valencia_city_council.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 2]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2013, 7, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2013, 9, 1)) }}</span>
                     </div>
                 </div>
                 <div class="logo valencia-city-council"></div>
@@ -139,8 +138,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.avptp.period')</span>
-                        @php $duration = Carbon::createFromDate(2018, 4, 30)->diffInMonths(); @endphp
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => $duration]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 4, 30)->longAbsoluteDiffForHumans(null, 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -154,7 +152,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.dide.period')</span>
-                        <span class="badge">{{ trans_choice('dates.month', $duration, ['amount' => 6]) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::createFromDate(2018, 12, 22)) }}</span>
                     </div>
                 </div>
                 <div class="logo dide"></div>
@@ -166,7 +164,7 @@
                         <a href="https://habtium.es">@lang('main.projects.habtium.organization')</a></div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.habtium.period')</span>
-                        <span class="badge">@lang('main.projects.habtium.duration')</span>
+                        <span class="badge">{{ Carbon::createFromDate(2010, 1, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2016, 7, 1), 2) }}</span>
                     </div>
                 </div>
                 <div class="logo habtium"></div>

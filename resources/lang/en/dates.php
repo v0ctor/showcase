@@ -5,8 +5,6 @@
 
 return [
 
-    'month' => 'one month|:amount months',
-
     'formats' => [
         'short' => [
             'without_time' => 'Y-m-d',
