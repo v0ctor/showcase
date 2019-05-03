@@ -2,7 +2,7 @@
 
 ## About
 
-This is the repository of my showcase, where I share my professional career, my skills and my interests. Find it live [here](https://victordiaz.me).
+This is the repository of my showcase, where I share my professional career, my skills and my interests. Find it live [here](https://v0ctor.me).
 
 ### Standards
 

@@ -11,7 +11,7 @@ steps:
   - name: build
     image: docker:18.09.5
     environment:
-      DOCKER_HOST: tcp://docker.victordiaz.me:2376
+      DOCKER_HOST: tcp://docker.v0ctor.me:2376
       DOCKER_CA:
         from_secret: docker-ca
       DOCKER_CERT:
@@ -19,7 +19,7 @@ steps:
       DOCKER_KEY:
         from_secret: docker-key
       DOCKER_TLS_VERIFY: '1'
-      REGISTRY_HOST: registry.victordiaz.me
+      REGISTRY_HOST: registry.v0ctor.me
       REGISTRY_CONFIG:
         from_secret: registry
     commands:
@@ -38,7 +38,7 @@ steps:
   - name: pre-deploy
     image: lachlanevenson/k8s-helm:v2.13.1
     environment:
-      REGISTRY_HOST: registry.victordiaz.me
+      REGISTRY_HOST: registry.v0ctor.me
       REGISTRY_CONFIG:
         from_secret: registry
     commands:
