@@ -135,6 +135,7 @@ return [
         'devops'     => 'Development and operations (DevOps)',
         'docker'     => 'Docker',
         'kubernetes' => 'Kubernetes',
+        'drone'      => 'Drone',
         'jenkins'    => 'Jenkins',
 
         'system_and_network_administration' => 'System and network administration',

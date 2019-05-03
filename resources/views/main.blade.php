@@ -286,6 +286,10 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
+                        <span>@lang('main.skills.drone')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
                         <span>@lang('main.skills.jenkins')</span>
                         <div class="level-100"></div>
                     </div>
