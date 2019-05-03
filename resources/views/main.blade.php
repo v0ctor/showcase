@@ -458,16 +458,16 @@
                 victor@diazmarco.me
             </div>
         </a>
-        <a href="https://linkedin.com/in/victordm">
+        <a href="https://linkedin.com/in/v0ctor">
             <div class="contact-method linkedin">
                 <img src="{{ asset('images/social/linkedin.svg') }}">
-                @victordm
+                @v0ctor
             </div>
         </a>
-        <a href="https://twitter.com/victordzmr">
+        <a href="https://twitter.com/v0ctor">
             <div class="contact-method twitter">
                 <img src="{{ asset('images/social/twitter.svg') }}">
-                @victordzmr
+                @v0ctor
             </div>
         </a>
         <a href="https://keybase.io/victordm">
