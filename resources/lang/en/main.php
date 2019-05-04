@@ -113,7 +113,6 @@ return [
         'css'                         => 'CSS 3',
         'react'                       => 'React',
         'jquery'                      => 'jQuery',
-        'angular'                     => 'Angular',
         'laravel'                     => 'Laravel',
         'lumen'                       => 'Lumen',
         'rest'                        => 'REST',

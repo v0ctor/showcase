@@ -208,10 +208,6 @@
                         <div class="level-50"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.angular')</span>
-                        <div class="level-25"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
                         <div class="level-100"></div>
                     </div>
@@ -307,7 +303,7 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.azure')</span>
-                        <div class="level-25"></div>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.linux')</span>
@@ -406,15 +402,15 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.gulp')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.nodejs')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.websocket')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.gulp')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>
