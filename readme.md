@@ -1,4 +1,6 @@
-# Víctor's showcase
+# Showcase
+
+![Build status](https://drone.dev.v0ctor.me/api/badges/v0ctor/showcase/status.svg)
 
 ## About
 
@@ -21,9 +23,11 @@ Extended by the following rules:
 
 ### Directory structure
 
-The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following addition:
+The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following additions:
 
-* `Dockerfile`, `docker-compose.yml`, `.dockerignore` and `chart` contain all necessary [Docker](https://www.docker.com) and [Kubernetes](https://kubernetes.io) manifests to define the infrastructure.
+* `Dockerfile`, `docker-compose.yml`, and `.dockerignore` have all necessary [Docker](https://www.docker.com) manifests to define the development and runtime environments.
+* `chart` contains a [Helm](https://helm.sh) package with all [Kubernetes](https://kubernetes.io) specifications that define the infrastructure.
+* `.drone.yml` has the [Drone](https://drone.io) CI/CD pipeline.
 
 ### License
 This software is distributed under the MIT license. Please read `license.md` for more information on the software availability and distribution.
@@ -86,7 +90,7 @@ Being inside of the `app` container for the first time, you should install the d
 
 ```Shell
 composer install
-npm install
+npm ci
 ```
 
 ### Usage
@@ -95,15 +99,9 @@ Now you can use [Composer](https://getcomposer.org), [Artisan](https://laravel.c
 
 [Xdebug](https://xdebug.org) is also available from the host machine. To use it with [PhpStorm](https://www.jetbrains.com/phpstorm/), see [the official guide](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html#integrationWithProduct).
 
-To use the application through HTTP, you can perform requests to [http://localhost](http://localhost). The database is also accessible from the host with the following credentials:
+To use the application through HTTP, you can perform requests to [http://localhost](http://localhost).
 
-* **Host:** `localhost`
-* **Port:** `3306`
-* **Database:** `test`
-* **Username:** `test`
-* **Password:** `test`
-
-> Note that Git is not available in the container, so you should use it from the host machine. It is strongly recommended to use [Fork](https://git-fork.com), a Git client.
+> Note that Git is not available in the container, so you should use it from the host machine. It is strongly recommended to use [Fork](https://git-fork.com), a desktop Git client.
 
 ### Deployment
 
