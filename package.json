@@ -1,4 +1,6 @@
 {
+    "name": "@v0ctor/showcase",
+    "license": "MIT",
     "private": true,
     "dependencies": {
         "cookieconsent": "^3.1.0",
