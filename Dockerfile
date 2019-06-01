@@ -59,7 +59,7 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && npm install --global \
         npm \
  && pecl install \
-        xdebug-2.7.0 \
+        xdebug-2.7.2 \
  && docker-php-ext-enable \
         xdebug \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
