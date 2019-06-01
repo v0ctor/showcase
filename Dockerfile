@@ -53,7 +53,7 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && apt-get install -y --no-install-recommends \
         curl \
         gnupg2 \
- && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
  && apt-get install -y --no-install-recommends \
         nodejs \
  && npm install --global \
@@ -81,7 +81,7 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:10.15.3-alpine AS assets
+FROM node:10.16.0-alpine AS assets
 
 WORKDIR /app
 
