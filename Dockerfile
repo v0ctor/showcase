@@ -39,7 +39,7 @@ COPY --from=composer:1.8.5 /usr/bin/composer /usr/local/bin
 FROM builder AS development
 
 ENV PS1='\u@\h:\w\\$ '
-ENV PATH="${PATH}:/app/vendor/bin"
+ENV PATH="${PATH}:/app/vendor/bin:/app/node_modules/.bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
 ARG USER_ID=1000
@@ -85,12 +85,11 @@ FROM node:10.16.0-alpine AS assets
 
 WORKDIR /app
 
+ENV PATH="${PATH}:/app/node_modules/.bin"
+
 COPY --from=installer /app /app
 
-RUN npm install --global \
-        gulp-cli \
-        npm \
- && npm ci \
+RUN npm ci \
  && gulp build
 
 
