@@ -146,6 +146,19 @@
             </div>
             <div class="project">
                 <div class="column">
+                    <div class="position">@lang('main.projects.mobincube.name')</div>
+                    <div class="organization">
+                        <a href="https://mobincube.com">@lang('main.jobs.mobincube.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.projects.mobincube.period')</span>
+                        <span class="badge">{{ Carbon::createFromDate(2019, 6, 1)->longAbsoluteDiffForHumans(null, 2) }}</span>
+                    </div>
+                </div>
+                <div class="logo mobincube"></div>
+            </div>
+            <div class="project">
+                <div class="column">
                     <div class="position">@lang('main.projects.dide.name')</div>
                     <div class="organization">
                         <a href="https://dide.app">@lang('main.projects.dide.organization')</a>
@@ -206,10 +219,6 @@
                     <div class="skill">
                         <span>@lang('main.skills.react')</span>
                         <div class="level-50"></div>
-                    </div>
-                    <div class="skill">
-                        <span>@lang('main.skills.angular')</span>
-                        <div class="level-25"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.jquery')</span>
@@ -307,7 +316,7 @@
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.azure')</span>
-                        <div class="level-25"></div>
+                        <div class="level-50"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.linux')</span>
@@ -406,15 +415,15 @@
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
-                        <span>@lang('main.skills.gulp')</span>
-                        <div class="level-100"></div>
-                    </div>
-                    <div class="skill">
                         <span>@lang('main.skills.nodejs')</span>
                         <div class="level-100"></div>
                     </div>
                     <div class="skill">
                         <span>@lang('main.skills.websocket')</span>
+                        <div class="level-100"></div>
+                    </div>
+                    <div class="skill">
+                        <span>@lang('main.skills.gulp')</span>
                         <div class="level-100"></div>
                     </div>
                 </div>

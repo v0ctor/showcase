@@ -86,6 +86,11 @@ return [
             'period'       => 'April 2018 — now',
         ],
 
+        'mobincube' => [
+            'name'         => 'Infrastructure migration to Kubernetes',
+            'period'       => 'June 2019 — now',
+        ],
+
         'dide' => [
             'name'         => 'Infrastructure migration to Kubernetes',
             'organization' => 'Díde',
@@ -113,7 +118,6 @@ return [
         'css'                         => 'CSS 3',
         'react'                       => 'React',
         'jquery'                      => 'jQuery',
-        'angular'                     => 'Angular',
         'laravel'                     => 'Laravel',
         'lumen'                       => 'Lumen',
         'rest'                        => 'REST',

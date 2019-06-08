@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.3.4-fpm AS base
+FROM php:7.3.6-fpm AS base
 
 WORKDIR /app
 
@@ -39,7 +39,7 @@ COPY --from=composer:1.8.5 /usr/bin/composer /usr/local/bin
 FROM builder AS development
 
 ENV PS1='\u@\h:\w\\$ '
-ENV PATH="${PATH}:/app/vendor/bin"
+ENV PATH="${PATH}:/app/vendor/bin:/app/node_modules/.bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
 ARG USER_ID=1000
@@ -53,13 +53,13 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && apt-get install -y --no-install-recommends \
         curl \
         gnupg2 \
- && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
  && apt-get install -y --no-install-recommends \
         nodejs \
  && npm install --global \
         npm \
  && pecl install \
-        xdebug-2.7.0 \
+        xdebug-2.7.2 \
  && docker-php-ext-enable \
         xdebug \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
@@ -81,16 +81,15 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:10.15.3-alpine AS assets
+FROM node:10.16.0-alpine AS assets
 
 WORKDIR /app
 
+ENV PATH="${PATH}:/app/node_modules/.bin"
+
 COPY --from=installer /app /app
 
-RUN npm install --global \
-        gulp-cli \
-        npm \
- && npm ci \
+RUN npm ci \
  && gulp build
 
 
