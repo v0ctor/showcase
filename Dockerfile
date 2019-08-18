@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.3.6-fpm AS base
+FROM php:7.3.8-fpm AS base
 
 WORKDIR /app
 
@@ -32,7 +32,7 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
 ## Builder image
 FROM base AS builder
 
-COPY --from=composer:1.8.5 /usr/bin/composer /usr/local/bin
+COPY --from=composer:1.9.0 /usr/bin/composer /usr/local/bin
 
 
 ## Development image
@@ -81,7 +81,7 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:10.16.0-alpine AS assets
+FROM node:10.16.3-alpine AS assets
 
 WORKDIR /app
 

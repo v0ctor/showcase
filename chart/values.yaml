@@ -4,7 +4,7 @@ images:
     tag: nil
   web:
     name: nginx
-    tag: 1.17.0-alpine
+    tag: 1.17.3-alpine
 
 registry:
   name: nil
@@ -18,8 +18,8 @@ deployment:
   resources:
     app:
       requests:
-        cpu: 100m
-        memory: 200Mi
+        cpu: 50m
+        memory: 50Mi
       limits:
         cpu: 300m
         memory: 256Mi
