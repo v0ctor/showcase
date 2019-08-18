@@ -78,7 +78,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.dixibox.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans() }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::now(), 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.avptp.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2018, 4, 30)->longAbsoluteDiffForHumans(null, 2) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 4, 30)->longAbsoluteDiffForHumans(Carbon::now(), 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.mobincube.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2019, 6, 1)->longAbsoluteDiffForHumans(null, 2) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2019, 6, 1)->longAbsoluteDiffForHumans() }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
