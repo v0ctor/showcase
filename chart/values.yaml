@@ -18,8 +18,8 @@ deployment:
   resources:
     app:
       requests:
-        cpu: 100m
-        memory: 200Mi
+        cpu: 50m
+        memory: 50Mi
       limits:
         cpu: 300m
         memory: 256Mi
