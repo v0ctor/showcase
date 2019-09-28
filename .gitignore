@@ -1,15 +1,13 @@
 # Operating system files
 .DS_Store
-Thumbs.db
 
 # IDEs
 /.idea
-/.vscode
 
 # Project
+/.env
 /node_modules
 /public/*
 !/public/index.php
 !/public/robots.txt
 /vendor
-/.env

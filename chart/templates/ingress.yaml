@@ -16,5 +16,5 @@ spec:
         paths:
           - backend:
               serviceName: {{ $.Release.Name }}
-              servicePort: http
+              servicePort: h2c
     {{- end }}

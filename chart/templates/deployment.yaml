@@ -50,11 +50,14 @@ spec:
               exec:
                 command: ['./artisan', 'config:cache']
           resources: {{ toYaml .Values.deployment.resources.app | nindent 12 }}
+          readinessProbe:
+            exec:
+              command: ['./artisan', '--version']
+            initialDelaySeconds: 10
           livenessProbe:
             exec:
               command: ['./artisan', '--version']
             initialDelaySeconds: 10
-            timeoutSeconds: 2
 
         - name: web
           image: {{ .Values.images.web.name }}:{{ .Values.images.web.tag }}
@@ -73,16 +76,23 @@ spec:
           ports:
             - name: http
               containerPort: 3000
+            - name: h2c
+              containerPort: 3001
           lifecycle:
             preStop:
               exec:
                 command: ['nginx', '-s', 'quit']
           resources: {{ toYaml .Values.deployment.resources.web | nindent 12 }}
-          livenessProbe:
-            tcpSocket:
+          readinessProbe:
+            httpGet:
+              path: /robots.txt
               port: http
             initialDelaySeconds: 5
-            timeoutSeconds: 2
+          livenessProbe:
+            httpGet:
+              path: /robots.txt
+              port: http
+            initialDelaySeconds: 5
 
       volumes:
         - name: public

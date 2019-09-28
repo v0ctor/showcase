@@ -6,9 +6,6 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use NumberFormatter;
 
-/**
- * Formatter helper.
- */
 class Formatter
 {
     /**
@@ -145,7 +142,8 @@ class Formatter
         ?int $hour = null,
         ?int $minute = null,
         ?int $second = null
-    ): string {
+    ): string
+    {
         $date = Carbon::create($year, $month, $day, $hour, $minute,
             $second)->formatLocalized(trans('dates.formats.human.with_time'));
 

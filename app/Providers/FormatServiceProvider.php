@@ -3,24 +3,12 @@
 namespace App\Providers;
 
 use App\Helpers\Formatter;
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
-/**
- * Format service provider.
- */
-class FormatServiceProvider extends ServiceProvider
+class FormatServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected $defer = true;
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register(): void
     {
         $this->app->singleton(Formatter::class, function () {
@@ -28,9 +16,6 @@ class FormatServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function provides(): array
     {
         return [Formatter::class];

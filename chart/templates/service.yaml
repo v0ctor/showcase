@@ -11,6 +11,6 @@ spec:
   selector:
     app: {{ .Release.Name }}
   ports:
-    - name: http
+    - name: h2c
       port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: h2c
