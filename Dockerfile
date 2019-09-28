@@ -38,7 +38,7 @@ COPY --from=composer:1.9.0 /usr/bin/composer /usr/local/bin
 ## Development image
 FROM builder AS development
 
-ENV PS1='\u@\h:\w\\$ '
+ENV PS1='\u:\w\\$ '
 ENV PATH="${PATH}:/app/vendor/bin:/app/node_modules/.bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
