@@ -37,6 +37,7 @@ service:
 ingress:
   hosts: []
   annotations:
+    ingress.kubernetes.io/protocol: h2c
     ingress.kubernetes.io/hsts-max-age: '31536000'
     ingress.kubernetes.io/hsts-include-subdomains: 'true'
     ingress.kubernetes.io/hsts-preload: 'true'

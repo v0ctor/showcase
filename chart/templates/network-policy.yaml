@@ -18,4 +18,4 @@ spec:
             matchLabels:
               namespace: networking
       ports:
-        - port: http
+        - port: h2c
