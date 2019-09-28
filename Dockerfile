@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.3.8-fpm AS base
+FROM php:7.3.10-fpm AS base
 
 WORKDIR /app
 
