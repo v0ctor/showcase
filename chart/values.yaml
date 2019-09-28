@@ -1,6 +1,6 @@
 images:
   app:
-    name: v0ctor/showcase
+    name: victor/showcase
     tag: nil
   web:
     name: nginx
