@@ -1,4 +1,5 @@
 .dockerignore
+.drone
 .drone.yml
 .DS_Store
 .editorconfig
@@ -7,8 +8,9 @@
 .git
 .gitignore
 .idea
+bootstrap/cache/*.php
 docker-compose.yml
 Dockerfile
-kubernetes
 license.md
 readme.md
+storage/logs/*

@@ -1,5 +1,0 @@
-<?php
-/**
- * API routes.
- */
-
