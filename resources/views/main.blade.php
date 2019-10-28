@@ -15,7 +15,6 @@
             <a href="https://linkedin.com/in/v0ctor"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
             <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
             <a href="https://twitter.com/v0ctor"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
-            <a href="https://dixibox.com/v0ctor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
             <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
             <a href="https://keybase.io/v0ctor"><img src="{{ asset('images/social/keybase.svg') }}" alt="Keybase"></a>
         </div>
@@ -73,17 +72,17 @@
         <div class="column stretch">
             <div class="job">
                 <div class="column">
-                    <div class="position">@lang('main.jobs.dixibox.position')</div>
+                    <div class="position">@lang('main.jobs.doyo.position')</div>
                     <div class="organization">
-                        <a href="https://dixibox.com">@lang('main.jobs.dixibox.organization')</a>
+                        <a href="https://doyo.tech">@lang('main.jobs.doyo.organization')</a>
                     </div>
                     <div class="period">
-                        <span class="badge">@lang('main.jobs.dixibox.period')</span>
+                        <span class="badge">@lang('main.jobs.doyo.period')</span>
                         <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::now(), 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
-                <div class="logo dixibox"></div>
+                <div class="logo doyo"></div>
             </div>
             <div class="job">
                 <div class="column">

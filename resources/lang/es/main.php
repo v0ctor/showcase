@@ -52,7 +52,7 @@ return [
 
         'co-founder' => 'cofundador',
 
-        'dixibox' => [
+        'doyo' => [
             'position' => 'Director de tecnología',
             'period'   => 'julio de 2018 — actualidad',
         ],

@@ -52,9 +52,9 @@ return [
 
         'co-founder' => 'co-founder',
 
-        'dixibox' => [
+        'doyo' => [
             'position'     => 'Chief technology officer',
-            'organization' => 'Dixibox',
+            'organization' => 'Doyo',
             'period'       => 'July 2018 — now',
         ],
 
