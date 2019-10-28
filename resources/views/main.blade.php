@@ -17,6 +17,7 @@
             <a href="https://twitter.com/v0ctor"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
             <a href="https://dixibox.com/v0ctor"><img src="{{ asset('images/social/dixibox.svg') }}" alt="Dixibox"></a>
             <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
+            <a href="https://keybase.io/v0ctor"><img src="{{ asset('images/social/keybase.svg') }}" alt="Keybase"></a>
         </div>
 
         <div id="scroll" class="arrow"></div>
@@ -479,10 +480,10 @@
                 @v0ctor
             </div>
         </a>
-        <a href="https://keybase.io/victordm">
+        <a href="https://keybase.io/v0ctor">
             <div class="contact-method keybase">
                 <img src="{{ asset('images/social/keybase.svg') }}">
-                @victordm
+                @v0ctor
             </div>
         </a>
     </section>
