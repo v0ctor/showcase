@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.3.10-fpm AS base
+FROM php:7.4.2-fpm AS base
 
 WORKDIR /app
 
@@ -32,7 +32,7 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
 ## Builder image
 FROM base AS builder
 
-COPY --from=composer:1.9.0 /usr/bin/composer /usr/local/bin
+COPY --from=composer:1.9.3 /usr/bin/composer /usr/local/bin
 
 
 ## Development image
@@ -53,13 +53,13 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && apt-get install -y --no-install-recommends \
         curl \
         gnupg2 \
- && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
  && apt-get install -y --no-install-recommends \
         nodejs \
  && npm install --global \
         npm \
  && pecl install \
-        xdebug-2.7.2 \
+        xdebug-2.9.2 \
  && docker-php-ext-enable \
         xdebug \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
@@ -81,7 +81,7 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:10.16.3-alpine AS assets
+FROM node:12.16.0-alpine AS assets
 
 WORKDIR /app
 

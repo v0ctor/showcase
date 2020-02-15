@@ -37,7 +37,7 @@ steps:
         echo "$REGISTRY_CONFIG" > $DRONE_DIR/docker/config.json
 
   - name: build
-    image: docker:19.03.2
+    image: docker:19.03.5
     environment:
       DOCKER_HOST: tcp://docker.v0ctor.me:2376
       DOCKER_TLS_VERIFY: '1'
@@ -49,11 +49,12 @@ steps:
         docker push $IMAGE
 
   - name: pre-deploy
-    image: lachlanevenson/k8s-helm:v2.14.3
+    image: lachlanevenson/k8s-helm:v3.0.2
     commands:
       - >-
-        helm template chart
-        --name $DRONE_REPO_NAME
+        helm template \
+        $DRONE_REPO_NAME
+        chart
         --namespace $(cat .drone/namespace)
         -f "chart/values.$(cat .drone/environment).yaml"
         --set-string images.app.tag=$(cat .drone/tag)
@@ -62,7 +63,7 @@ steps:
         > spec.yaml
 
   - name: deploy
-    image: lachlanevenson/k8s-kubectl:v1.15.3
+    image: lachlanevenson/k8s-kubectl:v1.17.2
     environment:
       KUBERNETES_CONFIG:
         from_secret: kubernetes
