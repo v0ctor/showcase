@@ -26,6 +26,7 @@ steps:
       - mkdir -p $DRONE_DIR
       - >-
         echo -n $REGISTRY_HOST > $DRONE_DIR/registry &&
+        echo -n $DRONE_REPO_NAME > $DRONE_DIR/name &&
         echo -n 'victor' > $DRONE_DIR/namespace &&
         echo -n ${DRONE_COMMIT_SHA:0:8} > $DRONE_DIR/tag &&
         echo -n $([[ $DRONE_COMMIT_BRANCH = 'master' ]] && echo 'production' || echo 'staging') > $DRONE_DIR/environment
@@ -37,33 +38,33 @@ steps:
         echo "$REGISTRY_CONFIG" > $DRONE_DIR/docker/config.json
 
   - name: build
-    image: docker:19.03.5
+    image: docker:19.03.6
     environment:
       DOCKER_HOST: tcp://docker.v0ctor.me:2376
       DOCKER_TLS_VERIFY: '1'
     commands:
-      - IMAGE="$(cat .drone/registry)/$(cat .drone/namespace)/$DRONE_REPO_NAME:$(cat .drone/tag)"
+      - IMAGE="$(cat .drone/registry)/$(cat .drone/namespace)/$(cat .drone/name):$(cat .drone/tag)"
       - >-
         ln -s $(pwd)/.drone/docker ~/.docker &&
         docker build -t $IMAGE . &&
         docker push $IMAGE
 
   - name: pre-deploy
-    image: lachlanevenson/k8s-helm:v3.0.2
+    image: lachlanevenson/k8s-helm:v3.1.0
     commands:
       - >-
-        helm template \
-        $DRONE_REPO_NAME
+        helm template
+        $(cat .drone/name)
         chart
         --namespace $(cat .drone/namespace)
         -f "chart/values.$(cat .drone/environment).yaml"
-        --set-string images.app.tag=$(cat .drone/tag)
+        --set-string images.server.tag=$(cat .drone/tag)
         --set-string registry.name=$(cat .drone/registry)
         --set-file registry.credentials=.drone/docker/config.json
         > spec.yaml
 
   - name: deploy
-    image: lachlanevenson/k8s-kubectl:v1.17.2
+    image: lachlanevenson/k8s-kubectl:v1.17.3
     environment:
       KUBERNETES_CONFIG:
         from_secret: kubernetes

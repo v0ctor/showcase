@@ -1,0 +1,17 @@
+{{ if gt (len .Values.ingress.hosts) 1 }}
+kind: Middleware
+apiVersion: traefik.containo.us/v1alpha1
+
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+
+spec:
+  redirectRegex:
+    #regex: ^https://(?!{{ index .Values.ingress.hosts 0 }})/(.*)
+    regex: ^https://({{ join "|" (slice .Values.ingress.hosts 1) }})/(.*)
+    replacement: https://{{ index .Values.ingress.hosts 0 }}/$2
+    permanent: true
+{{ end }}

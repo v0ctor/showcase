@@ -2,16 +2,14 @@ version: '3.7'
 
 services:
 
-  web:
+  proxy:
     image: nginx:1.17.8-alpine
-    working_dir: /app
     volumes:
-      - ./public:/app/public
-      - ./chart/files/web/nginx.conf:/etc/nginx/nginx.conf
-      - ./chart/files/web/default.conf:/etc/nginx/conf.d/default.conf
-      - app-sock:/run/php
+      - ./chart/files/proxy/nginx.conf:/etc/nginx/nginx.conf
+      - ./chart/files/proxy/fastcgi-docker.conf:/etc/nginx/fastcgi.conf
+      - ./chart/files/proxy/default.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - ${WEB_PORT:-80}:3000
+      - ${PROXY_PORT:-80}:3000
     depends_on:
       - app
 
@@ -22,12 +20,8 @@ services:
       args:
         - USER_ID=${UID:-1000}
     volumes:
-      - .:/app
-      - ./chart/files/app/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./chart/files/app/opcache-development.ini:/usr/local/etc/php/conf.d/opcache.ini
-      - ./chart/files/app/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
-      - ./chart/files/app/fpm.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
-      - app-sock:/run/php
-
-volumes:
-  app-sock:
+      - .:/var/www/html
+      - ./chart/files/server/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./chart/files/server/opcache-development.ini:/usr/local/etc/php/conf.d/opcache.ini
+      - ./chart/files/server/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./chart/files/server/fpm.conf:/usr/local/etc/php-fpm.d/zz-docker.conf

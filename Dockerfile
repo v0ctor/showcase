@@ -1,11 +1,9 @@
 ## Base image
-FROM php:7.4.2-fpm AS base
+FROM php:7.4.3-fpm AS base
 
-WORKDIR /app
-
-COPY chart/files/app/php.ini $PHP_INI_DIR/conf.d/php.ini
-COPY chart/files/app/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
-COPY chart/files/app/fpm.conf /usr/local/etc/php-fpm.d/zz-docker.conf
+COPY chart/files/server/php.ini $PHP_INI_DIR/conf.d/php.ini
+COPY chart/files/server/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY chart/files/server/fpm.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 
 # PHP extensions and their dependencies:
 #  - gmp (libgmp-dev)
@@ -39,14 +37,14 @@ COPY --from=composer:1.9.3 /usr/bin/composer /usr/local/bin
 FROM builder AS development
 
 ENV PS1='\u:\w\\$ '
-ENV PATH="${PATH}:/app/vendor/bin:/app/node_modules/.bin"
+ENV PATH="${PATH}:/var/www/html/vendor/bin:/var/www/html/node_modules/.bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
 ARG USER_ID=1000
 ENV USER_NAME=showcase
 
-COPY chart/files/app/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
-COPY chart/files/app/xdebug.ini $PHP_INI_DIR/conf.d
+COPY chart/files/server/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
+COPY chart/files/server/xdebug.ini $PHP_INI_DIR/conf.d
 
 RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && apt-get update \
@@ -69,7 +67,7 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
 ## Installer image
 FROM builder AS installer
 
-COPY . /app
+COPY . .
 
 RUN composer install \
         --no-dev \
@@ -81,13 +79,13 @@ RUN composer install \
 
 
 ## Assets image
-FROM node:12.16.0-alpine AS assets
+FROM node:12.16.1-alpine AS assets
 
-WORKDIR /app
+WORKDIR /var/www/html
 
-ENV PATH="${PATH}:/app/node_modules/.bin"
+ENV PATH="${PATH}:/var/www/html/node_modules/.bin"
 
-COPY --from=installer /app /app
+COPY --from=installer /var/www/html .
 
 RUN npm ci \
  && gulp build
@@ -96,5 +94,5 @@ RUN npm ci \
 ## Runtime image
 FROM base AS runtime
 
-COPY --from=installer /app /app
-COPY --from=assets /app/public /app/public
+COPY --from=installer /var/www/html .
+COPY --from=assets /var/www/html/public public

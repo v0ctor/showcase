@@ -1,0 +1,59 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: {{ .Release.Name }}-server
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: server
+  annotations:
+    kubernetes.io/change-cause: '{{ .Values.images.server.tag }}'
+
+spec:
+  revisionHistoryLimit: {{ .Values.deployments.revisionHistoryLimit }}
+
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/component: server
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/component: server
+
+    spec:
+      containers:
+        - name: default
+          image: {{ template "image" . }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}
+            - secretRef:
+                name: {{ .Release.Name }}
+          ports:
+            - name: fastcgi
+              containerPort: 9000
+          lifecycle:
+            postStart:
+              exec:
+                command: ['./artisan', 'config:cache']
+          resources: {{ toYaml .Values.deployments.server.resources | nindent 12 }}
+          readinessProbe:
+            exec:
+              command: ['./artisan', '--version']
+            initialDelaySeconds: 10
+          livenessProbe:
+            exec:
+              command: ['./artisan', '--version']
+            initialDelaySeconds: 10
+
+      imagePullSecrets:
+        - name: registry

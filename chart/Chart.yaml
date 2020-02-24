@@ -1,3 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: showcase
+type: application
 version: 1.0.0
