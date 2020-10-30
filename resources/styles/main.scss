@@ -210,7 +210,7 @@ header {
 
 section {
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         background-color: #f9f9f9;
     }
 
@@ -221,67 +221,12 @@ section {
             color: $sunflower-3;
         }
 
+        p, .values {
+            max-width: 800px;
+        }
+
         .values {
             margin: .5em 0;
-        }
-    }
-
-    &.education {
-        padding: 0;
-        flex-direction: row;
-        position: relative;
-
-        h1 {
-            width: 100%;
-            position: absolute;
-            top: 17vh;
-            left: 0;
-
-            span {
-                background-color: white;
-                border-radius: 8px;
-                padding: 5px 14px;
-                color: $dark-grey-2;
-            }
-        }
-
-        .period {
-            height: 100vh;
-            padding: 15px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 22px;
-            text-align: center;
-
-            &.a-level {
-                width: 50vw;
-                background-color: $grass-2;
-            }
-
-            &.bachelor-degree {
-                width: 50vw;
-                background-color: $grass-3;
-            }
-
-            time {
-                margin-top: 36px;
-                font-size: 18px;
-                font-weight: lighter;
-            }
-
-            .name {
-                font-weight: 600;
-            }
-
-            .info {
-                height: 50px;
-                margin-top: 10px;
-                font-size: 15px;
-                line-height: 1.3;
-            }
         }
     }
 

@@ -8,47 +8,25 @@ return [
     'about' => [
         'title' => 'About me',
 
-        'introduction' => 'Hi! My name is <strong>Víctor</strong>, I am <strong>:age years old</strong>, I live in <strong><a href="https://en.wikipedia.org/wiki/Valencia">Valencia</a></strong> and I am a computer engineer. My interest is particularly focused on <strong>software</strong> development, <strong>systems</strong>, <strong>networking</strong> and <strong>security</strong>.',
-
-        'beginnings' => 'In 2007, when I was 13, I began to delve into the world of computing through the web development. Little by little I learned PHP, JavaScript, HTML and CSS. This allowed me to deepen other topics such as software engineering, system administration, security and cryptography; which I find exciting. Since then I continue learning, both by myself and for having participated in several projects. In 2016 I graduated in <strong>computer science</strong> by the <strong>Universitat Politècnica de València</strong>, with the specialty in the field of <strong>information technologies</strong>.',
-
-        'principles' => 'I believe that knowledge must necessarily be accompanied by values that ensure that its application is beneficial to the whole society. These are my fundamental <strong>professional values</strong>:',
+        'introduction' => 'Hi! My name is <strong>Víctor</strong>, and I am a computer engineer by <a href="https://www.upv.es/index-en.html">Universitat Politècnica de València</a> with the mention of information technologies. My professional interest is mainly focused on the topics of <strong>infrastructure</strong>, <strong>security</strong> and <strong>software</strong> engineering.',
 
         'cave' => 'For me, <strong>computing</strong> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <strong>leave the <a href="https://en.wikipedia.org/wiki/Allegory_of_the_Cave">cave</a></strong> on our own and to travel without limits or prejudices through knowledge.',
 
-        'conclusion' => 'My professional <strong>goal</strong> is to realize computer science\'s potential to <strong>eliminate existing problems</strong> and <strong>meet new needs</strong>, thus doing my bit for the progress of humanity.',
+        'principles' => 'I believe that innovation and continuous improvement should be the key factors of any organization when defining its technological strategy and that they must necessarily be accompanied by <strong>values</strong> that guarantee that their application is beneficial for it and the whole of society:',
 
         'values' => [
-            'equality'            => 'Equality',
-            'freedom'             => 'Freedom',
             'respect'             => 'Respect',
             'empathy'             => 'Empathy',
-            'continuous_learning' => 'Continuous learning',
+            'equality'            => 'Equality',
+            'freedom'             => 'Freedom',
             'debate'              => 'Debate',
             'argumentation'       => 'Argumentation',
-            'enthusiasm'          => 'Enthusiasm',
-            'determination'       => 'Determination',
-            'perfectionism'       => 'Perfectionism',
-            'professionalism'     => 'Professionalism',
-        ],
-    ],
-
-    'education' => [
-        'title' => 'Education',
-
-        'a_level' => [
-            'name' => 'Advanced Level of sciences and technology',
-        ],
-
-        'bachelor_degree' => [
-            'name'        => "Bachelor's Degree of Computer Science",
-            'specialty'   => 'Information technologies',
-            'institution' => 'Universitat Politècnica de València',
+            'continuous_learning' => 'Continuous learning',
         ],
     ],
 
     'jobs' => [
-        'title' => 'Work experience',
+        'title' => 'Professional experience',
 
         'co-founder' => 'co-founder',
 
@@ -87,8 +65,8 @@ return [
         ],
 
         'mobincube' => [
-            'name'         => 'Infrastructure migration to Kubernetes',
-            'period'       => 'June 2019 — now',
+            'name'   => 'Infrastructure migration to Kubernetes',
+            'period' => 'June 2019 — now',
         ],
 
         'dide' => [
@@ -107,79 +85,57 @@ return [
     'skills' => [
         'title' => 'Skills',
 
-        'development_methodologies' => 'Development methodologies',
-        'kanban'                    => 'Kanban',
-        'fdd'                       => 'FDD',
-        'tdd'                       => 'TDD',
+        'devops'     => 'Development and operations (DevOps)',
+        'kubernetes' => 'Kubernetes',
+        'docker'     => 'Docker',
+        'ansible'    => 'Ansible',
+        'drone'      => 'Drone',
+        'jenkins'    => 'Jenkins',
+        'git'        => 'Git',
 
+        'systems_and_networking' => 'Systems and networking',
+        'gnu_linux'              => 'GNU/Linux',
+        'macos'                  => 'MacOS',
+        'cryptography'           => 'Cryptography',
+        'security'               => 'Security',
+        'traefik'                => 'Traefik',
+        'nginx'                  => 'Nginx',
+        'caddy'                  => 'Caddy',
 
-        'web_application_development' => 'Web application development',
-        'html'                        => 'HTML 5',
-        'css'                         => 'CSS 3',
-        'react'                       => 'React',
-        'jquery'                      => 'jQuery',
-        'laravel'                     => 'Laravel',
-        'lumen'                       => 'Lumen',
-        'rest'                        => 'REST',
-        'graphql'                     => 'GraphQL',
+        'databases'  => 'Database management systems',
+        'mariadb'    => 'MariaDB/MySQL',
+        'redis'      => 'Redis',
+        'mongodb'    => 'MongoDB',
+        'postgresql' => 'PostgreSQL',
 
+        'cloud_providers' => 'Cloud providers',
+        'digitalocean'    => 'DigitalOcean',
+        'aws'             => 'AWS',
+        'google_cloud'    => 'Google Cloud',
+        'azure'           => 'Azure',
 
         'programming_languages' => 'Programming languages',
+        'go'                    => 'Go',
+        'rust'                  => 'Rust',
         'php'                   => 'PHP',
         'javascript'            => 'JavaScript',
         'java'                  => 'Java',
-        'ruby'                  => 'Ruby',
-        'go'                    => 'Go',
-        'swift'                 => 'Swift',
-        'python'                => 'Python',
         'c'                     => 'C',
-        'c++'                   => 'C++',
 
-        'devops'     => 'Development and operations (DevOps)',
-        'docker'     => 'Docker',
-        'kubernetes' => 'Kubernetes',
-        'drone'      => 'Drone',
-        'jenkins'    => 'Jenkins',
+        'software_development' => 'Software development',
+        'fdd'                  => 'FDD',
+        'tdd'                  => 'TDD',
+        'graphql'              => 'GraphQL',
+        'rest'                 => 'REST',
+        'html'                 => 'HTML',
+        'sass_css'             => 'SASS/CSS',
 
-        'system_and_network_administration' => 'System and network administration',
-        'security'                          => 'Security',
-        'cryptography'                      => 'Cryptography',
-        'digitalocean'                      => 'DigitalOcean',
-        'aws'                               => 'AWS',
-        'azure'                             => 'Azure',
-        'linux'                             => 'Linux',
-        'ssh'                               => 'SSH',
-        'dns'                               => 'DNS',
-        'dhcp'                              => 'DHCP',
-
-
-        'database_administration' => 'Database administration',
-        'mariadb'                 => 'MariaDB',
-        'mysql'                   => 'MySQL',
-        'redis'                   => 'Redis',
-        'mongodb'                 => 'MongoDB',
-        'postgresql'              => 'PostgreSQL',
-
-
-        'web_server_administration' => 'Web server administration',
-        'nginx'                     => 'Nginx',
-        'traefik'                   => 'Træfik',
-
-
-        'mail_server_administration' => 'Mail server administration',
-        'postfix'                    => 'Postfix',
-        'dovecot'                    => 'Dovecot',
-        'rspamd'                     => 'Rspamd',
-        'spf'                        => 'SPF',
-        'dkim'                       => 'DKIM',
-        'dmarc'                      => 'DMARC',
-
-
-        'other'     => 'Other',
-        'git'       => 'Git',
-        'gulp'      => 'Gulp',
-        'nodejs'    => 'NodeJS',
-        'websocket' => 'WebSocket',
+        'frameworks_and_environments' => 'Frameworks and environments',
+        'symfony'                     => 'Symfony',
+        'laravel_lumen'               => 'Laravel/Lumen',
+        'express'                     => 'Express',
+        'react'                       => 'React',
+        'nodejs'                      => 'NodeJS',
     ],
 
     'languages' => [
