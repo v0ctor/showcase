@@ -1,0 +1,30 @@
+kind: ConfigMap
+apiVersion: v1
+
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+
+data: {{ toYaml .Values.config | nindent 2 }}
+
+---
+kind: ConfigMap
+apiVersion: v1
+
+metadata:
+  name: {{ .Release.Name }}-proxy
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+
+data:
+  nginx.conf: |-
+    {{ .Files.Get "files/proxy/nginx.conf" | nindent 4 }}
+
+  fastcgi.conf: |-
+    {{ .Files.Get "files/proxy/fastcgi-kubernetes.conf" | nindent 4 }}
+
+  default.conf: |-
+    {{ .Files.Get "files/proxy/default.conf" | nindent 4 }}

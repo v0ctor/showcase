@@ -8,3 +8,8 @@ secrets: {}
 ingress:
   hosts:
     - dev.v0ctor.me
+
+tls:
+  dnsNames:
+    - '*.dev.v0ctor.me'
+    - dev.v0ctor.me

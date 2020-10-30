@@ -2,15 +2,35 @@ kind: Service
 apiVersion: v1
 
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Release.Name }}-proxy
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ .Release.Name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
 
 spec:
   selector:
-    app: {{ .Release.Name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: proxy
   ports:
-    - name: h2c
-      port: {{ .Values.service.port }}
-      targetPort: h2c
+    - name: h2
+      port: 80
+      targetPort: h2
+
+---
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: {{ .Release.Name }}-server
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+
+spec:
+  selector:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: server
+  ports:
+    - name: fastcgi
+      port: 9000
+      targetPort: fastcgi

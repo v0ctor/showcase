@@ -8,11 +8,19 @@ secrets: {}
 ingress:
   hosts:
     - v0ctor.me
-    - victor.diazmarco.me
+    - www.v0ctor.me
     - diazmarco.me
+    - www.diazmarco.me
+    - victor.diazmarco.me
     - victordiaz.me
-  annotations:
-    #traefik.ingress.kubernetes.io/redirect-regex: ^https://(?!v0ctor.me)/(.*)
-    traefik.ingress.kubernetes.io/redirect-regex: ^https://(victor.diazmarco.me|diazmarco.me|victordiaz.me)/(.*)
-    traefik.ingress.kubernetes.io/redirect-replacement: https://v0ctor.me/$2
-    traefik.ingress.kubernetes.io/redirect-permanent: 'true'
+    - www.victordiaz.me
+
+tls:
+  dnsNames:
+    - '*.v0ctor.me'
+    - v0ctor.me
+    - diazmarco.me
+    - www.diazmarco.me
+    - victor.diazmarco.me
+    - victordiaz.me
+    - www.victordiaz.me

@@ -8,51 +8,29 @@ return [
     'about' => [
         'title' => 'Sobre mi',
 
-        'introduction' => 'Hola! El meu nom és <strong>Víctor</strong>, tinc <strong>:age anys</strong>, visc a <strong><a href="https://ca.wikipedia.org/wiki/València">València</a></strong> i sóc enginyer informàtic. El meu interés se centra especialment en el desenvolupament de <strong>programari</strong>, els <strong>sistemes</strong>, les <strong>xarxes</strong> i la <strong>seguretat</strong>.',
-
-        'beginnings' => 'En 2007, amb 13 anys, vaig començar a endinsar-me al món de la informàtica a través del desenvolupament web. A poc a poc vaig anar aprenent PHP, JavaScript, HTML i CSS. Això em va permetre aprofundir en altres temes com l\'enginyeria de programari, l\'administració de sistemes, la seguretat i la criptografia; els quals em pareixen apassionants. Des d\'aleshores continue aprenent, tant pel meu compte com gràcies a haver participat en diversos projectes. L\'any 2016 em vaig graduar en <strong>enginyeria informàtica</strong> per la <strong>Universitat Politècnica de València</strong>, amb la menció de <strong>tecnologies de la informació</strong>.',
-
-        'principles' => 'Considere que el coneixement ha d\'anar acompanyat necessàriament d\'uns valors que garantisquen que la seua aplicació siga beneficiosa per al conjunt de la societat. Estos són els meus <strong>valors professionals</strong> fundamentals:',
+        'introduction' => '¡Hola! El meu nom és <strong>Víctor</strong> i sóc enginyer informàtic per la <a href="https://www.upv.es/index-va.html">Universitat Politècnica de València</a> amb la menció de tecnologies de la informació. El meu interés professional se centra principalment en els temes d\'<strong>infraestructura</strong>, <strong>seguretat</strong> i enginyeria de <strong>programari</strong>.',
 
         'cave' => 'Per a mi, la <strong>informàtica</strong> és la cúspide en l\'aplicació pràctica de ciències pures tan elegants i belles com les matemàtiques i la física. Ella i els seus resultats (com ho és internet) ens permeten per igual a tots els humans <strong>eixir de la <a href="https://ca.wikipedia.org/wiki/Mite_de_la_caverna">caverna</a></strong> pel nostre compte i viatjar sense límits ni prejudicis pel coneixement.',
 
-        'conclusion' => 'El meu <strong>objectiu</strong> professional és fer efectiu el potencial de la informàtica per <strong>eliminar problemes existents</strong> i <strong>cobrir noves necessitats</strong>, donant així un xicotet pas més pel progrés de la humanitat.',
+        'principles' => 'Considere que la innovació i la millora continua han de ser els factors clau de qualsevol organització a l\'hora de definir la seua estratègia tecnològica i que han d\'anar acompanyats necessàriament d\'uns <strong>valors</strong> que garantisquen que la seua aplicació siga beneficiosa per a ella i per al conjunt de la societat:',
 
         'values' => [
-            'equality'            => 'Igualtat',
-            'freedom'             => 'Llibertat',
             'respect'             => 'Respecte',
             'empathy'             => 'Empatia',
-            'continuous_learning' => 'Aprenentatge continu',
+            'equality'            => 'Igualtat',
+            'freedom'             => 'Llibertat',
             'debate'              => 'Debat',
             'argumentation'       => 'Argumentació',
-            'enthusiasm'          => 'Entusiasme',
-            'determination'       => 'Determinació',
-            'perfectionism'       => 'Perfeccionisme',
-            'professionalism'     => 'Professionalisme',
-        ],
-    ],
-
-    'education' => [
-        'title' => 'Formació acadèmica',
-
-        'a_level' => [
-            'name' => 'Batxillerat científic-tecnològic',
-        ],
-
-        'bachelor_degree' => [
-            'name'        => 'Grau en Enginyeria Informàtica',
-            'specialty'   => 'Tecnologies de la informació',
-            'institution' => 'Universitat Politècnica de València',
+            'continuous_learning' => 'Aprenentatge continu',
         ],
     ],
 
     'jobs' => [
-        'title' => 'Experiència laboral',
+        'title' => 'Experiència professional',
 
         'co-founder' => 'cofundador',
 
-        'dixibox' => [
+        'doyo' => [
             'position' => 'Director de tecnologia',
             'period'   => 'juliol de 2018 — actualitat',
         ],
@@ -100,25 +78,21 @@ return [
     'skills' => [
         'title' => 'Habilitats',
 
-        'development_methodologies' => 'Metodologies de desenvolupament',
+        'devops' => 'Desenvolupament i operacions (<em>DevOps</em>)',
 
-        'web_application_development' => 'Desenvolupament d\'aplicacions web (<em>front-end</em> i <em>back-end</em>)',
+        'systems_and_networking' => 'Sistemes i xarxes',
+        'security'               => 'Seguretat',
+        'cryptography'           => 'Criptografia',
+
+        'databases' => 'Sistemes de gestió de bases de dades',
+
+        'cloud_providers' => 'Proveïdors al núvol',
 
         'programming_languages' => 'Llenguatges de programació',
 
-        'devops' => 'Desenvolupament i operacions (<em>DevOps</em>)',
+        'software_development' => 'Desenvolupament de programari',
 
-        'system_and_network_administration' => 'Administració de sistemes i xarxes',
-        'security'                          => 'Seguretat',
-        'cryptography'                      => 'Criptografia',
-
-        'database_administration' => 'Administració de bases de dades',
-
-        'web_server_administration' => 'Administració de servidors web',
-
-        'mail_server_administration' => 'Administració de servidors de correu',
-
-        'other' => 'Altres',
+        'frameworks_and_environments' => '<em>Frameworks</em> i entorns',
     ],
 
     'languages' => [

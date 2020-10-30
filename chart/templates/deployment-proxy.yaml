@@ -1,0 +1,84 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: {{ .Release.Name }}-proxy
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: proxy
+  annotations:
+    kubernetes.io/change-cause: '{{ .Values.images.server.tag }}'
+
+spec:
+  revisionHistoryLimit: {{ .Values.deployments.revisionHistoryLimit }}
+
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/component: proxy
+
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/component: proxy
+
+    spec:
+      initContainers:
+        - name: init
+          image: {{ template "image" . }}
+          command: ['sh', '-c', 'cp -rp /var/www/html/public/* /public/']
+          volumeMounts:
+            - name: public
+              mountPath: /public
+
+      containers:
+        - name: default
+          image: {{ .Values.images.proxy.name }}:{{ .Values.images.proxy.tag }}
+          volumeMounts:
+            - name: proxy-config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+            - name: proxy-config
+              mountPath: /etc/nginx/fastcgi.conf
+              subPath: fastcgi.conf
+            - name: proxy-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: default.conf
+            - name: public
+              mountPath: /usr/share/nginx/www
+          ports:
+            - name: h1
+              containerPort: 3000
+            - name: h2
+              containerPort: 3001
+          lifecycle:
+            preStop:
+              exec:
+                command: ['nginx', '-s', 'quit']
+          resources: {{ toYaml .Values.deployments.proxy.resources | nindent 12 }}
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: h1
+            initialDelaySeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: h1
+            initialDelaySeconds: 5
+
+      volumes:
+        - name: public
+        - name: proxy-config
+          configMap:
+            name: {{ .Release.Name }}-proxy
+
+      imagePullSecrets:
+        - name: registry
