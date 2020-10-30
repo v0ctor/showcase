@@ -15,7 +15,6 @@
             <a href="https://linkedin.com/in/v0ctor"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
             <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
             <a href="https://twitter.com/v0ctor"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
-            <a href="https://dribbble.com/v0ctor"><img src="{{ asset('images/social/dribbble.svg') }}" alt="Dribbble"></a>
             <a href="https://keybase.io/v0ctor"><img src="{{ asset('images/social/keybase.svg') }}" alt="Keybase"></a>
         </div>
 
