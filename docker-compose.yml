@@ -1,10 +1,11 @@
-version: '3.7'
+version: '3.8'
 
 services:
 
   proxy:
-    image: nginx:1.17.8-alpine
+    image: nginx:1.18.0-alpine
     volumes:
+      - ./public:/usr/share/nginx/www
       - ./chart/files/proxy/nginx.conf:/etc/nginx/nginx.conf
       - ./chart/files/proxy/fastcgi-docker.conf:/etc/nginx/fastcgi.conf
       - ./chart/files/proxy/default.conf:/etc/nginx/conf.d/default.conf

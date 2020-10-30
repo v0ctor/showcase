@@ -1,5 +1,5 @@
 ## Base image
-FROM php:7.4.3-fpm AS base
+FROM php:7.4.12-fpm AS base
 
 COPY chart/files/server/php.ini $PHP_INI_DIR/conf.d/php.ini
 COPY chart/files/server/opcache-runtime.ini $PHP_INI_DIR/conf.d/opcache.ini
@@ -30,7 +30,7 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
 ## Builder image
 FROM base AS builder
 
-COPY --from=composer:1.9.3 /usr/bin/composer /usr/local/bin
+COPY --from=composer:2.0.3 /usr/bin/composer /usr/local/bin
 
 
 ## Development image
@@ -41,7 +41,7 @@ ENV PATH="${PATH}:/var/www/html/vendor/bin:/var/www/html/node_modules/.bin"
 ENV PHP_IDE_CONFIG='serverName=default'
 
 ARG USER_ID=1000
-ENV USER_NAME=showcase
+ENV USER_NAME=default
 
 COPY chart/files/server/opcache-development.ini $PHP_INI_DIR/conf.d/opcache.ini
 COPY chart/files/server/xdebug.ini $PHP_INI_DIR/conf.d
@@ -57,7 +57,7 @@ RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini \
  && npm install --global \
         npm \
  && pecl install \
-        xdebug-2.9.2 \
+        xdebug-2.9.8 \
  && docker-php-ext-enable \
         xdebug \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
