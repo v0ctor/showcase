@@ -71,7 +71,7 @@ return [
 
         'dide' => [
             'name'         => 'Infrastructure migration to Kubernetes',
-            'organization' => 'Díde',
+            'organization' => 'Dide',
             'period'       => 'June — December 2018',
         ],
 
