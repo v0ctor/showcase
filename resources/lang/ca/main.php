@@ -8,7 +8,7 @@ return [
     'about' => [
         'title' => 'Sobre mi',
 
-        'introduction' => '¡Hola! El meu nom és <strong>Víctor</strong> i sóc enginyer informàtic per la <a href="https://www.upv.es/index-va.html">Universitat Politècnica de València</a> amb la menció de tecnologies de la informació. El meu interés professional se centra principalment en els temes d\'<strong>infraestructura</strong>, <strong>seguretat</strong> i enginyeria de <strong>programari</strong>.',
+        'introduction' => 'Hola! El meu nom és <strong>Víctor</strong> i sóc enginyer informàtic per la <a href="https://www.upv.es/index-va.html">Universitat Politècnica de València</a> amb la menció de tecnologies de la informació. El meu interés professional se centra principalment en els temes d\'<strong>infraestructura</strong>, <strong>seguretat</strong> i enginyeria de <strong>programari</strong>.',
 
         'cave' => 'Per a mi, la <strong>informàtica</strong> és la cúspide en l\'aplicació pràctica de ciències pures tan elegants i belles com les matemàtiques i la física. Ella i els seus resultats (com ho és internet) ens permeten per igual a tots els humans <strong>eixir de la <a href="https://ca.wikipedia.org/wiki/Mite_de_la_caverna">caverna</a></strong> pel nostre compte i viatjar sense límits ni prejudicis pel coneixement.',
 
