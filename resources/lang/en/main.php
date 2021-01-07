@@ -66,7 +66,7 @@ return [
 
         'mobincube' => [
             'name'   => 'Infrastructure migration to Kubernetes',
-            'period' => 'June 2019 — now',
+            'period' => 'June 2019 — November 2020',
         ],
 
         'dide' => [

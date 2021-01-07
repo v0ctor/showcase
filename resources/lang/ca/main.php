@@ -61,7 +61,7 @@ return [
 
         'mobincube' => [
             'name'   => 'Migració de la infraestructura a Kubernetes',
-            'period' => 'juny de 2019 — actualitat',
+            'period' => 'juny de 2019 — novembre de 2020',
         ],
 
         'dide' => [

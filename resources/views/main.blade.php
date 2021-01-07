@@ -126,7 +126,7 @@
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.projects.mobincube.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2019, 6, 1)->longAbsoluteDiffForHumans() }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2019, 6, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2020, 11, 30), 2) }}</span>
                     </div>
                 </div>
                 <div class="logo mobincube"></div>
