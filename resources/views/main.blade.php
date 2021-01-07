@@ -14,7 +14,6 @@
         <div class="social row">
             <a href="https://linkedin.com/in/v0ctor"><img src="{{ asset('images/social/linkedin.svg') }}" alt="LinkedIn"></a>
             <a href="https://github.com/v0ctor"><img src="{{ asset('images/social/github.svg') }}" alt="GitHub"></a>
-            <a href="https://twitter.com/v0ctor"><img src="{{ asset('images/social/twitter.svg') }}" alt="Twitter"></a>
             <a href="https://keybase.io/v0ctor"><img src="{{ asset('images/social/keybase.svg') }}" alt="Keybase"></a>
         </div>
 
@@ -388,12 +387,6 @@
         <a href="https://linkedin.com/in/v0ctor">
             <div class="contact-method linkedin">
                 <img src="{{ asset('images/social/linkedin.svg') }}">
-                @v0ctor
-            </div>
-        </a>
-        <a href="https://twitter.com/v0ctor">
-            <div class="contact-method twitter">
-                <img src="{{ asset('images/social/twitter.svg') }}">
                 @v0ctor
             </div>
         </a>
