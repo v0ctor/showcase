@@ -47,7 +47,7 @@
                 <div class="column">
                     <div class="position">@lang('main.jobs.doyo.position')</div>
                     <div class="organization">
-                        <a href="https://doyo.tech">@lang('main.jobs.doyo.organization')</a>
+                        @lang('main.jobs.doyo.organization')
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.doyo.period')</span>
