@@ -45,13 +45,26 @@
         <div class="column stretch">
             <div class="job">
                 <div class="column">
+                    <div class="position">@lang('main.jobs.brutal.position')</div>
+                    <div class="organization">
+                        <a href="https://brutalsys.com">@lang('main.jobs.brutal.organization')</a>
+                    </div>
+                    <div class="period">
+                        <span class="badge">@lang('main.jobs.brutal.period')</span>
+                        <span class="badge">{{ Carbon::createFromDate(2021, 2, 1)->longAbsoluteDiffForHumans(Carbon::now()) }}</span>
+                    </div>
+                </div>
+                <div class="logo brutal"></div>
+            </div>
+            <div class="job">
+                <div class="column">
                     <div class="position">@lang('main.jobs.doyo.position')</div>
                     <div class="organization">
-                        @lang('main.jobs.doyo.organization')
+                        <a href="https://doyo.tech">@lang('main.jobs.doyo.organization')</a>
                     </div>
                     <div class="period">
                         <span class="badge">@lang('main.jobs.doyo.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::now(), 2) }}</span>
+                        <span class="badge">{{ Carbon::createFromDate(2018, 6, 22)->longAbsoluteDiffForHumans(Carbon::createFromDate(2021, 1, 31), 2) }}</span>
                         <span class="badge emphasized">@lang('main.jobs.co-founder')</span>
                     </div>
                 </div>
@@ -82,19 +95,6 @@
                     </div>
                 </div>
                 <div class="logo apadrina-un-olivo"></div>
-            </div>
-            <div class="job">
-                <div class="column">
-                    <div class="position">@lang('main.jobs.valencia_city_council.position')</div>
-                    <div class="organization">
-                        <a href="https://valencia.es">@lang('main.jobs.valencia_city_council.organization')</a>
-                    </div>
-                    <div class="period">
-                        <span class="badge">@lang('main.jobs.valencia_city_council.period')</span>
-                        <span class="badge">{{ Carbon::createFromDate(2013, 7, 1)->longAbsoluteDiffForHumans(Carbon::createFromDate(2013, 9, 1)) }}</span>
-                    </div>
-                </div>
-                <div class="logo valencia-city-council"></div>
             </div>
         </div>
     </section>

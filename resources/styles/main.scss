@@ -372,6 +372,11 @@ section {
         width: 56px;
         margin-left: 20px;
 
+        &.brutal {
+            background: url('/images/organizations/brutal.svg') center no-repeat;
+            background-size: contain;
+        }
+
         &.doyo {
             background: url('/images/organizations/doyo.svg') center no-repeat;
             background-size: contain;
@@ -394,11 +399,6 @@ section {
 
         &.apadrina-un-olivo {
             background: url('/images/organizations/apadrina_un_olivo.png') center no-repeat;
-            background-size: contain;
-        }
-
-        &.valencia-city-council {
-            background: url('/images/organizations/valencia_city_council.svg') center no-repeat;
             background-size: contain;
         }
 
