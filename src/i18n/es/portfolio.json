@@ -1,0 +1,78 @@
+{
+  "about": {
+    "title": "Sobre mí",
+
+    "introduction": {
+      "text": "¡Hola! Mi nombre es <0>Víctor</0> y soy ingeniero informático por la <1>Universitat Politècnica de València</1> con la mención de tecnologías de la información. Mi interés profesional se centra principalmente en los temas de <0>infraestructura</0>, <0>seguridad</0> e ingeniería de <0>software</0>.",
+      "url": "https://www.upv.es/index-es.html"
+    },
+
+    "cave": {
+      "text": "Para mí, la <1>informática</1> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es internet) nos permiten por igual a todos los humanos <1>salir de la <0>caverna</0></1> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.",
+      "url": "https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna"
+    },
+
+    "principles": "Considero que la innovación y la mejora continua deben ser los factores clave de cualquier organización a la hora de definir su estrategia tecnológica y que deben ir acompañados necesariamente de unos <0>valores</0> que garanticen que su aplicación sea beneficiosa para ella y para el conjunto de la sociedad:",
+
+    "values": {
+      "respect": "Respeto",
+      "empathy": "Empatía",
+      "equality": "Igualdad",
+      "freedom": "Libertad",
+      "debate": "Debate",
+      "argumentation": "Argumentación",
+      "continuous_learning": "Aprendizaje continuo"
+    }
+  },
+
+  "jobs": {
+    "title": "Experiencia profesional",
+    "co-founder": "cofundador",
+
+    "brutal": "Ingeniero de sistemas (<0>DevSecOps</0>)",
+    "doyo": "Director de tecnología",
+    "mobincube": "Ingeniero de software <0>back-end</0>",
+    "apadrina_un_olivo": "Ingeniero de software"
+  },
+  "projects": {
+    "title": "Proyectos",
+
+    "avptp": "Vicepresidente y portavoz",
+    "mobincube": "Migración de la infraestructura a Kubernetes",
+    "dide": "Migración de la infraestructura a Kubernetes",
+    "habtium": "Administrador de sistemas y desarrollador web"
+  },
+  "skills": {
+    "title": "Habilidades",
+
+    "devops": "Desarrollo y operaciones (<0>DevOps</0>)",
+    "systems_and_networking": "Sistemas y redes",
+    "security": "Seguridad",
+    "cryptography": "Criptografía",
+
+    "databases": "Sistemas de gestión de bases de datos",
+
+    "cloud_providers": "Proveedores en la nube",
+
+    "programming_languages": "Lenguajes de programación",
+
+    "software_development": "Desarrollo de software",
+
+    "frameworks_and_environments": "<0>Frameworks</0> y entornos"
+  },
+
+  "languages": {
+    "title": "Idiomas",
+    "ca": "Valenciano/catalán nativo",
+    "es": "Castellano nativo",
+    "en": "Inglés intermedio-alto"
+  },
+
+  "articles": {
+    "title": "Artículos"
+  },
+
+  "contact": {
+    "title": "Contacto"
+  }
+}

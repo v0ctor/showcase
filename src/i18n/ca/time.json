@@ -1,0 +1,9 @@
+{
+  "now": "actualitat",
+
+  "durations": {
+    "years": "{{years}} anys i {{months}} mesos",
+    "months": "{{months}} mesos",
+    "weeks": "{{weeks}} setmanes"
+  }
+}

@@ -1,16 +1,12 @@
 .dockerignore
-.drone
-.drone.yml
 .DS_Store
 .editorconfig
-.env
 .env.example
 .git
 .gitignore
 .idea
-bootstrap/cache/*.php
 docker-compose.yml
 Dockerfile
 license.md
+node_modules
 readme.md
-storage/logs/*

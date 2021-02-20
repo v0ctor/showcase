@@ -1,0 +1,80 @@
+{
+  "about": {
+    "title": "About me",
+
+    "introduction": {
+      "text": "Hi! My name is <0>Víctor</0>, and I am a computer engineer by <1>Universitat Politècnica de València</1> with the mention of information technologies. My professional interest is mainly focused on the topics of <0>infrastructure</0>, <0>security</0> and <0>software</0> engineering.",
+      "url": "https://www.upv.es/index-en.html"
+    },
+
+    "cave": {
+      "text": "For me, <1>computing</1> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <1>leave the <0>cave</0></1> on our own and to travel without limits or prejudices through knowledge.",
+      "url": "https://en.wikipedia.org/wiki/Allegory_of_the_Cave"
+    },
+
+    "principles": "I believe that innovation and continuous improvement should be the key factors of any organization when defining its technological strategy and that they must necessarily be accompanied by <0>values</0> that guarantee that their application is beneficial for it and the whole of society:",
+
+    "values": {
+      "respect": "Respect",
+      "empathy": "Empathy",
+      "equality": "Equality",
+      "freedom": "Freedom",
+      "debate": "Debate",
+      "argumentation": "Argumentation",
+      "continuous_learning": "Continuous learning"
+    }
+  },
+
+  "jobs": {
+    "title": "Professional experience",
+    "co-founder": "co-founder",
+
+    "brutal": "Systems engineer (DevSecOps)",
+    "doyo": "Chief technology officer",
+    "mobincube": "Back-end software engineer",
+    "apadrina_un_olivo": "Software engineer"
+  },
+
+  "projects": {
+    "title": "Projects",
+
+    "avptp": "Vice president and spokesperson",
+    "mobincube": "Infrastructure migration to Kubernetes",
+    "dide": "Infrastructure migration to Kubernetes",
+    "habtium": "System administrator and web developer"
+  },
+
+  "skills": {
+    "title": "Skills",
+
+    "devops": "Development and operations (DevOps)",
+    "systems_and_networking": "Systems and networking",
+    "cryptography": "Cryptography",
+    "security": "Security",
+
+    "databases": "Database management systems",
+
+    "cloud_providers": "Cloud providers",
+
+    "programming_languages": "Programming languages",
+
+    "software_development": "Software development",
+
+    "frameworks_and_environments": "Frameworks and environments"
+  },
+
+  "languages": {
+    "title": "Languages",
+    "ca": "Native Catalan/Valencian",
+    "es": "Native Spanish",
+    "en": "Upper-intermediate English"
+  },
+
+  "articles": {
+    "title": "Articles"
+  },
+
+  "contact": {
+    "title": "Contact"
+  }
+}

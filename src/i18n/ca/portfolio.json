@@ -1,0 +1,80 @@
+{
+  "about": {
+    "title": "Sobre mi",
+
+    "introduction": {
+      "text": "Hola! El meu nom és <0>Víctor</0> i sóc enginyer informàtic per la <1>Universitat Politècnica de València</1> amb la menció de tecnologies de la informació. El meu interés professional se centra principalment en els temes d'<0>infraestructura</0>, <0>seguretat</0> i enginyeria de <0>programari</0>.",
+      "url": "https://www.upv.es/index-va.html"
+    },
+
+    "cave": {
+      "text": "Per a mi, la <1>informàtica</1> és la cúspide en l'aplicació pràctica de ciències pures tan elegants i belles com les matemàtiques i la física. Ella i els seus resultats (com ho és internet) ens permeten per igual a tots els humans <1>eixir de la <0>caverna</0></1> pel nostre compte i viatjar sense límits ni prejudicis pel coneixement.",
+      "url": "https://ca.wikipedia.org/wiki/Mite_de_la_caverna"
+    },
+
+    "principles": "Considere que la innovació i la millora continua han de ser els factors clau de qualsevol organització a l'hora de definir la seua estratègia tecnològica i que han d'anar acompanyats necessàriament d'uns <0>valors</0> que garantisquen que la seua aplicació siga beneficiosa per a ella i per al conjunt de la societat:",
+
+    "values": {
+      "respect": "Respecte",
+      "empathy": "Empatia",
+      "equality": "Igualtat",
+      "freedom": "Llibertat",
+      "debate": "Debat",
+      "argumentation": "Argumentació",
+      "continuous_learning": "Aprenentatge continu"
+    }
+  },
+
+  "jobs": {
+    "title": "Experiència professional",
+    "co-founder": "cofundador",
+
+    "brutal": "Enginyer de sistemes (<0>DevSecOps</0>)",
+    "doyo": "Director de tecnologia",
+    "mobincube": "Enginyer de programari <0>back-end</0>",
+    "apadrina_un_olivo": "Enginyer de programari"
+  },
+
+  "projects": {
+    "title": "Projectes",
+
+    "avptp": "Vicepresident i portaveu",
+    "mobincube": "Migració de la infraestructura a Kubernetes",
+    "dide": "Migració de la infraestructura a Kubernetes",
+    "habtium": "Administrador de sistemes i desenvolupador web"
+  },
+
+  "skills": {
+    "title": "Habilitats",
+
+    "devops": "Desenvolupament i operacions (<0>DevOps</0>)",
+    "systems_and_networking": "Sistemes i xarxes",
+    "security": "Seguretat",
+    "cryptography": "Criptografia",
+
+    "databases": "Sistemes de gestió de bases de dades",
+
+    "cloud_providers": "Proveïdors al núvol",
+
+    "programming_languages": "Llenguatges de programació",
+
+    "software_development": "Desenvolupament de programari",
+
+    "frameworks_and_environments": "<0>Frameworks</0> i entorns"
+  },
+
+  "languages": {
+    "title": "Llengües",
+    "ca": "Valencià/català natiu",
+    "es": "Castellà natiu",
+    "en": "Anglés intermedi-alt"
+  },
+
+  "articles": {
+    "title": "Articles"
+  },
+
+  "contact": {
+    "title": "Contacte"
+  }
+}

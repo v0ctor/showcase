@@ -1,0 +1,9 @@
+{
+  "now": "now",
+
+  "durations": {
+    "years": "{{years}} years and {{months}} months",
+    "months": "{{months}} months",
+    "weeks": "{{weeks}} weeks"
+  }
+}

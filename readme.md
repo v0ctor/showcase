@@ -4,36 +4,24 @@
 
 This is the repository of my showcase, where I share my professional career, my skills and my interests. Find it live [here](https://v0ctor.me).
 
-### Standards
+It is made with [React](https://reactjs.org) and love. ❤
 
-The project follows these standards:
+### Practices and principles
 
-* [PSR-2](https://www.php-fig.org/psr/psr-2/): coding style.
-* [PSR-4](https://www.php-fig.org/psr/psr-4/): autoloading.
-* [PSR-5](https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc.md) and [PSR-19](https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md): documentation.
+The development workflow is based on these practices and principles:
 
-Extended by the following rules:
-
-* Code must sort `use` declarations in alphabetical order.
-* Code must use the short array declaration style.
-* Code must align multiline constant declarations and array key-value pairs.
-* Code must use a comma after last element in multiline arrays.
+* [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+* [Semantic Versioning](https://semver.org).
 
 ### Directory structure
 
-The project follows the [default Laravel application structure](https://laravel.com/docs/structure) with the following additions:
+The project follows the [default Create React App folder structure](https://create-react-app.dev/docs/folder-structure/) with the following additions:
 
 * `Dockerfile`, `docker-compose.yml`, and `.dockerignore` have all necessary [Docker](https://www.docker.com) manifests to define the development and runtime environments.
-* `chart` contains a [Helm](https://helm.sh) package with all [Kubernetes](https://kubernetes.io) specifications that define the infrastructure.
-* `.drone.yml` has the [Drone](https://drone.io) CI/CD pipeline.
 
 ### License
-This software is distributed under the MIT license. Please read `license.md` for more information on the software availability and distribution.
 
-### Credits
-* [Main header](https://unsplash.com/photos/jVx8JaO2Ddc) by [Philipp Katzenberger](https://unsplash.com/@fantasyflip).
-* [WebSocket header](https://unsplash.com/photos/7m2gkYUDfFE) by [Marat Gilyadzinov](https://unsplash.com/@m3design).
-* [Errors header](https://unsplash.com/photos/-coR_4tgtWA) by [Ali Inay](http://unsplash.com/@inayali).
+This software is distributed under the MIT license. Please read [the software license](license.md) for more information on the availability and distribution.
 
 ## First steps
 
@@ -59,27 +47,26 @@ sed -i "s/UID=.*/UID=$(id -u)/" .env
 
 #### Docker environment
 
-The development environment is made of two different containers:
+The development environment is made of a single container:
 
-* `app` runs the application itself using the [PHP interpreter](https://php.net).
-* `web` serves the application through HTTP using [Nginx](https://nginx.org).
+* `app` runs the application itself using the [Node interpreter](https://nodejs.org).
 
-To build the environment, run Docker Compose in daemon mode. The first time it may take a few minutes, since software must be compiled.
+To build the environment, run Docker Compose in daemon mode. The first time it may take a few minutes, since containers must be built.
 
 ```Shell
 docker-compose up -d
 ```
 
-Then, enter to the `app` container.
+Then, run the default shell in the `app` container.
 
 ```Shell
-docker-compose exec -u $(id -u) app bash
+docker-compose exec -u $(id -u) app sh
 ```
 
-To easily access the container on subsequent occasions, you can add the following alias to your `.bashrc` or `.zshrc` file.
+To easily access the container on subsequent occasions, you can add the following aliases to your `.bashrc` or `.zshrc` file.
 
 ```Shell
-alias app="docker-compose exec -u $(id -u) app bash"
+alias dcsh="docker-compose exec -u $(id -u) app sh"
 ```
 
 ### Initialization
@@ -87,35 +74,22 @@ alias app="docker-compose exec -u $(id -u) app bash"
 Being inside of the `app` container for the first time, you should install the dependencies.
 
 ```Shell
-composer install
 npm ci
 ```
 
 ### Usage
 
-Now you can use [Composer](https://getcomposer.org), [Artisan](https://laravel.com/docs/artisan), [Tinker](https://github.com/laravel/tinker) and [PHPUnit](https://phpunit.de) in the `app` container, among others
+Run the following command to start the development server:
 
-[Xdebug](https://xdebug.org) is also available from the host machine. To use it with [PhpStorm](https://www.jetbrains.com/phpstorm/), see [the official guide](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html#integrationWithProduct).
+```Shell
+npm run start
+```
 
-To use the application through HTTP, you can perform requests to [http://localhost](http://localhost).
-
-> Note that Git is not available in the container, so you should use it from the host machine. It is strongly recommended to use [Fork](https://git-fork.com), a desktop Git client.
-
-### Deployment
-
-The deployment process is automated with [Drone](https://drone.io) and [Kubernetes](https://kubernetes.io). When changes are incorporated into production (`master` branch) or staging (`develop` branch), an automatic deployment is made to the corresponding environment.
+> Note that Git is not available in the container, so you should use it from the host machine. It is strongly recommended to use a desktop client like [Fork](https://git-fork.com) or [GitKraken](https://www.gitkraken.com).
 
 ## Troubleshooting
 
 There are several common problems that can be easily solved. Here are their causes and solutions.
-
-### Composer
-
-When a class is not found, check that it is in the correct namespace. If that was not the problem, you should [update the autoloader](https://getcomposer.org/doc/03-cli.md#dump-autoload-dumpautoload-) by running the following command.
-
-```Shell
-composer dump-autoload
-```
 
 ### Docker
 

@@ -1,0 +1,15 @@
+@import 'styles/mixins';
+
+header.not-found {
+    background-color: #d8d8d8;
+    @include background-image('../components/NotFound/images/header/4k.jpg', '../components/NotFound/images/header/2k.jpg', '../components/NotFound/images/header/1k.jpg', '../components/NotFound/images/header/hd.jpg');
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 20px;
+        text-align: center;
+    }
+}

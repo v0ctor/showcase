@@ -5,9 +5,10 @@
 /.idea
 
 # Project
-/.env
+/build
+/coverage
 /node_modules
-/public/*
-!/public/index.php
-!/public/robots.txt
-/vendor
+/.env
+
+# Logs
+*.log

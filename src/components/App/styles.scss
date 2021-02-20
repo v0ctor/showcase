@@ -1,0 +1,110 @@
+@import-normalize;
+@import 'styles/colors';
+
+/** Base **/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 14px;
+    color: $dark-grey-3;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+    outline-style: none;
+
+    img {
+        border: none;
+    }
+}
+
+p a, li a, .paragraph a {
+    transition: color .3s ease;
+    text-decoration: underline !important;
+
+    &:hover {
+        color: black;
+    }
+}
+
+h1 {
+    font-size: 35px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+p > code, li > code {
+    padding: 1px 2px;
+    border-radius: 3px;
+    background-color: #e3edf3;
+    font-size: 0.85em;
+}
+
+pre {
+    border-radius: 5px;
+
+    code {
+        white-space: pre-wrap !important;
+    }
+}
+
+mark {
+    padding: 1px 2px;
+    border-radius: 3px;
+    background-color: #fdffb6;
+}
+
+/** Sections **/
+header, section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &.stretch {
+            align-items: stretch;
+        }
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+
+        &.stretch {
+            align-items: stretch;
+        }
+    }
+}
