@@ -30,10 +30,16 @@ return [
 
         'co-founder' => 'co-founder',
 
+        'brutal' => [
+            'position'     => 'Systems engineer',
+            'organization' => 'Brutal',
+            'period'       => 'February 2021 — now',
+        ],
+
         'doyo' => [
             'position'     => 'Chief technology officer',
             'organization' => 'Doyo',
-            'period'       => 'July 2018 — now',
+            'period'       => 'July 2018 — January 2021',
         ],
 
         'mobincube' => [
@@ -46,12 +52,6 @@ return [
             'position'     => 'Software engineer',
             'organization' => 'Apadrina un olivo',
             'period'       => 'March — July 2017',
-        ],
-
-        'valencia_city_council' => [
-            'position'     => 'Full-stack software developer (scholarship)',
-            'organization' => 'Ajuntament de València',
-            'period'       => 'July — August 2013',
         ],
     ],
 
@@ -66,7 +66,7 @@ return [
 
         'mobincube' => [
             'name'   => 'Infrastructure migration to Kubernetes',
-            'period' => 'June 2019 — now',
+            'period' => 'June 2019 — November 2020',
         ],
 
         'dide' => [

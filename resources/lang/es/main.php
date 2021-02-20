@@ -30,9 +30,14 @@ return [
 
         'co-founder' => 'cofundador',
 
+        'brutal' => [
+            'position' => 'Ingeniero de sistemas',
+            'period'   => 'febrero de 2021 — actualidad',
+        ],
+
         'doyo' => [
             'position' => 'Director de tecnología',
-            'period'   => 'julio de 2018 — actualidad',
+            'period'   => 'julio de 2018 — enero de 2021',
         ],
 
         'mobincube' => [
@@ -43,11 +48,6 @@ return [
         'apadrina_un_olivo' => [
             'position' => 'Ingeniero de software',
             'period'   => 'marzo — julio de 2017',
-        ],
-
-        'valencia_city_council' => [
-            'position' => 'Desarrollador de software <em>full-stack</em> (beca)',
-            'period'   => 'julio — agosto de 2013',
         ],
     ],
 
@@ -61,7 +61,7 @@ return [
 
         'mobincube' => [
             'name'   => 'Migración de la infraestructura a Kubernetes',
-            'period' => 'junio de 2019 — actualidad',
+            'period' => 'junio de 2019 — noviembre de 2020',
         ],
 
         'dide' => [

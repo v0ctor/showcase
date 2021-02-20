@@ -56,7 +56,7 @@
             background-color: #6090c0;
 
             $base-url: '/images/publications/websocket/header/';
-            @include background-image($base-url + '4k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
+            @include background-image($base-url + '2k.jpg', $base-url + '2k.jpg', $base-url + '1k.jpg', $base-url + 'hd.jpg');
 
             h1 {
                 color: #6090c0;

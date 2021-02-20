@@ -28,19 +28,11 @@ gulp.task('clean-images', function () {
     return del(['public/images']);
 });
 
-gulp.task('clean-manifests', function () {
-    return del([
-        'public/manifest.json',
-        'public/browserconfig.xml',
-    ]);
-});
-
 // Global
 gulp.task('clean', gulp.parallel(
     'clean-scripts',
     'clean-styles',
     'clean-images',
-    'clean-manifests',
 ));
 
 /*
@@ -116,22 +108,11 @@ gulp.task('build-images', gulp.series('clean-images', function () {
     return gulp.src('resources/images/**/*').pipe(gulp.dest('public/images'));
 }));
 
-gulp.task('build-manifests', gulp.series('clean-manifests', gulp.parallel(buildWebManifest, buildBrowserManifest)));
-
-function buildWebManifest() {
-    return gulp.src('resources/manifest.json').pipe(gulp.dest('public'));
-}
-
-function buildBrowserManifest() {
-    return gulp.src('resources/browserconfig.xml').pipe(gulp.dest('public'));
-}
-
 // Global
 gulp.task('build', gulp.parallel(
     'build-scripts',
     'build-styles',
     'build-images',
-    'build-manifests',
 ));
 
 /*

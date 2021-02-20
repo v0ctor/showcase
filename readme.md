@@ -1,7 +1,5 @@
 # Showcase
 
-![Build status](https://drone.dev.v0ctor.me/api/badges/v0ctor/showcase/status.svg)
-
 ## About
 
 This is the repository of my showcase, where I share my professional career, my skills and my interests. Find it live [here](https://v0ctor.me).

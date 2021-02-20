@@ -30,9 +30,14 @@ return [
 
         'co-founder' => 'cofundador',
 
+        'brutal' => [
+            'position' => 'Enginyer de sistemes',
+            'period'   => 'febrer de 2021 — actualitat',
+        ],
+
         'doyo' => [
             'position' => 'Director de tecnologia',
-            'period'   => 'juliol de 2018 — actualitat',
+            'period'   => 'juliol de 2018 — gener de 2021',
         ],
 
         'mobincube' => [
@@ -43,11 +48,6 @@ return [
         'apadrina_un_olivo' => [
             'position' => 'Enginyer de programari',
             'period'   => 'març — juliol de 2017',
-        ],
-
-        'valencia_city_council' => [
-            'position' => 'Desenvolupador de programari <em>full-stack</em> (beca)',
-            'period'   => 'juliol — agost de 2013',
         ],
     ],
 
@@ -61,7 +61,7 @@ return [
 
         'mobincube' => [
             'name'   => 'Migració de la infraestructura a Kubernetes',
-            'period' => 'juny de 2019 — actualitat',
+            'period' => 'juny de 2019 — novembre de 2020',
         ],
 
         'dide' => [
