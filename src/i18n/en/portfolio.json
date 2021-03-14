@@ -8,7 +8,7 @@
     },
 
     "cave": {
-      "text": "For me, <1>computing</1> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <1>leave the <0>cave</0></1> on our own and to travel without limits or prejudices through knowledge.",
+      "text": "For me, <0>computing</0> is the pinnacle in the practical application of pure sciences as elegant and beautiful as mathematics and physics. It and its results (such as the internet) allow equally to all humans to <0>leave the <0>cave</0></0> on our own and to travel without limits or prejudices through knowledge.",
       "url": "https://en.wikipedia.org/wiki/Allegory_of_the_Cave"
     },
 

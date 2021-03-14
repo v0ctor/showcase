@@ -8,7 +8,7 @@
     },
 
     "cave": {
-      "text": "Para mí, la <1>informática</1> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es internet) nos permiten por igual a todos los humanos <1>salir de la <0>caverna</0></1> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.",
+      "text": "Para mí, la <0>informática</0> es la cúspide en la aplicación práctica de ciencias puras tan elegantes y bellas como las matemáticas y la física. Ella y sus resultados (como lo es internet) nos permiten por igual a todos los humanos <0>salir de la <0>caverna</0></0> por nuestra cuenta y viajar sin límites ni prejuicios por el conocimiento.",
       "url": "https://es.wikipedia.org/wiki/Alegor%C3%ADa_de_la_caverna"
     },
 

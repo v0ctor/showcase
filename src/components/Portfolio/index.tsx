@@ -46,8 +46,9 @@ export default function Portfolio() {
                     parent="p"
                     i18nKey="about.cave.text"
                     components={[
-                        <a href={t('about.cave.url')} />,
-                        <strong />
+                        <strong>
+                            <a href={t('about.cave.url')} />
+                        </strong>
                     ]} />
                 <Trans
                     t={t}
