@@ -75,7 +75,9 @@ export default function Portfolio() {
                                     t={t}
                                     i18nKey="jobs.brutal"
                                     components={[
-                                        <em />
+                                        <small>
+                                            <em />
+                                        </small>
                                     ]} />
                             </div>
                             <div className="organization paragraph">
