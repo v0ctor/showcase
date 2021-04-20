@@ -314,6 +314,7 @@ export default function Portfolio() {
                                         ['Kubernetes', '75'],
                                         ['Docker', '100'],
                                         ['Ansible', '75'],
+                                        ['Terraform', '50'],
                                         ['Drone', '100'],
                                         ['Jenkins', '75'],
                                         ['Git', '100'],
@@ -338,7 +339,7 @@ export default function Portfolio() {
                                         ['MacOS', '100'],
                                         [t('skills.cryptography'), '100'],
                                         [t('skills.security'), '100'],
-                                        ['Traefik', '100'],
+                                        ['Traefik Proxy', '100'],
                                         ['Nginx', '100'],
                                         ['Caddy', '50'],
                                     ];
@@ -373,7 +374,9 @@ export default function Portfolio() {
                                 })()
                             }
                         </div>
+                    </div>
 
+                    <div className="second">
                         <h2>{t('skills.cloud_providers')}</h2>
                         <div className="row">
                             {
@@ -394,9 +397,7 @@ export default function Portfolio() {
                                 })()
                             }
                         </div>
-                    </div>
-
-                    <div className="second">
+                        
                         <h2>{t('skills.programming_languages')}</h2>
                         <div className="row">
                             {
@@ -487,6 +488,9 @@ export default function Portfolio() {
                 <div className="language en" style={{order: i18n.language === 'en' ? 1 : 2}}>
                     <div className="name">{t('languages.en')}</div>
                     <div className="badge">B2</div>
+                </div>
+                <div className="language fr" style={{order: i18n.language === 'fr' ? 1 : 2}}>
+                    <div className="name">{t('languages.fr')}</div>
                 </div>
             </section>
 

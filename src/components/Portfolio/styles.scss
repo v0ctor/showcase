@@ -162,6 +162,15 @@ section {
                 }
             }
 
+            &.fr {
+                border-color: $chewinggum-1;
+                color: $chewinggum-1;
+
+                .badge {
+                    background-color: $chewinggum-1;
+                }
+            }
+
             .badge {
                 margin-left: 7px;
             }
