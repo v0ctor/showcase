@@ -1,7 +1,7 @@
-import './styles.scss';
+import React from 'react';
 import {Trans, useTranslation} from 'react-i18next';
-import React from "react";
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
+import './styles.scss';
 
 export default function NotFound() {
     const {t} = useTranslation('errors');

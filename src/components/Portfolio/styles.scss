@@ -2,7 +2,7 @@
 @import 'styles/colors';
 @import 'styles/mixins';
 
-/** Gradients **/
+// Gradients
 $gradient-a: #4BC0C8;
 $gradient-b: #C779D0;
 
@@ -12,15 +12,12 @@ $gradient-b: #C779D0;
     background: linear-gradient(to right, $gradient-a, $gradient-b);
 }
 
-/** Header **/
-header {
-    background: $secondary center;
-    background-size: cover;
+article.portfolio {
+    header {
+        background: $secondary url('images/header.jpg') center;
 
-    &.main {
         color: white;
         text-shadow: 0 0 30px black;
-        @include background-image('../components/Portfolio/images/header/4k.jpg', '../components/Portfolio/images/header/2k.jpg', '../components/Portfolio/images/header/1k.jpg', '../components/Portfolio/images/header/hd.jpg');
 
         .avatar {
             width: 130px;
@@ -32,8 +29,8 @@ header {
 
         .social {
             img {
-                height: 22px;
-                margin: 0 6px;
+                height: 1.5rem;
+                margin: 0 .4rem;
 
                 &:hover {
                     opacity: .75;
@@ -41,380 +38,401 @@ header {
             }
         }
 
-
-        h1 {
-            margin: 10px 0;
-        }
-    }
-
-    .arrow {
-        width: 34px;
-        height: 18px;
-        position: absolute;
-        top: calc(100vh - 74px);
-        left: calc(50vw - 17px);
-        background: url('../../images/arrow.svg') no-repeat;
-        background-size: contain;
-        opacity: .7;
-        transition: opacity 0.3s ease;
-        animation: bounce 4s 2s infinite;
-
-        @media (max-device-width: 768px) {
-            display: none;
-        }
-
-        /*&:hover {
-            opacity: 1;
-            cursor: pointer;
-        }*/
-    }
-
-    .web {
-        width: 200px;
-        height: 50px;
-        position: absolute;
-        top: calc(100vh - 84px);
-        left: calc(50vw - 100px);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-    }
-}
-
-/** Sections **/
-section {
-    &:nth-child(odd) {
-        background-color: #f9f9f9;
-    }
-
-    &.about {
-        padding: 40px 10vw;
-
-        strong {
-            color: $grass-1;
-        }
-
-        p, .values {
-            max-width: 800px;
-        }
-
-        .values {
-            margin: .5em 0;
-        }
-    }
-
-    &.skills {
-        @extend .gradient-one;
-        color: white;
-
-        h1 {
-            background-color: white;
-            border-radius: 8px;
-            padding: 5px 14px;
-
-            span {
-                @extend .gradient-one;
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-        }
-    }
-
-    &.languages {
-        .language {
-            margin: 5px;
-            padding: 10px;
-            font-size: 17px;
-            font-weight: 400;
-            border-radius: 6px;
-            border: 1px solid $dark-grey-1;
-            color: #666;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &.ca {
-                border-color: $grapefruit-1;
-                color: $grapefruit-1;
-
-                .badge {
-                    background-color: $grapefruit-1;
-                }
-            }
-
-            &.es {
-                border-color: $mint-2;
-                color: $mint-2;
-
-                .badge {
-                    background-color: $mint-2;
-                }
-            }
-
-            &.en {
-                border-color: $aqua-2;
-                color: $aqua-2;
-
-                .badge {
-                    background-color: $aqua-2;
-                }
-            }
-
-            &.fr {
-                border-color: $chewinggum-1;
-                color: $chewinggum-1;
-
-                .badge {
-                    background-color: $chewinggum-1;
-                }
-            }
-
-            .badge {
-                margin-left: 7px;
-            }
-        }
-    }
-
-    &.articles {
-        padding: 0;
-        flex-direction: row;
-        position: relative;
-
-        h1 {
-            width: 100%;
-            position: absolute;
-            top: 17vh;
-            left: 0;
-
-            span {
-                background-color: white;
-                border-radius: 8px;
-                padding: 5px 14px;
-                color: $dark-grey-2;
-            }
-        }
-
-        .article {
-            height: 100vh;
-            padding: 15px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 22px;
-            text-align: center;
-            background-position: center;
-            background-size: cover;
-
-            &.websocket {
-                width: 50vw;
-                background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('../Article/images/websocket/header/1k.jpg');
-            }
-
-            &.bitcoin {
-                width: 50vw;
-                background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('../Article/images/bitcoin/header/1k.jpg');
-            }
-        }
-    }
-}
-
-/** Values **/
-.value {
-    margin: 4px 0 4px -25px;
-    padding: 10px 30px;
-    border-radius: 20px;
-    border: 2px solid white;
-    font-size: 15px;
-    color: white;
-    background: $grass-1;
-}
-
-/** Jobs **/
-.job,
-.project {
-    width: 474px;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 17px;
-    font-weight: 500;
-    color: $dark-grey-2;
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-device-width: 600px) {
-        width: 100%;
-    }
-
-    .logo {
-        width: 56px;
-        margin-left: 20px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        $organizations: 'brutal', 'doyo', 'dide', 'avptp', 'mobincube', 'habtium';
-
-        @each $org in $organizations {
-            &.#{$org} {
-                background-image: url('./images/organizations/' + $org + '.svg');
-            }
-        }
-
-        &.auo {
-            background-image: url('./images/organizations/auo.png');
-        }
-    }
-
-    .position {
-        color: #424242;
-    }
-
-    .organization {
-        margin-top: 7px;
-        font-size: 15px;
-        font-weight: 300;
-    }
-
-    .period {
-        margin-top: 8px;
-
-        .badge {
-            display: inline-block;
-            margin: 5px 5px 0 0;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-/** Skills **/
-.skill {
-    margin: 5px;
-    font-size: 17px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 1px solid white;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-    span {
-        padding: 10px 10px 7px 10px;
-    }
-
-    .level {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-    }
-
-    .level-25 {
-        @extend .level;
-        width: 25%;
-    }
-
-    .level-50 {
-        @extend .level;
-        width: 50%;
-    }
-
-    .level-75 {
-        @extend .level;
-        width: 75%;
-    }
-
-    .level-100 {
-        @extend .level;
-    }
-}
-
-/** Contact methods **/
-.contact-method {
-    margin: 4px;
-    padding: 12px 16px;
-    border-radius: 20px;
-    font-size: 15px;
-    color: white;
-    background: $bluejeans-1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-        height: 16px;
-        margin-right: 10px;
-    }
-
-    &.mail img {
-        height: 13px;
-    }
-
-    &.keybase img {
-        height: 17px;
-    }
-}
-
-/** Badges **/
-.badge {
-    border-radius: 6px;
-    padding: 5px;
-    font-size: 11px;
-    background-color: $dark-grey-1;
-    color: white;
-
-    &.emphasized {
-        background-color: $dark-grey-2;
-    }
-}
-
-/** PDF styles **/
-@media print {
-    header {
-        background-position: bottom center;
-
         .arrow {
-            display: none;
+            width: 34px;
+            height: 18px;
+            position: absolute;
+            top: calc(100vh - 74px);
+            left: calc(50vw - 17px);
+            background: url('../../images/arrow.svg') no-repeat;
+            background-size: contain;
+            opacity: .7;
+            transition: opacity 0.3s ease;
+            animation: bounce 4s 2s infinite;
+
+            @media (max-device-width: 768px) {
+                display: none;
+            }
+
+            /*&:hover {
+                opacity: 1;
+                cursor: pointer;
+            }*/
         }
 
         .web {
-            display: flex;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: calc(100vh - 84px);
+            left: calc(50vw - 100px);
+            display: none;
+            justify-content: center;
+            align-items: center;
         }
     }
 
-    section.skills {
-        padding: 40px 20px;
+    section {
+        &.about {
+            strong {
+                color: $primary;
+            }
 
-        h1 span {
-            -webkit-background-clip: initial;
-            background-clip: initial;
-            background: none;
-            color: #9cadc9;
-        }
+            .values {
+                max-width: 900px;
 
-        .first {
-            display: flex;
-            flex-direction: row;
+                .value {
+                    margin: 4px 0 4px -25px;
+                    padding: 10px 30px;
+                    border-radius: 20px;
+                    border: 2px solid white;
+                    font-size: 15px;
+                    color: white;
+                    background: $primary;
 
-            .second {
-                width: calc(50vw - 20px);
-
-                &:nth-of-type(1) {
-                    padding-right: 20px;
-                    border-right: 1px solid white;
-                }
-
-                &:nth-of-type(2) {
-                    padding-left: 20px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
                 }
             }
+        }
+
+        &.skills {
+            @extend .gradient-one;
+            color: white;
+
+            h2 {
+                background-color: white;
+                border-radius: 8px;
+                padding: 5px 14px;
+
+                span {
+                    @extend .gradient-one;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                }
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                margin-block: 1rem 1rem;
+                color: white;
+            }
+        }
+
+        &.languages {
+            .language {
+                margin-bottom: .75rem;
+                padding: 10px;
+                font-size: 17px;
+                font-weight: 400;
+                border-radius: 6px;
+                border: 1px solid $dark-grey-1;
+                color: #666;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.ca {
+                    border-color: $grapefruit-1;
+                    color: $grapefruit-1;
+
+                    .badge {
+                        background-color: $grapefruit-1;
+                    }
+                }
+
+                &.es {
+                    border-color: $mint-2;
+                    color: $mint-2;
+
+                    .badge {
+                        background-color: $mint-2;
+                    }
+                }
+
+                &.en {
+                    border-color: $aqua-2;
+                    color: $aqua-2;
+
+                    .badge {
+                        background-color: $aqua-2;
+                    }
+                }
+
+                &.fr {
+                    border-color: $chewinggum-1;
+                    color: $chewinggum-1;
+
+                    .badge {
+                        background-color: $chewinggum-1;
+                    }
+                }
+
+                .badge {
+                    margin-left: 7px;
+                }
+            }
+        }
+
+        &.articles {
+            padding: 0;
+            flex-direction: row;
+            position: relative;
+
+            h2 {
+                width: 100%;
+                position: absolute;
+                top: 17vh;
+                left: 0;
+
+                span {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 5px 14px;
+                    color: $dark-grey-2;
+                }
+            }
+
+            .article {
+                height: 100vh;
+                padding: 15px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                text-align: center;
+                background-position: center;
+                background-size: cover;
+
+                &.websocket {
+                    width: 50vw;
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)) /*, url('images/articles/websocket.jpg')*/
+                ;
+                }
+
+                &.bitcoin {
+                    width: 50vw;
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)) /*, url('images/articles/bitcoin.jpg')*/
+                ;
+                }
+            }
+        }
+
+        &.contact {
+            a {
+                margin-bottom: .6rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .contact-method {
+                padding: 12px 16px;
+                border-radius: 20px;
+                font-size: 15px;
+                color: white;
+                background: $bluejeans-1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 16px;
+                    margin-right: 10px;
+                }
+
+                &.mail img {
+                    height: 13px;
+                }
+
+                &.keybase img {
+                    height: 17px;
+                }
+            }
+        }
+    }
+
+    /** Jobs **/
+    .job,
+    .project {
+        width: 490px;
+        margin-bottom: 1rem;
+        padding: 1rem .8rem;
+        border-radius: .5rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+        font-size: 17px;
+        font-weight: 500;
+        color: $dark-grey-2;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-device-width: 600px) {
+            width: 100%;
+        }
+
+        .logo {
+            width: 56px;
+            margin-left: 20px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            $organizations: 'brutal', 'doyo', 'dide', 'avptp', 'mobincube', 'habtium';
+
+            @each $org in $organizations {
+                &.#{$org} {
+                    background-image: url('./images/organizations/' + $org + '.svg');
+                }
+            }
+
+            &.auo {
+                background-image: url('./images/organizations/auo.png');
+            }
+        }
+
+        .position {
+            color: #424242;
+
+            small {
+                display: block;
+                margin-top: .2rem;
+            }
+        }
+
+        .organization {
+            margin-top: 7px;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .period {
+            margin-top: 8px;
+
+            .badge {
+                display: inline-block;
+                margin: 5px 5px 0 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    /** Skills **/
+    .skill {
+        margin: 5px;
+        font-size: .95rem;
+        font-weight: 400;
+        border-radius: 6px;
+        border: 1px solid white;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        span {
+            padding: 10px 10px 7px 10px;
+        }
+
+        .level {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+
+        .level-25 {
+            @extend .level;
+            width: 25%;
+        }
+
+        .level-50 {
+            @extend .level;
+            width: 50%;
+        }
+
+        .level-75 {
+            @extend .level;
+            width: 75%;
+        }
+
+        .level-100 {
+            @extend .level;
+        }
+    }
+
+    /** Badges **/
+    .badge {
+        border-radius: 6px;
+        padding: 5px;
+        font-size: 11px;
+        background-color: $dark-grey-1;
+        color: white;
+
+        &.emphasized {
+            background-color: $dark-grey-2;
+        }
+    }
+
+    /** PDF styles **/
+    @media print {
+        header {
+            background-position: bottom center;
+            text-shadow: none;
+
+            .arrow {
+                display: none;
+            }
+
+            .web {
+                display: flex;
+            }
+        }
+
+        section.skills {
+            h2 span {
+                -webkit-background-clip: initial;
+                background-clip: initial;
+                background: none;
+                color: #9cadc9;
+            }
+
+            .first {
+                display: flex;
+                flex-direction: row;
+
+                .second {
+                    width: calc(50vw - 20px);
+
+                    &:nth-of-type(1) {
+                        padding-right: 20px;
+                        border-right: 1px solid white;
+                    }
+
+                    &:nth-of-type(2) {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .job,
+        .project {
+            box-shadow: none;
+            border: 1px solid #ccc;
         }
     }
 }

@@ -1,6 +1,6 @@
-import './styles.scss';
 import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
+import './styles.scss';
 
 export default function CookieNotice() {
     const [accepted, setAccepted] = useState(

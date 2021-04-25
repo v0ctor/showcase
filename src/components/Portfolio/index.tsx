@@ -1,21 +1,21 @@
 import React from 'react';
-import './styles.scss';
-import {DateTime} from 'luxon';
 import {Trans, useTranslation} from 'react-i18next';
+import {Link} from "react-router-dom";
+import {DateTime} from 'luxon';
+import Diff from 'components/Time/Diff';
+import Period from 'components/Time/Period';
 import linkedInLogo from './images/social/linkedin.svg';
 import gitHubLogo from './images/social/github.svg';
 import keybaseLogo from './images/social/keybase.svg';
-import {Link} from "react-router-dom";
 import envelopeLogo from './images/envelope.svg';
-import Diff from 'components/Time/Diff';
-import Period from 'components/Time/Period';
+import './styles.scss';
 
 export default function Portfolio() {
     const {t, i18n} = useTranslation('portfolio');
 
     return (
-        <>
-            <header className="main">
+        <article className="portfolio">
+            <header>
                 <div className="avatar" />
                 <h1>{t('app:name')}</h1>
 
@@ -30,7 +30,7 @@ export default function Portfolio() {
             </header>
 
             <section className="about">
-                <h1>{t('about.title')}</h1>
+                <h2>{t('about.title')}</h2>
 
                 <Trans
                     t={t}
@@ -40,7 +40,6 @@ export default function Portfolio() {
                         <strong />,
                         <a href={t('about.introduction.url')} />
                     ]} />
-                {/* TODO: fix issue with nested tags*/}
                 <Trans
                     t={t}
                     parent="p"
@@ -59,14 +58,14 @@ export default function Portfolio() {
                     ]} />
 
                 <div className="values row">
-                    {Object.entries(t<string, object>('about.values', {returnObjects: true})).map((item: [string, string]) => (
-                        <div key={item[0]} className="value">{item[1]}</div>
+                    {Object.entries(t<string, object>('about.values')).map((item: [string, string]) => (
+                        <span key={item[0]} className="value">{item[1]}</span>
                     ))}
                 </div>
             </section>
 
             <section className="jobs">
-                <h1>{t('jobs.title')}</h1>
+                <h2>{t('jobs.title')}</h2>
 
                 <div className="column stretch">
                     <div className="job">
@@ -110,7 +109,16 @@ export default function Portfolio() {
                     </div>
                     <div className="job">
                         <div className="column">
-                            <div className="position">{t('jobs.doyo')}</div>
+                            <div className="position">
+                                <Trans
+                                    t={t}
+                                    i18nKey="jobs.doyo"
+                                    components={[
+                                        <small>
+                                            <em />
+                                        </small>
+                                    ]} />
+                            </div>
                             <div className="organization paragraph">
                                 <a href="https://doyo.tech">Doyo</a>
                             </div>
@@ -189,7 +197,7 @@ export default function Portfolio() {
             </section>
 
             <section className="projects">
-                <h1>{t('projects.title')}</h1>
+                <h2>{t('projects.title')}</h2>
 
                 <div className="column stretch">
                     <div className="project">
@@ -296,13 +304,13 @@ export default function Portfolio() {
             </section>
 
             <section className="skills">
-                <h1><span>{t('skills.title')}</span></h1>
+                <h2><span>{t('skills.title')}</span></h2>
 
                 <div className="first">
                     <div className="second">
                         <Trans
                             t={t}
-                            parent="h2"
+                            parent="h3"
                             i18nKey="skills.devops"
                             components={[
                                 <em />
@@ -330,7 +338,7 @@ export default function Portfolio() {
                             }
                         </div>
 
-                        <h2>{t('skills.systems_and_networking')}</h2>
+                        <h3>{t('skills.systems_and_networking')}</h3>
                         <div className="row">
                             {
                                 (() => {
@@ -354,7 +362,7 @@ export default function Portfolio() {
                             }
                         </div>
 
-                        <h2>{t('skills.databases')}</h2>
+                        <h3>{t('skills.databases')}</h3>
                         <div className="row">
                             {
                                 (() => {
@@ -377,7 +385,7 @@ export default function Portfolio() {
                     </div>
 
                     <div className="second">
-                        <h2>{t('skills.cloud_providers')}</h2>
+                        <h3>{t('skills.cloud_providers')}</h3>
                         <div className="row">
                             {
                                 (() => {
@@ -397,8 +405,8 @@ export default function Portfolio() {
                                 })()
                             }
                         </div>
-                        
-                        <h2>{t('skills.programming_languages')}</h2>
+
+                        <h3>{t('skills.programming_languages')}</h3>
                         <div className="row">
                             {
                                 (() => {
@@ -421,7 +429,7 @@ export default function Portfolio() {
                             }
                         </div>
 
-                        <h2>{t('skills.software_development')}</h2>
+                        <h3>{t('skills.software_development')}</h3>
                         <div className="row">
                             {
                                 (() => {
@@ -446,7 +454,7 @@ export default function Portfolio() {
 
                         <Trans
                             t={t}
-                            parent="h2"
+                            parent="h3"
                             i18nKey="skills.frameworks_and_environments"
                             components={[
                                 <em />
@@ -476,26 +484,26 @@ export default function Portfolio() {
             </section>
 
             <section className="languages">
-                <h1>{t('languages.title')}</h1>
+                <h2>{t('languages.title')}</h2>
 
-                <div className="language ca" style={{order: i18n.language === 'ca' ? 1 : 2}}>
+                <div className="language ca" style={{order: i18n.languages[0] === 'ca' ? 1 : 2}}>
                     <div className="name">{t('languages.ca')}</div>
                     <div className="badge">C1</div>
                 </div>
-                <div className="language es" style={{order: i18n.language === 'es' ? 1 : 2}}>
+                <div className="language es" style={{order: i18n.languages[0] === 'es' ? 1 : 2}}>
                     <div className="name">{t('languages.es')}</div>
                 </div>
-                <div className="language en" style={{order: i18n.language === 'en' ? 1 : 2}}>
+                <div className="language en" style={{order: i18n.languages[0] === 'en' ? 1 : 2}}>
                     <div className="name">{t('languages.en')}</div>
                     <div className="badge">B2</div>
                 </div>
-                <div className="language fr" style={{order: i18n.language === 'fr' ? 1 : 2}}>
+                <div className="language fr" style={{order: i18n.languages[0] === 'fr' ? 1 : 2}}>
                     <div className="name">{t('languages.fr')}</div>
                 </div>
             </section>
 
             <section className="contact">
-                <h1>{t('contact.title')}</h1>
+                <h2>{t('contact.title')}</h2>
 
                 <a href="mailto:victor@diazmarco.me">
                     <div className="contact-method mail">
@@ -516,6 +524,6 @@ export default function Portfolio() {
                     </div>
                 </a>
             </section>
-        </>
+        </article>
     );
 }
