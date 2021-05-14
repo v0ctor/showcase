@@ -39,8 +39,7 @@
     "title": "Projectes",
 
     "avptp": "Vicepresident i portaveu",
-    "mobincube": "Migració de la infraestructura a Kubernetes",
-    "dide": "Migració de la infraestructura a Kubernetes",
+    "kubernetes": "Migració de la infraestructura a Kubernetes",
     "habtium": "Administrador de sistemes i desenvolupador web"
   },
 

@@ -233,7 +233,35 @@ export default function Portfolio() {
                     </div>
                     <div className="project">
                         <div className="column">
-                            <div className="position">{t('projects.mobincube')}</div>
+                            <div className="position">{t('projects.kubernetes')}</div>
+                            <div className="organization paragraph">
+                                <a href="https://forocoches.com">ForoCoches</a>
+                            </div>
+                            {
+                                (() => {
+                                    const start = DateTime.local(2021, 3, 9);
+                                    const end = DateTime.local();
+                                    const duration = end.diff(start);
+
+                                    return (
+                                        <div className="period">
+                                            <span className="badge">
+                                                {start.toLocaleString({
+                                                    year: 'numeric',
+                                                    month: 'long'
+                                                })} — {t('time:now')}
+                                            </span>
+                                            <span className="badge"><Diff duration={duration} /></span>
+                                        </div>
+                                    );
+                                })()
+                            }
+                        </div>
+                        <div className="logo forocoches" />
+                    </div>
+                    <div className="project">
+                        <div className="column">
+                            <div className="position">{t('projects.kubernetes')}</div>
                             <div className="organization paragraph">
                                 <a href="https://mobincube.com">Mobincube</a>
                             </div>
@@ -256,7 +284,7 @@ export default function Portfolio() {
                     </div>
                     <div className="project">
                         <div className="column">
-                            <div className="position">{t('projects.dide')}</div>
+                            <div className="position">{t('projects.kubernetes')}</div>
                             <div className="organization paragraph">
                                 <a href="https://dide.app">Dide</a>
                             </div>
