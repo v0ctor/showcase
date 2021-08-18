@@ -240,17 +240,12 @@ export default function Portfolio() {
                             {
                                 (() => {
                                     const start = DateTime.local(2021, 3, 9);
-                                    const end = DateTime.local();
+                                    const end = DateTime.local(2021, 8, 18);
                                     const duration = end.diff(start);
 
                                     return (
                                         <div className="period">
-                                            <span className="badge">
-                                                {start.toLocaleString({
-                                                    year: 'numeric',
-                                                    month: 'long'
-                                                })} — {t('time:now')}
-                                            </span>
+                                            <span className="badge"><Period start={start} end={end} /></span>
                                             <span className="badge"><Diff duration={duration} /></span>
                                         </div>
                                     );
