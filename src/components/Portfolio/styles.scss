@@ -406,28 +406,32 @@ article.portfolio {
             }
         }
 
-        section.skills {
-            h2 span {
-                -webkit-background-clip: initial;
-                background-clip: initial;
-                background: none;
-                color: #9cadc9;
-            }
+        section {
+            padding: 5vh 10vw;
 
-            .first {
-                display: flex;
-                flex-direction: row;
-
-                .second {
-                    width: calc(50vw - 20px);
-
-                    &:nth-of-type(1) {
-                        padding-right: 20px;
-                        border-right: 1px solid white;
-                    }
-
-                    &:nth-of-type(2) {
-                        padding-left: 20px;
+            &.skills {
+                h2 span {
+                    -webkit-background-clip: initial;
+                    background-clip: initial;
+                    background: none;
+                    color: #9cadc9;
+                }
+    
+                .first {
+                    display: flex;
+                    flex-direction: row;
+    
+                    .second {
+                        width: calc(50vw - 20px);
+    
+                        &:nth-of-type(1) {
+                            padding-right: 20px;
+                            border-right: 1px solid white;
+                        }
+    
+                        &:nth-of-type(2) {
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
@@ -435,6 +439,7 @@ article.portfolio {
 
         .job,
         .project {
+            padding: .8rem .7rem;
             box-shadow: none;
             border: 1px solid #ccc;
         }

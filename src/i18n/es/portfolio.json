@@ -45,9 +45,11 @@
     "title": "Habilidades",
 
     "devops": "Desarrollo y operaciones (<0>DevOps</0>)",
+
     "systems_and_networking": "Sistemas y redes",
     "security": "Seguridad",
     "cryptography": "Criptografía",
+    "monitoring": "Monitorización",
 
     "databases": "Sistemas de gestión de bases de datos",
 

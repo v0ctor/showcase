@@ -47,9 +47,11 @@
     "title": "Habilitats",
 
     "devops": "Desenvolupament i operacions (<0>DevOps</0>)",
+
     "systems_and_networking": "Sistemes i xarxes",
     "security": "Seguretat",
     "cryptography": "Criptografia",
+    "monitoring": "Monitorització",
 
     "databases": "Sistemes de gestió de bases de dades",
 

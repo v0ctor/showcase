@@ -1,4 +1,3 @@
-import React from 'react';
 import {Trans, useTranslation} from 'react-i18next';
 import {Link} from "react-router-dom";
 import {DateTime} from 'luxon';
@@ -342,13 +341,13 @@ export default function Portfolio() {
                             {
                                 (() => {
                                     const skills = [
-                                        ['Kubernetes', '75'],
+                                        ['Kubernetes', '100'],
+                                        ['Helm', '100'],
+                                        ['CI/CD', '100'],
                                         ['Docker', '100'],
+                                        ['Git', '100'],
                                         ['Ansible', '75'],
                                         ['Terraform', '50'],
-                                        ['Drone', '100'],
-                                        ['Jenkins', '75'],
-                                        ['Git', '100'],
                                     ];
 
                                     return skills.map((item: string[], key: number) => (
@@ -367,12 +366,10 @@ export default function Portfolio() {
                                 (() => {
                                     const skills = [
                                         ['GNU/Linux', '100'],
-                                        ['MacOS', '100'],
-                                        [t('skills.cryptography'), '100'],
+                                        ['Proxmox', '75'],
                                         [t('skills.security'), '100'],
-                                        ['Traefik Proxy', '100'],
-                                        ['Nginx', '100'],
-                                        ['Caddy', '50'],
+                                        [t('skills.cryptography'), '100'],
+                                        [t('skills.monitoring'), '50'],
                                     ];
 
                                     return skills.map((item: string[], key: number) => (
@@ -390,10 +387,10 @@ export default function Portfolio() {
                             {
                                 (() => {
                                     const skills = [
-                                        ['MariaDB/MySQL', '100'],
-                                        ['Redis', '75'],
-                                        ['MongoDB', '50'],
+                                        ['MySQL/Percona/MariaDB', '100'],
                                         ['PostgreSQL', '25'],
+                                        ['MongoDB', '50'],
+                                        ['Redis', '75'],
                                     ];
 
                                     return skills.map((item: string[], key: number) => (
@@ -437,7 +434,7 @@ export default function Portfolio() {
                                         ['Go', '100'],
                                         ['Rust', '25'],
                                         ['PHP', '100'],
-                                        ['JavaScript', '100'],
+                                        ['JavaScript/TypeScript', '100'],
                                         ['Java', '100'],
                                         ['C', '50'],
                                     ];
@@ -462,7 +459,7 @@ export default function Portfolio() {
                                         ['GraphQL', '100'],
                                         ['REST', '100'],
                                         ['HTML', '100'],
-                                        ['SASS/CSS', '100'],
+                                        ['CSS/SASS', '100'],
                                     ];
 
                                     return skills.map((item: string[], key: number) => (

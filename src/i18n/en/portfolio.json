@@ -47,9 +47,11 @@
     "title": "Skills",
 
     "devops": "Development and operations (DevOps)",
+
     "systems_and_networking": "Systems and networking",
     "cryptography": "Cryptography",
     "security": "Security",
+    "monitoring": "Monitoring",
 
     "databases": "Database management systems",
 
