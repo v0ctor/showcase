@@ -38,7 +38,7 @@ export default function Portfolio() {
                     i18nKey="about.introduction.text"
                     components={[
                         <strong />,
-                        <a href={t('about.introduction.url')} />
+                        <a href={t('about.introduction.url')} />, // eslint-disable-line
                     ]} />
                 <Trans
                     t={t}
@@ -46,7 +46,7 @@ export default function Portfolio() {
                     i18nKey="about.cave.text"
                     components={[
                         <strong>
-                            <a href={t('about.cave.url')} />
+                            <a href={t('about.cave.url')} /> {/* eslint-disable-line */}
                         </strong>
                     ]} />
                 <Trans
@@ -530,19 +530,19 @@ export default function Portfolio() {
 
                 <a href="mailto:victor@diazmarco.me">
                     <div className="contact-method mail">
-                        <img src={envelopeLogo} />
+                        <img src={envelopeLogo} alt="" />
                         victor@diazmarco.me
                     </div>
                 </a>
                 <a href="https://linkedin.com/in/v0ctor">
                     <div className="contact-method linkedin">
-                        <img src={linkedInLogo} />
+                        <img src={linkedInLogo} alt="" />
                         @v0ctor
                     </div>
                 </a>
                 <a href="https://keybase.io/v0ctor">
                     <div className="contact-method keybase">
-                        <img src={keybaseLogo} />
+                        <img src={keybaseLogo} alt="" />
                         @v0ctor
                     </div>
                 </a>

@@ -10,7 +10,7 @@ export default function CookieNotice() {
     const {t} = useTranslation('cookies');
 
     React.useEffect(() => {
-        accepted == 'true' ? localStorage.setItem('cookies', 'true') : localStorage.removeItem('cookies');
+        accepted === 'true' ? localStorage.setItem('cookies', 'true') : localStorage.removeItem('cookies');
     }, [accepted]);
 
     if (accepted) {

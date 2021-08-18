@@ -26,7 +26,8 @@ interface Article {
     sections: Array<string>
 }
 
-export default function Article() {
+// eslint-disable-next-line
+export default function () {
     let {slug} = useParams<RouteParams>();
     const {t, i18n} = useTranslation('app');
     const [article, setArticle] = useState<Article>();
@@ -41,7 +42,7 @@ export default function Article() {
 
         getArticle(slug, language)
             .then(data => setArticle(data));
-    }, []);
+    }, [slug, i18n.languages]);
 
     if (!article) {
         return (
