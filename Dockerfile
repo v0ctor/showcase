@@ -1,5 +1,5 @@
 ## Development image
-FROM amd64/node:14.16.1-alpine3.13 AS development
+FROM amd64/node:14.17.5-alpine3.14 AS development
 
 ARG USER_ID=1000
 ENV USER_NAME=default
