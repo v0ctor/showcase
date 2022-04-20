@@ -1,5 +1,4 @@
 import {Trans, useTranslation} from 'react-i18next';
-import {Link} from "react-router-dom";
 import {DateTime} from 'luxon';
 import Diff from 'components/Time/Diff';
 import Period from 'components/Time/Period';
@@ -80,7 +79,7 @@ export default function Portfolio() {
                                     ]} />
                             </div>
                             <div className="organization paragraph">
-                                <a href="https://brutalsys.com">Brutal</a>
+                                <a href="https://brutal.systems">Brutal</a>
                             </div>
                             {
                                 (() => {
