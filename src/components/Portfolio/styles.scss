@@ -290,7 +290,7 @@ article.portfolio {
             background-position: center;
             background-repeat: no-repeat;
 
-            $organizations: 'avptp', 'brutal', 'dide', 'doyo', 'habtium', 'mobincube';
+            $organizations: 'avptp', 'brutal', 'dide', 'doyo', 'forocoches', 'habtium', 'mobincube';
 
             @each $org in $organizations {
                 &.#{$org} {
@@ -298,7 +298,7 @@ article.portfolio {
                 }
             }
 
-            $organizations: 'auo', 'forocoches';
+            $organizations: 'auo';
 
             @each $org in $organizations {
                 &.#{$org} {
