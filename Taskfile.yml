@@ -1,0 +1,30 @@
+version: "3"
+
+silent: true
+
+vars:
+  RUN: docker compose exec -u $(id -u) app
+
+tasks:
+  default:
+    - task: init
+    - task: up
+
+  init:
+    cmds:
+      - cp .env.example .env
+      - sed -i{{if eq OS "darwin"}} ""{{end}} -e "s/^#*\(USER_ID=\).*/\1$(id -u)/" .env
+    status:
+      - test -f .env
+
+  up: DOCKER_BUILDKIT=1 docker compose up -d --build
+
+  down: docker compose down
+
+  rebuild:
+    - docker compose down
+    - docker compose build --no-cache app
+
+  shell: "{{.RUN}} sh"
+
+  run: "{{.RUN}} {{.CLI_ARGS}}"

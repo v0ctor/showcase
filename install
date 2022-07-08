@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PLATFORM=$(uname)
+
+case $PLATFORM in
+
+  Linux)
+    # Install Taskfile
+    sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+
+    # Install Docker
+    sudo sh -c "$(curl -fsSL https://get.docker.com)"
+    sudo usermod -aG docker $USER
+    sudo systemctl enable docker --now
+
+    # Install Docker Compose
+    DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+    mkdir -p "$DOCKER_CONFIG/cli-plugins"
+
+    curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o "$DOCKER_CONFIG/cli-plugins/docker-compose"
+    chmod +x "$DOCKER_CONFIG/cli-plugins/docker-compose"
+
+    echo "\nInstallation complete. You may need to logout and login again to use Docker without being the root user."
+    ;;
+
+  Darwin)
+    # Install Homebrew
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # Install Taskfile
+    brew install go-task/tap/go-task
+
+    # Install Docker Desktop, that includes Docker Compose
+    brew install --cask docker
+
+    # Run Docker Desktop
+    open -a Docker
+    ;;
+
+  *)
+    echo "Unsupported platform: $PLATFORM"
+    ;;
+
+esac

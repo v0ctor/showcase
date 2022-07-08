@@ -4,7 +4,7 @@ services:
       context: .
       target: development
       args:
-        - USER_ID=${UID:-1000}
+        USER_ID: ${USER_ID:-1000}
     env_file: .env
     tty: true
     volumes:
