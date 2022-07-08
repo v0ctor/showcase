@@ -73,9 +73,7 @@ export default function Portfolio() {
                                     t={t}
                                     i18nKey="jobs.brutal"
                                     components={[
-                                        <small>
-                                            <em />
-                                        </small>
+                                        <small />
                                     ]} />
                             </div>
                             <div className="organization paragraph">
@@ -112,9 +110,7 @@ export default function Portfolio() {
                                     t={t}
                                     i18nKey="jobs.doyo"
                                     components={[
-                                        <small>
-                                            <em />
-                                        </small>
+                                        <small />
                                     ]} />
                             </div>
                             <div className="organization paragraph">
@@ -228,6 +224,36 @@ export default function Portfolio() {
                             }
                         </div>
                         <div className="logo avptp" />
+                    </div>
+                    <div className="project">
+                        <div className="column">
+                            <div className="position">{t('projects.bronze')}</div>
+                            <div className="organization paragraph">
+                                <a href="https://bronze.vision/">Bronze</a>
+                            </div>
+                            {
+                                (() => {
+                                    const start = DateTime.local(2022, 5, 6);
+                                    const end = DateTime.local();
+                                    const duration = end.diff(start);
+
+                                    return (
+                                        <div className="period">
+                                            <span className="badge">
+                                                {start.toLocaleString({
+                                                    year: 'numeric',
+                                                    month: 'long'
+                                                })} — {t('time:now')}
+                                            </span>
+                                            <span className="badge">
+                                                <Diff duration={duration} />
+                                            </span>
+                                        </div>
+                                    );
+                                })()
+                            }
+                        </div>
+                        <div className="logo bronze" />
                     </div>
                     <div className="project">
                         <div className="column">

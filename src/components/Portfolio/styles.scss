@@ -290,7 +290,7 @@ article.portfolio {
             background-position: center;
             background-repeat: no-repeat;
 
-            $organizations: 'avptp', 'brutal', 'dide', 'doyo', 'forocoches', 'habtium', 'mobincube';
+            $organizations: 'avptp', 'bronze', 'brutal', 'dide', 'doyo', 'forocoches', 'habtium', 'mobincube';
 
             @each $org in $organizations {
                 &.#{$org} {
@@ -305,15 +305,15 @@ article.portfolio {
                     background-image: url('./images/organizations/' + $org + '.png');
                 }
             }
+
+            &.bronze {
+                width: 80px;
+                margin-left: 0;
+            }
         }
 
         .position {
             color: #424242;
-
-            small {
-                display: block;
-                margin-top: .2rem;
-            }
         }
 
         .organization {
@@ -407,6 +407,7 @@ article.portfolio {
         }
 
         section {
+            max-height: 210mm;
             padding: 5vh 10vw;
 
             &.skills {
@@ -416,19 +417,19 @@ article.portfolio {
                     background: none;
                     color: #9cadc9;
                 }
-    
+
                 .first {
                     display: flex;
                     flex-direction: row;
-    
+
                     .second {
                         width: calc(50vw - 20px);
-    
+
                         &:nth-of-type(1) {
                             padding-right: 20px;
                             border-right: 1px solid white;
                         }
-    
+
                         &:nth-of-type(2) {
                             padding-left: 20px;
                         }

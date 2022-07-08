@@ -29,8 +29,8 @@
     "title": "Professional experience",
     "co-founder": "co-founder",
 
-    "brutal": "Site reliability engineer",
-    "doyo": "Chief technology officer",
+    "brutal": "Systems engineer <0>(SRE)</0>",
+    "doyo": "Chief technology officer <0>(CTO)</0>",
     "mobincube": "Back-end software engineer",
     "apadrina_un_olivo": "Software engineer"
   },
@@ -38,7 +38,8 @@
   "projects": {
     "title": "Projects",
 
-    "avptp": "Vice president and spokesperson",
+    "avptp": "Vice-president",
+    "bronze": "Cloud-based service for cooking analysis with computer vision",
     "kubernetes": "Infrastructure migration to Kubernetes",
     "habtium": "System administrator and web developer"
   },
